@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en" data-mn-root="../">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Security — How Nova handles your data · MSPNova</title>
+<meta name="description" content="Your ticket data stays in your PSA. Nova reads, doesn't store. SSO via Microsoft Entra. Anthropic zero-retention policy." />
+<link rel="canonical" href="https://mspnova.com/security/" />
+<link rel="icon" type="image/svg+xml" href="../assets/favicon.svg" />
+<meta name="theme-color" content="#0a1628" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/site.css?v=1" />
+
+<!-- TODO: paste Cloudflare Web Analytics <script> here -->
+</head>
+<body>
+<div data-mn-header></div>
+
+<section class="page-hero">
+  <div class="container">
+    <div class="breadcrumb"><a href="/">Home</a><span class="breadcrumb__sep">/</span>Security</div>
+    <span class="eyebrow">Security &amp; trust</span>
+    <h1 class="h-1">Your data stays <span class="accent">where it lives.</span></h1>
+    <p class="lede">Nova reads from your PSA and writes back to your PSA. We don't build a parallel data lake. We don't train AI on your tickets. And we don't store more than the metadata we need to do our job.</p>
+  </div>
+</section>
+
+<!-- Compliance badges -->
+<section class="section-sm bg-dark-2">
+  <div class="container">
+    <div class="grid grid-3" style="gap:24px;">
+      <div class="card" style="text-align:center;background:var(--c-navy-2);border-color:var(--c-navy-3);">
+        <div class="h-4" style="color:#fff;margin:0 0 4px;">ZERO-RETENTION AI</div>
+        <div class="muted" style="font-size:12px;color:var(--c-fg-on-dark-2);">Prompts not stored or trained on</div>
+      </div>
+      <div class="card" style="text-align:center;background:var(--c-navy-2);border-color:var(--c-navy-3);">
+        <div class="h-4" style="color:#fff;margin:0 0 4px;">ENTRA SSO</div>
+        <div class="muted" style="font-size:12px;color:var(--c-fg-on-dark-2);">Required for all staff access</div>
+      </div>
+      <div class="card" style="text-align:center;background:var(--c-navy-2);border-color:var(--c-navy-3);">
+        <div class="h-4" style="color:#fff;margin:0 0 4px;">DATA STAYS PUT</div>
+        <div class="muted" style="font-size:12px;color:var(--c-fg-on-dark-2);">Ticket bodies live in your PSA</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Data handling -->
+<section class="section bg-light">
+  <div class="container">
+    <span class="eyebrow">Data handling</span>
+    <h2 class="h-2 mb-48">What Nova reads, writes, and stores.</h2>
+    <div class="grid grid-3">
+      <div class="card">
+        <div class="mono" style="font-size:11px;color:var(--c-accent);font-weight:700;">/ READS</div>
+        <h4 class="h-4" style="margin-top:8px;">From your PSA, on a schedule</h4>
+        <p class="muted" style="font-size:14px;line-height:1.6;">Ticket subject, body, status, priority, contact. Read-only API access via your Autotask user. We see what your dispatcher sees — nothing more.</p>
+      </div>
+      <div class="card">
+        <div class="mono" style="font-size:11px;color:var(--c-accent);font-weight:700;">/ WRITES</div>
+        <h4 class="h-4" style="margin-top:8px;">When dispatcher clicks Accept</h4>
+        <p class="muted" style="font-size:14px;line-height:1.6;">Updated classification fields (priority, queue, category, work type). Internal notes for transparency. Time entries when techs check out from Field Ops. All changes logged.</p>
+      </div>
+      <div class="card">
+        <div class="mono" style="font-size:11px;color:var(--c-accent);font-weight:700;">/ STORES</div>
+        <h4 class="h-4" style="margin-top:8px;">Only what we need to operate</h4>
+        <p class="muted" style="font-size:14px;line-height:1.6;">Ticket metadata (IDs, classifications, history) and learned rules. Encrypted at rest (AES-256) and in transit (TLS 1.3). Ticket bodies are not persisted — read, classified, discarded.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AI handling -->
+<section class="bg-light">
+  <div class="container deepdive">
+    <div class="deepdive__grid">
+      <div>
+        <div class="deepdive__head">/ AI usage</div>
+        <h3 class="h-2" style="font-size:36px;">Your tickets are not training data.</h3>
+        <p class="muted" style="font-size:16px;line-height:1.6;">Nova uses Anthropic's enterprise API with zero-retention enabled. Prompts are processed and discarded — not stored, not used to train models, not visible to anyone at Anthropic outside of your active inference call.</p>
+        <ul class="deepdive__bullets">
+          <li><span data-icon="check"></span><span>Anthropic enterprise API · zero data retention</span></li>
+          <li><span data-icon="check"></span><span>Prompts redacted of obvious PII before sending</span></li>
+          <li><span data-icon="check"></span><span>Optional: bring your own AI provider with self-hosted compliance</span></li>
+
+        </ul>
+      </div>
+      <div class="card" style="background:var(--c-bg-3);">
+        <h4 class="h-4">What goes to the AI</h4>
+        <div style="font-family:var(--font-mono);font-size:13px;background:var(--c-navy-1);color:var(--c-fg-on-dark-1);padding:16px;border-radius:var(--r-sm);margin-top:12px;line-height:1.6;">
+          <span style="color:#90D7EC;">// Sample prompt body</span><br/>
+          <span style="color:#a5d6a7;">subject:</span> "Outlook crashing on launch"<br/>
+          <span style="color:#a5d6a7;">body:</span> "Started this morning after Win update..."<br/>
+          <span style="color:#a5d6a7;">contact_role:</span> "office manager"<br/>
+          <span style="color:#a5d6a7;">contract_tier:</span> "managed services T1"<br/>
+          <span style="color:#a5d6a7;">history_summary:</span> "3 tickets last 30d"<br/>
+          <br/>
+          <span style="color:#90D7EC;">// What's NOT sent:</span><br/>
+          <span style="color:#ef9a9a;">- contact name, email, phone</span><br/>
+          <span style="color:#ef9a9a;">- attachment contents</span><br/>
+          <span style="color:#ef9a9a;">- internal notes flagged private</span><br/>
+          <span style="color:#ef9a9a;">- billing or contract amounts</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Access -->
+<section class="section bg-mute">
+  <div class="container">
+    <span class="eyebrow">Access &amp; auth</span>
+    <h2 class="h-2 mb-48">Who can see what.</h2>
+    <div class="grid grid-2" style="gap:32px;">
+      <div class="card">
+        <h4 class="h-4">Inside your MSP</h4>
+        <ul style="margin:12px 0 0;padding:0;list-style:none;display:flex;flex-direction:column;gap:10px;font-size:14px;">
+          <li style="display:flex;gap:10px;"><span data-icon="check" style="color:var(--c-accent);"></span><span>Microsoft Entra SSO required for all staff access</span></li>
+          <li style="display:flex;gap:10px;"><span data-icon="check" style="color:var(--c-accent);"></span><span>Role-based: dispatcher, tech, manager, owner, billing</span></li>
+          <li style="display:flex;gap:10px;"><span data-icon="check" style="color:var(--c-accent);"></span><span>Group-based provisioning — Entra group changes propagate</span></li>
+          <li style="display:flex;gap:10px;"><span data-icon="check" style="color:var(--c-accent);"></span><span>Audit log of every classification, override, login</span></li>
+          <li style="display:flex;gap:10px;"><span data-icon="check" style="color:var(--c-accent);"></span><span>Session timeout configurable (default 8 hours)</span></li>
+        </ul>
+      </div>
+      <div class="card">
+        <h4 class="h-4">Inside your client portal</h4>
+        <ul style="margin:12px 0 0;padding:0;list-style:none;display:flex;flex-direction:column;gap:10px;font-size:14px;">
+          <li style="display:flex;gap:10px;"><span data-icon="check" style="color:var(--c-accent);"></span><span>SSO via M365, Google, or SAML 2.0</span></li>
+          <li style="display:flex;gap:10px;"><span data-icon="check" style="color:var(--c-accent);"></span><span>Per-client roles: regular user, manager, billing, admin</span></li>
+          <li style="display:flex;gap:10px;"><span data-icon="check" style="color:var(--c-accent);"></span><span>Org-level isolation: clients see only their own tickets</span></li>
+          <li style="display:flex;gap:10px;"><span data-icon="check" style="color:var(--c-accent);"></span><span>Public/private ticket comment separation</span></li>
+          <li style="display:flex;gap:10px;"><span data-icon="check" style="color:var(--c-accent);"></span><span>Optional MFA enforcement per client policy</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DPA -->
+<section class="section bg-light" id="dpa">
+  <div class="container container-narrow">
+    <span class="eyebrow">DPA + agreements</span>
+    <h2 class="h-2">The paperwork.</h2>
+    <p class="muted" style="font-size:16px;line-height:1.6;">All Nova customers receive a Data Processing Addendum (DPA) and Master Service Agreement on signup. Sub-processor list available on request. Notice of material changes 30 days in advance.</p>
+    <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:24px;">
+      <a class="btn btn-secondary btn-arrow" href="mailto:security@mspnova.com?subject=DPA%20Request">Request DPA</a>
+      <a class="btn btn-secondary btn-arrow" href="mailto:security@mspnova.com?subject=Security%20questionnaire">Send a questionnaire</a>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="section cta">
+  <svg class="cta__chev" viewBox="0 0 100 110" fill="#fff" aria-hidden="true">
+    <path d="M5 22 L40 55 L5 88 Z" opacity="0.25"/><path d="M25 22 L60 55 L25 88 Z" opacity="0.5"/><path d="M45 22 L80 55 L45 88 Z" opacity="0.8"/><path d="M65 22 L100 55 L65 88 Z" opacity="1"/>
+  </svg>
+  <div class="container">
+    <div class="cta__grid">
+      <div>
+        <h2 class="h-2" style="font-size:46px;color:#fff;">Have a security <span class="accent">questionnaire?</span></h2>
+        <p style="font-size:17px;color:#c9d3dd;">Send it over. We respond inside one business day. We've answered every variant of "do you store our ticket bodies?" — short version: no.</p>
+      </div>
+      <div class="cta__ctas">
+        <a class="btn btn-lg btn-primary btn-arrow" href="mailto:security@mspnova.com">Email security@</a>
+        <a class="btn btn-lg btn-outline" href="/contact/">Book a security review</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div data-mn-footer></div>
+<script src="../js/site.js?v=1"></script>
+</body>
+</html>

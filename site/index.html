@@ -1,26 +1,499 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="en" data-mn-root="./">
 <head>
-  <meta charset="utf-8">
-  <title>MSPNova — placeholder</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <style>
-    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: linear-gradient(135deg, #0f172a, #1e293b); color: #e2e8f0; display: grid; place-items: center; min-height: 100vh; margin: 0; padding: 20px; }
-    .box { text-align: center; max-width: 640px; }
-    h1 { color: #60a5fa; font-size: 3rem; margin: 0 0 12px; letter-spacing: -0.02em; }
-    .badge { display: inline-block; padding: 4px 12px; border: 1px solid #22c55e; color: #22c55e; border-radius: 999px; font-size: 0.75rem; font-weight: 600; letter-spacing: 0.04em; margin-bottom: 24px; text-transform: uppercase; }
-    p { opacity: 0.7; line-height: 1.6; margin: 8px 0; }
-    code { background: rgba(255,255,255,0.08); padding: 2px 6px; border-radius: 4px; font-size: 0.85em; }
-    .footer { margin-top: 40px; opacity: 0.45; font-size: 0.8rem; }
-  </style>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<!-- Primary -->
+<title>MSPNova — AI dispatch for MSPs · triage every ticket in under 30 seconds</title>
+<meta name="description" content="Nova is an AI dispatch assistant for MSPs. It watches your PSA, classifies every ticket in under 30 seconds, and gives your dispatcher one prioritized list. Per-MSP pricing, unlimited engineers." />
+<link rel="canonical" href="https://mspnova.com/" />
+
+<!-- Favicon + manifest -->
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+<meta name="theme-color" content="#0a1628" />
+
+<!-- Open Graph -->
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://mspnova.com/" />
+<meta property="og:title" content="MSPNova — AI dispatch for MSPs" />
+<meta property="og:description" content="Nova watches your PSA, classifies every ticket in under 30 seconds, and gives your dispatcher one prioritized list." />
+<meta property="og:image" content="https://mspnova.com/assets/og-image.svg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:site_name" content="MSPNova" />
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="@mspnova" />
+<meta name="twitter:title" content="MSPNova — AI dispatch for MSPs" />
+<meta name="twitter:description" content="Triage every ticket in under 30 seconds. Built inside a working help desk." />
+<meta name="twitter:image" content="https://mspnova.com/assets/og-image.svg" />
+
+<!-- JSON-LD -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://mspnova.com/#org",
+      "name": "MSPNova",
+      "url": "https://mspnova.com/",
+      "logo": "https://mspnova.com/assets/mspnova-logo.svg",
+      "description": "AI dispatch operating system for managed services providers. Built inside a working help desk.",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "230 N Brand Blvd, Suite 700",
+        "addressLocality": "Glendale",
+        "addressRegion": "CA",
+        "postalCode": "91203",
+        "addressCountry": "US"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "email": "hello@mspnova.com",
+        "telephone": "+1-818-555-1234",
+        "contactType": "Sales"
+      },
+      "parentOrganization": { "@type": "Organization", "name": "Techital" }
+    },
+    {
+      "@type": "SoftwareApplication",
+      "name": "MSPNova",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Web, iOS, Android",
+      "description": "AI ticket triage, dispatch prioritization, huddle briefings, field operations, and white-label client portal — built for MSPs running Autotask.",
+      "offers": [
+        { "@type": "Offer", "name": "Nova Starter", "price": "795", "priceCurrency": "USD", "priceSpecification": { "@type": "UnitPriceSpecification", "billingDuration": "P1M" } },
+        { "@type": "Offer", "name": "Nova Standard", "price": "1495", "priceCurrency": "USD", "priceSpecification": { "@type": "UnitPriceSpecification", "billingDuration": "P1M" } }
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "url": "https://mspnova.com/",
+      "name": "MSPNova"
+    }
+  ]
+}
+</script>
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<!-- Styles -->
+<link rel="stylesheet" href="css/site.css?v=1" />
+
+<!-- JSON-LD: Organization + SoftwareApplication -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://mspnova.com/#organization",
+      "name": "MSPNova",
+      "alternateName": "Nova",
+      "url": "https://mspnova.com",
+      "logo": "https://mspnova.com/assets/mspnova-logo.svg",
+      "sameAs": [
+        "https://www.linkedin.com/company/mspnova/",
+        "https://twitter.com/mspnova",
+        "https://github.com/mspnova"
+      ],
+      "parentOrganization": {
+        "@type": "Organization",
+        "name": "Techital",
+        "address": { "@type": "PostalAddress", "addressLocality": "Glendale", "addressRegion": "CA", "addressCountry": "US" }
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "email": "hello@mspnova.com",
+        "contactType": "sales",
+        "areaServed": "US",
+        "availableLanguage": "en"
+      }
+    },
+    {
+      "@type": "SoftwareApplication",
+      "name": "MSPNova",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Web",
+      "offers": {
+        "@type": "Offer",
+        "price": "1495",
+        "priceCurrency": "USD",
+        "priceSpecification": {
+          "@type": "UnitPriceSpecification",
+          "price": "1495",
+          "priceCurrency": "USD",
+          "billingDuration": "P1M",
+          "unitText": "month"
+        }
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "ratingCount": "47"
+      }
+    }
+  ]
+}
+</script>
+
+<!-- Plausible analytics (privacy-first, no cookies). Swap domain when live. -->
+<script defer data-domain="mspnova.com" src="https://plausible.io/js/script.js"></script>
+
+
+<!-- TODO: paste Cloudflare Web Analytics <script> here -->
 </head>
 <body>
-  <div class="box">
-    <div class="badge">● Live</div>
-    <h1>MSPNova</h1>
-    <p>The marketing site is deployed. The real design is on its way.</p>
-    <p style="margin-top: 24px; font-size: 0.85rem;">Stack: Caddy on a Mac Mini → Cloudflare Tunnel → <code>www.mspnova.com</code></p>
-    <div class="footer">Placeholder served at 2026-04-26T22:35:10Z</div>
+
+<div data-mn-header></div>
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <svg class="hero__chev-bg" viewBox="0 0 100 110" fill="#fff" aria-hidden="true">
+    <path d="M5 22 L40 55 L5 88 Z" opacity="0.25"/><path d="M25 22 L60 55 L25 88 Z" opacity="0.5"/><path d="M45 22 L80 55 L45 88 Z" opacity="0.8"/><path d="M65 22 L100 55 L65 88 Z" opacity="1"/>
+  </svg>
+  <div class="container hero__inner">
+    <div class="hero__grid">
+      <div>
+        <span class="eyebrow">AI dispatch for MSPs</span>
+        <h1 class="h-1">Your dispatcher's <span class="accent">new favorite</span> coworker.</h1>
+        <p class="lede">Nova watches your Autotask queue, classifies every new ticket in under 30 seconds, and hands your dispatcher a clean prioritized list. AI does the analysis. Your team makes the calls.</p>
+        <div class="hero__ctas">
+          <a class="btn btn-lg btn-primary btn-arrow" href="/contact/">Book a 30-min demo</a>
+          <a class="btn btn-lg btn-outline" href="/features/triage/">See it triage live</a>
+        </div>
+        <div class="hero__stats">
+          <div><div class="hero__stat-n">&lt;30s</div><div class="hero__stat-l">Time to triage</div></div>
+          <div><div class="hero__stat-n">68.8%</div><div class="hero__stat-l">AI clean rate</div></div>
+          <div><div class="hero__stat-n">~17 hrs</div><div class="hero__stat-l">Saved per week</div></div>
+          <div><div class="hero__stat-n">$30/mo</div><div class="hero__stat-l">To run Nova</div></div>
+        </div>
+      </div>
+      <div class="hero__mock">
+        <!-- Product mockup placeholder (Triage queue) -->
+        <div class="mock-frame"></div>
+      </div>
+    </div>
   </div>
+</section>
+
+<!-- ============ LOGO BAR ============ -->
+<section class="logobar bg-dark-2">
+  <div class="container logobar__inner">
+    <div class="logobar__title">Built on the rails your team already runs</div>
+    <div class="logobar__items">
+      <div class="logobar__item"><div class="logobar__name">Autotask</div><div class="logobar__kind">PSA</div></div>
+      <div class="logobar__item"><div class="logobar__name">Microsoft Teams</div><div class="logobar__kind">Notifications</div></div>
+      <div class="logobar__item"><div class="logobar__name">Microsoft Entra ID</div><div class="logobar__kind">SSO</div></div>
+      <div class="logobar__item"><div class="logobar__name">Anthropic Claude</div><div class="logobar__kind">AI</div></div>
+      <div class="logobar__item"><div class="logobar__name">CIPP</div><div class="logobar__kind">M365</div></div>
+      <div class="logobar__item"><div class="logobar__name">ConnectBooster</div><div class="logobar__kind">Billing</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FEATURE OVERVIEW ============ -->
+<section class="section bg-light">
+  <div class="container">
+    <span class="eyebrow">What Nova covers</span>
+    <div class="grid grid-2" style="align-items: end; margin-bottom: 56px;">
+      <h2 class="h-2">Four modules. One operator. Zero cherry-picking.</h2>
+      <p class="muted" style="font-size: 16px; line-height: 1.6; margin: 0;">Nova doesn't replace your dispatcher — it makes them 3–5x more effective by eliminating the manual sorting, prioritizing, and monitoring that eats their day. AI handles the analysis. Your team makes the calls.</p>
+    </div>
+    <div class="grid-bordered grid-2">
+      <a class="card--feature" href="/features/triage/" style="text-decoration: none; color: inherit;">
+        <div style="display: flex; align-items: center; gap: 16px; margin-bottom: 18px;">
+          <div class="card__num">01</div>
+          <div style="flex: 1; height: 1px; background: var(--c-border-1);"></div>
+          <span data-icon="cpu" style="color: var(--c-fg-2);"></span>
+        </div>
+        <h3 class="h-3">Two-pass AI triage</h3>
+        <p class="muted">Sonnet classifies every new ticket across priority, type, queue, and category. Opus verifies low-confidence calls. Auto-accepts at 85%+ confidence — dispatcher reviews the rest.</p>
+        <span class="btn btn-link" style="margin-top: auto;">Learn more →</span>
+      </a>
+      <a class="card--feature" href="/features/needs-attention/" style="text-decoration: none; color: inherit;">
+        <div style="display: flex; align-items: center; gap: 16px; margin-bottom: 18px;">
+          <div class="card__num">02</div>
+          <div style="flex: 1; height: 1px; background: var(--c-border-1);"></div>
+          <span data-icon="dispatch" style="color: var(--c-fg-2);"></span>
+        </div>
+        <h3 class="h-3">Needs Attention queue</h3>
+        <p class="muted">Composite scoring ranks every open ticket by SLA risk, age, scarcity, and skill match. The Pull Ticket flow gives techs their next best ticket — not a buffet.</p>
+        <span class="btn btn-link" style="margin-top: auto;">Learn more →</span>
+      </a>
+      <a class="card--feature" href="/features/pulse/" style="text-decoration: none; color: inherit;">
+        <div style="display: flex; align-items: center; gap: 16px; margin-bottom: 18px;">
+          <div class="card__num">03</div>
+          <div style="flex: 1; height: 1px; background: var(--c-border-1);"></div>
+          <span data-icon="message" style="color: var(--c-fg-2);"></span>
+        </div>
+        <h3 class="h-3">Pulse + Teams alerts</h3>
+        <p class="muted">AI-generated huddle briefings, P1 alerts, end-of-day summaries, and per-tech DMs for status checks. Nine card types, all configurable.</p>
+        <span class="btn btn-link" style="margin-top: auto;">Learn more →</span>
+      </a>
+      <a class="card--feature" href="/features/field-ops/" style="text-decoration: none; color: inherit;">
+        <div style="display: flex; align-items: center; gap: 16px; margin-bottom: 18px;">
+          <div class="card__num">04</div>
+          <div style="flex: 1; height: 1px; background: var(--c-border-1);"></div>
+          <span data-icon="server" style="color: var(--c-fg-2);"></span>
+        </div>
+        <h3 class="h-3">Field Ops + portal</h3>
+        <p class="muted">Mobile check-in/out, real-time status board, Flash Ticket. Plus a white-label React portal where clients see exactly the tickets, SLAs, and CSAT you want them to see.</p>
+        <span class="btn btn-link" style="margin-top: auto;">Learn more →</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ DEEP DIVE 01 ============ -->
+<section class="bg-light">
+  <div class="container deepdive">
+    <div class="deepdive__grid">
+      <div>
+        <div style="display: flex; align-items: baseline; gap: 12px; margin-bottom: 20px;">
+          <div class="deepdive__head">01 /</div>
+          <span class="eyebrow mb-0">Two-pass AI triage</span>
+        </div>
+        <h3 class="h-2" style="font-size: 38px; max-width: 540px;">From ticket creation to dispatched, in 30 seconds.</h3>
+        <p class="muted" style="font-size: 16px; line-height: 1.6;">Nova polls Autotask every 30 seconds. New tickets get classified across 7 dimensions — priority, issue type, queue, category, sub-category, work type, and source. High-confidence calls auto-accept. The rest land in a clean review list with the AI's reasoning attached.</p>
+        <ul class="deepdive__bullets">
+          <li><span data-icon="check"></span>Sonnet first pass + conditional Opus verification</li>
+          <li><span data-icon="check"></span>78 learned rules + 18 pattern rules, growing weekly</li>
+          <li><span data-icon="check"></span>Auto-accept threshold tunable per queue</li>
+          <li><span data-icon="check"></span>Every override trains the model — clean rate climbs from 47% to 68.8%</li>
+        </ul>
+        <a class="btn btn-link" href="/features/triage/" style="margin-top: 28px;">Read the triage deep dive →</a>
+      </div>
+      <div class="deepdive__shot mock-frame mock-frame--triage" aria-label="Triage queue mockup"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ DEEP DIVE 02 ============ -->
+<section class="bg-light">
+  <div class="container deepdive deepdive--reverse">
+    <div class="deepdive__grid">
+      <div>
+        <div style="display: flex; align-items: baseline; gap: 12px; margin-bottom: 20px;">
+          <div class="deepdive__head">02 /</div>
+          <span class="eyebrow mb-0">Needs Attention</span>
+        </div>
+        <h3 class="h-2" style="font-size: 38px; max-width: 540px;">One queue. Ranked by urgency, not arrival time.</h3>
+        <p class="muted" style="font-size: 16px; line-height: 1.6;">Composite scoring weighs SLA risk, age, client tier, skill match, and technician scarcity. The Pull Ticket flow presents each tech their next best ticket — anti-cherry-picking is structural, not policy. Each card explains why it needs attention right now.</p>
+        <ul class="deepdive__bullets">
+          <li><span data-icon="check"></span>Live SLA countdowns and breach alerts</li>
+          <li><span data-icon="check"></span>One-click: assign, reply, ask the tech via Teams DM</li>
+          <li><span data-icon="check"></span>12-minute triage SLA target, tracked daily</li>
+          <li><span data-icon="check"></span>Holding lanes for waiting-on-client tickets</li>
+        </ul>
+        <a class="btn btn-link" href="/features/needs-attention/" style="margin-top: 28px;">See the dispatch flow →</a>
+      </div>
+      <div class="deepdive__shot mock-frame mock-frame--dispatch" aria-label="Needs Attention dispatch board"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ DEEP DIVE 03 ============ -->
+<section class="bg-light">
+  <div class="container deepdive">
+    <div class="deepdive__grid">
+      <div>
+        <div style="display: flex; align-items: baseline; gap: 12px; margin-bottom: 20px;">
+          <div class="deepdive__head">03 /</div>
+          <span class="eyebrow mb-0">Pulse + Field Ops</span>
+        </div>
+        <h3 class="h-2" style="font-size: 38px; max-width: 540px;">Daily huddles, briefings, and a mobile status board.</h3>
+        <p class="muted" style="font-size: 16px; line-height: 1.6;">Pulse generates the morning briefing — capacity, on-site schedule, escalations, talking points — and posts it to Teams before standup. Techs check in and out from their phone. The dispatcher sees who's where, who's on lunch, and who's overrun on a job.</p>
+        <ul class="deepdive__bullets">
+          <li><span data-icon="check"></span>AI-generated huddle briefings + EOD reports</li>
+          <li><span data-icon="check"></span>Mobile check-in/out with overrun alerts</li>
+          <li><span data-icon="check"></span>Real-time status board for dispatch</li>
+          <li><span data-icon="check"></span>Flash Ticket from a touch panel for shared devices</li>
+        </ul>
+        <a class="btn btn-link" href="/features/pulse/" style="margin-top: 28px;">Tour Pulse →</a>
+      </div>
+      <div class="deepdive__shot mock-frame mock-frame--pulse" aria-label="Pulse huddle briefing"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PRICING STRIP ============ -->
+<section class="section bg-mute">
+  <div class="container">
+    <div class="grid grid-2" style="align-items: start;">
+      <div>
+        <span class="eyebrow">Pricing</span>
+        <h2 class="h-2">Per MSP. <span class="accent">Not per seat, not per ticket.</span></h2>
+        <p class="muted" style="font-size: 16px; line-height: 1.6; max-width: 480px;">One flat platform fee. Unlimited engineers, unlimited clients, unlimited tickets. The only variable cost is your AI usage — typically under $30/month for a small MSP.</p>
+      </div>
+      <div class="card">
+        <div class="eyebrow">Nova Standard</div>
+        <div style="display: flex; align-items: baseline; gap: 10px; margin-bottom: 16px;">
+          <div class="tier__price-n">$1,495</div>
+          <div class="tier__price-s">/ month · your MSP</div>
+        </div>
+        <div style="display: flex; gap: 8px; margin-bottom: 20px; flex-wrap: wrap;">
+          <span class="pill pill--navy">Unlimited engineers</span>
+          <span class="pill pill--navy">Unlimited tickets</span>
+          <span class="pill pill--navy">White-label portal</span>
+          <span class="pill pill--navy">Teams + SSO</span>
+        </div>
+        <a class="btn btn-primary btn-arrow" href="/pricing/">See full pricing</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ INTEGRATIONS ============ -->
+<section class="section bg-light">
+  <div class="container">
+    <div style="display: flex; align-items: end; justify-content: space-between; gap: 24px; flex-wrap: wrap; margin-bottom: 36px;">
+      <div>
+        <span class="eyebrow">Integrations</span>
+        <h2 class="h-2" style="font-size: 36px; margin: 0;">PSA-native. Teams-native. No workflow changes.</h2>
+      </div>
+      <a href="/integrations/" class="btn btn-link">See all integrations →</a>
+    </div>
+    <div class="grid-bordered grid-3">
+      <div style="display: flex; align-items: center; gap: 14px;">
+        <div class="int-badge">AT</div>
+        <div><div style="font-weight: 600; font-size: 14px;">Autotask</div><div class="muted" style="font-size: 12px;">PSA · read tickets, write back on click</div></div>
+      </div>
+      <div style="display: flex; align-items: center; gap: 14px;">
+        <div class="int-badge">MT</div>
+        <div><div style="font-weight: 600; font-size: 14px;">Microsoft Teams</div><div class="muted" style="font-size: 12px;">Channel alerts + per-tech DMs</div></div>
+      </div>
+      <div style="display: flex; align-items: center; gap: 14px;">
+        <div class="int-badge">EI</div>
+        <div><div style="font-weight: 600; font-size: 14px;">Microsoft Entra ID</div><div class="muted" style="font-size: 12px;">SSO + role-based permissions</div></div>
+      </div>
+      <div style="display: flex; align-items: center; gap: 14px;">
+        <div class="int-badge">AC</div>
+        <div><div style="font-weight: 600; font-size: 14px;">Anthropic Claude</div><div class="muted" style="font-size: 12px;">Two-pass triage + EOD reports</div></div>
+      </div>
+      <div style="display: flex; align-items: center; gap: 14px;">
+        <div class="int-badge">OA</div>
+        <div><div style="font-weight: 600; font-size: 14px;">OpenAI</div><div class="muted" style="font-size: 12px;">Configurable per-process</div></div>
+      </div>
+      <div style="display: flex; align-items: center; gap: 14px;">
+        <div class="int-badge">CI</div>
+        <div><div style="font-weight: 600; font-size: 14px;">CIPP</div><div class="muted" style="font-size: 12px;">M365 license management</div></div>
+      </div>
+      <div style="display: flex; align-items: center; gap: 14px;">
+        <div class="int-badge">CB</div>
+        <div><div style="font-weight: 600; font-size: 14px;">ConnectBooster</div><div class="muted" style="font-size: 12px;">Client billing portal</div></div>
+      </div>
+      <div style="display: flex; align-items: center; gap: 14px;">
+        <div class="int-badge">CW</div>
+        <div><div style="font-weight: 600; font-size: 14px;">ConnectWise / HaloPSA</div><div class="muted" style="font-size: 12px;">Roadmap · PSA-agnostic core</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="section bg-light">
+  <div class="container">
+    <div class="grid" style="grid-template-columns: 1fr 1.6fr; gap: 64px; align-items: start;">
+      <div>
+        <span class="eyebrow">Frequently asked</span>
+        <h2 class="h-2" style="font-size: 36px;">The questions MSP owners ask first.</h2>
+        <p class="muted" style="font-size: 15px;">Don't see yours? <a href="/contact/" class="accent">Talk to a human</a> — we staff sales the same way we staff dispatch.</p>
+      </div>
+      <div class="faq">
+        <div class="faq__item">
+          <button class="faq__q">Does Nova replace Autotask?</button>
+          <div class="faq__a">No. Nova sits alongside Autotask. All ticket data stays in your PSA. Nova reads tickets, helps your team make faster decisions, and writes back when your dispatcher clicks a button. No custom fields, no workflow changes, no PSA add-ons required.</div>
+        </div>
+        <div class="faq__item">
+          <button class="faq__q">What if the AI gets it wrong?</button>
+          <div class="faq__a">The dispatcher reviews every AI suggestion before it takes effect. Wrong classifications are overridden with one click, and that feedback trains the next pass. Production clean rate today: 68.8% and climbing weekly.</div>
+        </div>
+        <div class="faq__item">
+          <button class="faq__q">How long does setup take?</button>
+          <div class="faq__a">A basic install (ticket monitoring + triage + Teams alerts) runs in a day. The full feature set — QA, portal, field ops, huddle manager — builds out over weeks as you tune it to your workflow. We staff the cutover with a Nova engineer.</div>
+        </div>
+        <div class="faq__item">
+          <button class="faq__q">Can it work with ConnectWise or HaloPSA?</button>
+          <div class="faq__a">The architecture is PSA-agnostic. The Autotask integration is a single API client (~80 lines). Building one for ConnectWise Manage or HaloPSA is on the roadmap; the rest of Nova works unchanged.</div>
+        </div>
+        <div class="faq__item">
+          <button class="faq__q">What about data security?</button>
+          <div class="faq__a">All data stays on your dedicated server. Nova doesn't send ticket data to any cloud service except the AI API for classification (Anthropic doesn't store or train on your data). Access is controlled via Microsoft Entra ID SSO. Read the <a href="/security/" class="accent">security details</a>.</div>
+        </div>
+        <div class="faq__item">
+          <button class="faq__q">What does it cost to run?</button>
+          <div class="faq__a">Hardware aside, the only ongoing variable cost is AI API usage — typically $20–30/month for a small MSP. Docker, Node.js, and all other components are free tier.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CTA ============ -->
+<section class="section cta">
+  <svg class="cta__chev" viewBox="0 0 100 110" fill="#fff" aria-hidden="true">
+    <path d="M5 22 L40 55 L5 88 Z" opacity="0.25"/><path d="M25 22 L60 55 L25 88 Z" opacity="0.5"/><path d="M45 22 L80 55 L45 88 Z" opacity="0.8"/><path d="M65 22 L100 55 L65 88 Z" opacity="1"/>
+  </svg>
+  <div class="container">
+    <div class="cta__grid">
+      <div>
+        <span class="eyebrow" style="color: #a8b5c1;">Ready when you are</span>
+        <h2 class="h-2" style="font-size: 52px; color: #fff;">See Nova triage <span class="accent">your ticket types live.</span></h2>
+        <p style="font-size: 17px; color: #c9d3dd; line-height: 1.55; max-width: 520px;">30 minutes. Bring a day's worth of your tickets. We'll load them in Nova with you, watch the AI classify them, and price out a rollout.</p>
+      </div>
+      <div class="cta__ctas">
+        <a class="btn btn-lg btn-primary btn-arrow" href="/contact/">Book a 30-min demo</a>
+        <a class="btn btn-lg btn-outline" href="/customers/">Read customer stories</a>
+        <div class="cta__finep">No SDR gauntlet. You talk to a working dispatcher.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div data-mn-footer></div>
+
+<style>
+/* Page-level: int-badge for integration items */
+.int-badge { width: 40px; height: 40px; border-radius: var(--r-md); background: var(--c-bg-2); display: flex; align-items: center; justify-content: center; font-family: var(--font-display); font-weight: 800; color: var(--c-primary); font-size: 14px; flex-shrink: 0; }
+
+/* Mock frames — placeholder boxes for product screens (swap in real PNGs later) */
+.mock-frame {
+  background: linear-gradient(135deg, #1c3050 0%, #0a1628 100%);
+  border-radius: var(--r-lg);
+  border: 1px solid var(--c-navy-3);
+  box-shadow: var(--shadow-xl);
+  position: relative;
+  overflow: hidden;
+}
+.hero__mock .mock-frame { aspect-ratio: 16/10; width: 100%; }
+.mock-frame::before {
+  content: '';
+  position: absolute; left: 16px; top: 16px; right: 16px; height: 28px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.04), transparent);
+  border-radius: var(--r-sm);
+  border-bottom: 1px solid var(--c-navy-3);
+}
+.mock-frame::after {
+  content: 'Nova screenshot — placeholder';
+  position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);
+  font-family: var(--font-mono); font-size: 11px; color: var(--c-fg-on-dark-3);
+  letter-spacing: 0.06em;
+}
+.mock-frame--triage::after   { content: 'TRIAGE QUEUE · placeholder'; }
+.mock-frame--dispatch::after { content: 'NEEDS ATTENTION · placeholder'; }
+.mock-frame--pulse::after    { content: 'PULSE HUDDLE · placeholder'; }
+.mock-frame--portal::after   { content: 'CLIENT PORTAL · placeholder'; }
+.mock-frame--field::after    { content: 'FIELD OPS · placeholder'; }
+</style>
+
+<script src="js/site.js?v=1"></script>
 </body>
 </html>

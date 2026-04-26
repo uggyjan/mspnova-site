@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en" data-mn-root="../../">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Client Portal — White-label, branded as you · MSPNova</title>
+<meta name="description" content="A white-label React portal where your clients see exactly the tickets, SLAs, and CSAT data you want them to see. Branded as you. Hosted by us." />
+<link rel="canonical" href="https://mspnova.com/features/client-portal/" />
+<link rel="icon" type="image/svg+xml" href="../../assets/favicon.svg" />
+<meta name="theme-color" content="#0a1628" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../css/site.css?v=1" />
+
+<!-- TODO: paste Cloudflare Web Analytics <script> here -->
+</head>
+<body>
+<div data-mn-header></div>
+
+<section class="page-hero">
+  <div class="container">
+    <div class="breadcrumb"><a href="/">Home</a><span class="breadcrumb__sep">/</span><a href="/features/">Features</a><span class="breadcrumb__sep">/</span>Client Portal</div>
+    <span class="eyebrow eyebrow--accent">05 · Client Portal</span>
+    <h1 class="h-1">Your portal. <span class="accent">Their experience.</span></h1>
+    <p class="lede">A white-label React portal where your clients see exactly the tickets, SLAs, and CSAT data you choose to expose. Your logo. Your colors. Your domain. Hosted, maintained, and updated by us.</p>
+    <div class="hero__ctas">
+      <a class="btn btn-lg btn-primary btn-arrow" href="/contact/">Book a demo</a>
+      <a class="btn btn-lg btn-outline" href="#whats-in">What's inside</a>
+    </div>
+  </div>
+</section>
+
+<section class="section-sm bg-dark-2">
+  <div class="container">
+    <div class="grid grid-4" style="gap:32px;">
+      <div><div class="hero__stat-n">White-label</div><div class="hero__stat-l">Your brand, top to bottom</div></div>
+      <div><div class="hero__stat-n">SSO</div><div class="hero__stat-l">Microsoft 365, Google, SAML</div></div>
+      <div><div class="hero__stat-n">Per-client</div><div class="hero__stat-l">Custom domain, branding</div></div>
+      <div><div class="hero__stat-n">RBAC</div><div class="hero__stat-l">Role-based access controls</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- What's inside -->
+<section class="section bg-light" id="whats-in">
+  <div class="container">
+    <span class="eyebrow">Inside the portal</span>
+    <h2 class="h-2 mb-48">Six surfaces. All optional. All client-configurable.</h2>
+    <div class="grid-bordered grid-3">
+      <div>
+        <h4 class="h-4">Ticket history</h4>
+        <p class="muted" style="font-size:14px;">Open + closed tickets, filtered to the user or their org. Status, owner, last update, public comments only.</p>
+      </div>
+      <div>
+        <h4 class="h-4">New ticket form</h4>
+        <p class="muted" style="font-size:14px;">Configurable per-client form. Required fields, hidden fields, attachments, urgency capture. Auto-routed by Nova on submit.</p>
+      </div>
+      <div>
+        <h4 class="h-4">SLA dashboard</h4>
+        <p class="muted" style="font-size:14px;">Last-30-days response time, resolution time, SLA hit rate. Hide or show per contract type.</p>
+      </div>
+      <div>
+        <h4 class="h-4">CSAT widget</h4>
+        <p class="muted" style="font-size:14px;">Per-ticket satisfaction survey. Aggregate score visible to client owners. Trends over time.</p>
+      </div>
+      <div>
+        <h4 class="h-4">Asset register</h4>
+        <p class="muted" style="font-size:14px;">User-facing view of devices, M365 licenses, software entitlements. Pulls from CIPP + Autotask.</p>
+      </div>
+      <div>
+        <h4 class="h-4">Knowledge base</h4>
+        <p class="muted" style="font-size:14px;">Per-client KB articles. AI-suggested matches when users open new tickets. Deflect simple issues.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Branding -->
+<section class="bg-light">
+  <div class="container deepdive">
+    <div class="deepdive__grid">
+      <div>
+        <div class="deepdive__head">/ White-label</div>
+        <h3 class="h-2" style="font-size:36px;">Your logo. Your colors. Your domain.</h3>
+        <p class="muted" style="font-size:16px;line-height:1.6;">The portal lives at portal.<em>yourmsp</em>.com (or any subdomain you choose). Your wordmark in the header, your brand colors throughout, your support contact info in the footer. Clients never see "MSPNova" — they see you.</p>
+        <ul class="deepdive__bullets">
+          <li><span data-icon="check"></span><span>Custom domain with managed SSL</span></li>
+          <li><span data-icon="check"></span><span>Logo upload, primary + accent color tokens</span></li>
+          <li><span data-icon="check"></span><span>Header / footer text fully editable</span></li>
+          <li><span data-icon="check"></span><span>Optional per-client co-branding (your logo + their logo)</span></li>
+        </ul>
+      </div>
+      <div class="deepdive__shot mock-frame mock-frame--portal" aria-label="Branded portal"></div>
+    </div>
+  </div>
+</section>
+
+<!-- Auth -->
+<section class="bg-light">
+  <div class="container deepdive deepdive--reverse">
+    <div class="deepdive__grid">
+      <div>
+        <div class="deepdive__head">/ Authentication</div>
+        <h3 class="h-2" style="font-size:36px;">SSO that actually works on day one.</h3>
+        <p class="muted" style="font-size:16px;line-height:1.6;">Most clients use Microsoft 365. The portal supports M365 SSO out of the box — clients click "Sign in with Microsoft," get redirected, return authenticated. SAML and Google Workspace also supported. Local accounts available for orgs without SSO.</p>
+        <ul class="deepdive__bullets">
+          <li><span data-icon="check"></span><span>Microsoft 365 SSO (Entra ID)</span></li>
+          <li><span data-icon="check"></span><span>Google Workspace SSO</span></li>
+          <li><span data-icon="check"></span><span>SAML 2.0 for everything else</span></li>
+          <li><span data-icon="check"></span><span>RBAC: regular user, manager, billing, admin</span></li>
+        </ul>
+      </div>
+      <div class="deepdive__shot mock-frame mock-frame--auth" aria-label="SSO flow"></div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="section cta">
+  <svg class="cta__chev" viewBox="0 0 100 110" fill="#fff" aria-hidden="true">
+    <path d="M5 22 L40 55 L5 88 Z" opacity="0.25"/><path d="M25 22 L60 55 L25 88 Z" opacity="0.5"/><path d="M45 22 L80 55 L45 88 Z" opacity="0.8"/><path d="M65 22 L100 55 L65 88 Z" opacity="1"/>
+  </svg>
+  <div class="container">
+    <div class="cta__grid">
+      <div>
+        <h2 class="h-2" style="font-size:46px;color:#fff;">See it <span class="accent">branded as you</span> in 30 minutes.</h2>
+        <p style="font-size:17px;color:#c9d3dd;">Drop your logo and brand colors during the demo. We'll have a portal running with your branding before the call ends.</p>
+      </div>
+      <div class="cta__ctas">
+        <a class="btn btn-lg btn-primary btn-arrow" href="/contact/">Book a demo</a>
+        <a class="btn btn-lg btn-outline" href="/security/">Security details →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div data-mn-footer></div>
+<style>
+.mock-frame { background:linear-gradient(135deg,#1c3050 0%,#0a1628 100%); border-radius:var(--r-lg); border:1px solid var(--c-navy-3); box-shadow:var(--shadow-xl); position:relative; overflow:hidden; }
+.mock-frame::after { content:'placeholder'; position:absolute; left:50%; top:50%; transform:translate(-50%,-50%); font-family:var(--font-mono); font-size:11px; color:var(--c-fg-on-dark-3); letter-spacing:.06em; }
+.mock-frame--portal::after { content:'BRANDED PORTAL · placeholder'; }
+.mock-frame--auth::after { content:'SSO FLOW · placeholder'; }
+</style>
+<script src="../../js/site.js?v=1"></script>
+</body>
+</html>

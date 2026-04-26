@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en" data-mn-root="../../">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Needs Attention — One queue, ranked by urgency · MSPNova</title>
+<meta name="description" content="Composite scoring ranks every open ticket by SLA risk, age, scarcity, and skill match. The Pull Ticket flow gives techs their next best work — anti-cherry-picking is structural." />
+<link rel="canonical" href="https://mspnova.com/features/needs-attention/" />
+<link rel="icon" type="image/svg+xml" href="../../assets/favicon.svg" />
+<meta name="theme-color" content="#0a1628" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../css/site.css?v=1" />
+
+<!-- TODO: paste Cloudflare Web Analytics <script> here -->
+</head>
+<body>
+<div data-mn-header></div>
+
+<section class="page-hero">
+  <div class="container">
+    <div class="breadcrumb"><a href="/">Home</a><span class="breadcrumb__sep">/</span><a href="/features/">Features</a><span class="breadcrumb__sep">/</span>Needs Attention</div>
+    <span class="eyebrow eyebrow--accent">02 · Needs Attention</span>
+    <h1 class="h-1">One queue. <span class="accent">Ranked by urgency,</span><br/>not arrival time.</h1>
+    <p class="lede">Composite scoring weighs SLA risk, age, client tier, skill match, and tech scarcity to rank every open ticket. The Pull Ticket flow presents each engineer their next best work — anti-cherry-picking is structural, not policy. Each card explains why it needs attention right now.</p>
+    <div class="hero__ctas">
+      <a class="btn btn-lg btn-primary btn-arrow" href="/contact/">Book a demo</a>
+      <a class="btn btn-lg btn-outline" href="#scoring">How scoring works</a>
+    </div>
+  </div>
+</section>
+
+<section class="section-sm bg-dark-2">
+  <div class="container">
+    <div class="grid grid-4" style="gap:32px;">
+      <div><div class="hero__stat-n">12 min</div><div class="hero__stat-l">Triage SLA target</div></div>
+      <div><div class="hero__stat-n">94%</div><div class="hero__stat-l">SLA hit rate (avg)</div></div>
+      <div><div class="hero__stat-n">5 factors</div><div class="hero__stat-l">In each composite score</div></div>
+      <div><div class="hero__stat-n">1 click</div><div class="hero__stat-l">From card → action</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- Composite scoring -->
+<section class="section bg-light" id="scoring">
+  <div class="container">
+    <span class="eyebrow">Composite scoring</span>
+    <h2 class="h-2 mb-48">Five factors. One score. No gut calls.</h2>
+    <div class="grid-bordered grid-3">
+      <div>
+        <h4 class="h-4">SLA risk</h4>
+        <p class="muted" style="font-size:14px;">Time-to-breach weighted exponentially as the deadline closes. A ticket with 30 min on the clock outranks one with 4 hours, even if it came in later.</p>
+      </div>
+      <div>
+        <h4 class="h-4">Client tier</h4>
+        <p class="muted" style="font-size:14px;">Tier 1 clients (managed services contract, agreed response times) get a multiplier. Tier 3 (T&amp;M, ad hoc) sits behind. Tunable per contract.</p>
+      </div>
+      <div>
+        <h4 class="h-4">Age</h4>
+        <p class="muted" style="font-size:14px;">Tickets older than 24 hours that aren't waiting on the client get an aging boost — small at first, growing daily.</p>
+      </div>
+      <div>
+        <h4 class="h-4">Skill match</h4>
+        <p class="muted" style="font-size:14px;">Each ticket carries a primary skill tag (M365, networking, on-site, etc.). The Pull Ticket flow scores against the requesting tech's skill profile.</p>
+      </div>
+      <div>
+        <h4 class="h-4">Scarcity</h4>
+        <p class="muted" style="font-size:14px;">If only one tech can handle a ticket type today (sole on-call, only certified person), Nova surfaces it before broader-skill tickets queue up.</p>
+      </div>
+      <div>
+        <h4 class="h-4">Override</h4>
+        <p class="muted" style="font-size:14px;">Dispatcher can pin any ticket to the top of the queue — VIP issue, internal escalation, owner ask. Pinned tickets show a manual flag.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Pull Ticket -->
+<section class="bg-light">
+  <div class="container deepdive">
+    <div class="deepdive__grid">
+      <div>
+        <div class="deepdive__head">/ Pull Ticket</div>
+        <h3 class="h-2" style="font-size:36px;">Techs ask for work. Nova picks one.</h3>
+        <p class="muted" style="font-size:16px;line-height:1.6;">Engineers don't browse a queue and pick what looks easy. They click "Pull next ticket." Nova considers their skills, current load, and the queue's composite scores, and assigns the single best fit. They can decline (with a reason) — that signal trains the model too.</p>
+        <ul class="deepdive__bullets">
+          <li><span data-icon="check"></span><span>Anti-cherry-picking by design — no list browsing</span></li>
+          <li><span data-icon="check"></span><span>Decline w/ reason: "out of skill," "context mismatch," "need on-site"</span></li>
+          <li><span data-icon="check"></span><span>Rebalance algorithm prevents one tech getting all the easy tickets</span></li>
+          <li><span data-icon="check"></span><span>Optional manual mode for senior techs / leads</span></li>
+        </ul>
+      </div>
+      <div class="deepdive__shot mock-frame mock-frame--pull" aria-label="Pull Ticket flow"></div>
+    </div>
+  </div>
+</section>
+
+<!-- Holding lanes -->
+<section class="bg-light">
+  <div class="container deepdive deepdive--reverse">
+    <div class="deepdive__grid">
+      <div>
+        <div class="deepdive__head">/ Holding lanes</div>
+        <h3 class="h-2" style="font-size:36px;">Waiting on the client doesn't mean lost.</h3>
+        <p class="muted" style="font-size:16px;line-height:1.6;">Tickets in "waiting on customer" pause SLA but stay tracked. Nova surfaces them when the client replies — or when they've been silent past the chase threshold. No more tickets falling into the void of someone else's inbox.</p>
+        <ul class="deepdive__bullets">
+          <li><span data-icon="check"></span><span>Pause SLA when status flips to waiting</span></li>
+          <li><span data-icon="check"></span><span>Auto-resurface when client replies (Outlook integration)</span></li>
+          <li><span data-icon="check"></span><span>Stale-chase alert at 3, 7, 14 days (configurable)</span></li>
+          <li><span data-icon="check"></span><span>Auto-close suggestions for clearly resolved tickets</span></li>
+        </ul>
+      </div>
+      <div class="deepdive__shot mock-frame mock-frame--holding" aria-label="Holding lanes"></div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="section cta">
+  <svg class="cta__chev" viewBox="0 0 100 110" fill="#fff" aria-hidden="true">
+    <path d="M5 22 L40 55 L5 88 Z" opacity="0.25"/><path d="M25 22 L60 55 L25 88 Z" opacity="0.5"/><path d="M45 22 L80 55 L45 88 Z" opacity="0.8"/><path d="M65 22 L100 55 L65 88 Z" opacity="1"/>
+  </svg>
+  <div class="container">
+    <div class="cta__grid">
+      <div>
+        <h2 class="h-2" style="font-size:46px;color:#fff;">Watch your dispatcher <span class="accent">stop drowning.</span></h2>
+        <p style="font-size:17px;color:#c9d3dd;">30 minutes. Bring your queue. We'll show you what a ranked list looks like and what happens when techs Pull Ticket.</p>
+      </div>
+      <div class="cta__ctas">
+        <a class="btn btn-lg btn-primary btn-arrow" href="/contact/">Book a demo</a>
+        <a class="btn btn-lg btn-outline" href="/features/pulse/">See Pulse next →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div data-mn-footer></div>
+<style>
+.mock-frame { background:linear-gradient(135deg,#1c3050 0%,#0a1628 100%); border-radius:var(--r-lg); border:1px solid var(--c-navy-3); box-shadow:var(--shadow-xl); position:relative; overflow:hidden; }
+.mock-frame::after { content:'NEEDS ATTENTION · placeholder'; position:absolute; left:50%; top:50%; transform:translate(-50%,-50%); font-family:var(--font-mono); font-size:11px; color:var(--c-fg-on-dark-3); letter-spacing:.06em; }
+.mock-frame--pull::after { content:'PULL TICKET FLOW · placeholder'; }
+.mock-frame--holding::after { content:'HOLDING LANES · placeholder'; }
+</style>
+<script src="../../js/site.js?v=1"></script>
+</body>
+</html>

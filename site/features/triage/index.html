@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en" data-mn-root="../../">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>AI Triage — Two-pass classification, &lt;30s per ticket · MSPNova</title>
+<meta name="description" content="Nova triages every Autotask ticket in under 30 seconds using a two-pass AI flow. Sonnet first, Opus to verify. Auto-accept high-confidence calls, dispatcher reviews the rest." />
+<link rel="canonical" href="https://mspnova.com/features/triage/" />
+<link rel="icon" type="image/svg+xml" href="../../assets/favicon.svg" />
+<meta name="theme-color" content="#0a1628" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../css/site.css?v=1" />
+
+<!-- TODO: paste Cloudflare Web Analytics <script> here -->
+</head>
+<body>
+<div data-mn-header></div>
+
+<section class="page-hero">
+  <div class="container">
+    <div class="breadcrumb"><a href="/">Home</a><span class="breadcrumb__sep">/</span><a href="/features/">Features</a><span class="breadcrumb__sep">/</span>AI Triage</div>
+    <span class="eyebrow eyebrow--accent">01 · AI Triage</span>
+    <h1 class="h-1">From ticket created<br/>to dispatched, <span class="accent">in 30 seconds.</span></h1>
+    <p class="lede">Nova polls Autotask every 30 seconds. New tickets get classified across seven dimensions — priority, issue type, queue, category, sub-category, work type, and source. High-confidence calls auto-accept. Everything else lands in a clean review queue with the AI's reasoning attached.</p>
+    <div class="hero__ctas">
+      <a class="btn btn-lg btn-primary btn-arrow" href="/contact/">See it on your tickets</a>
+      <a class="btn btn-lg btn-outline" href="#how">How it works</a>
+    </div>
+  </div>
+</section>
+
+<!-- Stats strip -->
+<section class="section-sm bg-dark-2">
+  <div class="container">
+    <div class="grid grid-4" style="gap:32px;">
+      <div><div class="hero__stat-n">&lt;30s</div><div class="hero__stat-l">Time to triage</div></div>
+      <div><div class="hero__stat-n">68.8%</div><div class="hero__stat-l">Production clean rate</div></div>
+      <div><div class="hero__stat-n">96 rules</div><div class="hero__stat-l">Learned + pattern</div></div>
+      <div><div class="hero__stat-n">$0.003</div><div class="hero__stat-l">Per ticket triaged</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- How it works -->
+<section class="section bg-light" id="how">
+  <div class="container">
+    <span class="eyebrow">How it works</span>
+    <h2 class="h-2 mb-48">Two AI passes. One dispatcher in the loop.</h2>
+    <div class="grid-bordered grid-3">
+      <div>
+        <div class="card__num" style="margin-bottom:12px;">PASS 01</div>
+        <h3 class="h-4">Sonnet classifies fast</h3>
+        <p class="muted" style="font-size:14px;">Claude Sonnet reads ticket subject, body, and contact context. Returns priority, issue type, queue, category, sub-category, work type, source — plus a confidence score per field.</p>
+      </div>
+      <div>
+        <div class="card__num" style="margin-bottom:12px;">PASS 02</div>
+        <h3 class="h-4">Opus verifies low-confidence</h3>
+        <p class="muted" style="font-size:14px;">Anything below the auto-accept threshold gets a second pass with Claude Opus. Fewer false dispatches, better edge-case handling, conditional cost.</p>
+      </div>
+      <div>
+        <div class="card__num" style="margin-bottom:12px;">REVIEW</div>
+        <h3 class="h-4">Dispatcher decides</h3>
+        <p class="muted" style="font-size:14px;">Above 85% confidence: auto-accept. Below: lands in review with reasoning. One click to approve or override. Every override trains the next pass.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Deep dive 1 -->
+<section class="bg-light">
+  <div class="container deepdive">
+    <div class="deepdive__grid">
+      <div>
+        <div class="deepdive__head">/ Rules engine</div>
+        <h3 class="h-2" style="font-size:36px;">96 rules and counting. Every override teaches the model.</h3>
+        <p class="muted" style="font-size:16px;line-height:1.6;">Nova starts with 18 pattern rules — common ticket shapes (password resets, printer jams, M365 license adds). As your dispatcher overrides AI calls, those become learned rules. After 90 days you typically have 70+ learned rules tuned to your client base.</p>
+        <ul class="deepdive__bullets">
+          <li><span data-icon="check"></span><span><strong>78 learned rules</strong> from production overrides</span></li>
+          <li><span data-icon="check"></span><span><strong>18 pattern rules</strong> shipped out of the box</span></li>
+          <li><span data-icon="check"></span><span>Rules sync across all your queues — one client teaches all</span></li>
+          <li><span data-icon="check"></span><span>Inspect, edit, or pause any rule from the admin console</span></li>
+        </ul>
+      </div>
+      <div class="deepdive__shot mock-frame mock-frame--rules" aria-label="Rules console mockup"></div>
+    </div>
+  </div>
+</section>
+
+<!-- Deep dive 2 -->
+<section class="bg-light">
+  <div class="container deepdive deepdive--reverse">
+    <div class="deepdive__grid">
+      <div>
+        <div class="deepdive__head">/ Confidence + thresholds</div>
+        <h3 class="h-2" style="font-size:36px;">Per-queue auto-accept thresholds. You stay in control.</h3>
+        <p class="muted" style="font-size:16px;line-height:1.6;">High-volume routine queues (password resets, license requests) auto-accept at 85% confidence. Sensitive queues (security incidents, P1s) stay at 100% — every call goes through dispatch review. Tune any threshold per queue from the admin panel.</p>
+        <ul class="deepdive__bullets">
+          <li><span data-icon="check"></span><span>Auto-accept threshold per queue, per client tier</span></li>
+          <li><span data-icon="check"></span><span>Reasoning string on every classification</span></li>
+          <li><span data-icon="check"></span><span>Audit log: who accepted, who overrode, when, why</span></li>
+          <li><span data-icon="check"></span><span>Daily clean-rate report posted to Teams</span></li>
+        </ul>
+      </div>
+      <div class="deepdive__shot mock-frame mock-frame--threshold" aria-label="Threshold tuning"></div>
+    </div>
+  </div>
+</section>
+
+<!-- The numbers -->
+<section class="section bg-mute">
+  <div class="container">
+    <div class="grid grid-2" style="align-items:start;gap:64px;">
+      <div>
+        <span class="eyebrow">In production</span>
+        <h2 class="h-2">The clean rate climbs every week.</h2>
+        <p class="muted" style="font-size:16px;line-height:1.6;">When we shipped triage at our parent MSP (Techital), AI agreed with the dispatcher on 47% of tickets. Three months later: 68.8%. The override loop is the magic — every time your dispatcher corrects the AI, the next pass gets smarter.</p>
+      </div>
+      <div class="card">
+        <h4 class="h-4">Triage performance, last 90 days</h4>
+        <div style="display:flex;flex-direction:column;gap:14px;margin-top:16px;">
+          <div style="display:flex;justify-content:space-between;align-items:baseline;border-bottom:1px solid var(--c-border-1);padding-bottom:10px;">
+            <span class="muted" style="font-size:14px;">Day 1 clean rate</span>
+            <span class="mono" style="font-weight:700;">47.2%</span>
+          </div>
+          <div style="display:flex;justify-content:space-between;align-items:baseline;border-bottom:1px solid var(--c-border-1);padding-bottom:10px;">
+            <span class="muted" style="font-size:14px;">Day 90 clean rate</span>
+            <span class="mono" style="font-weight:700;color:var(--c-accent);">68.8%</span>
+          </div>
+          <div style="display:flex;justify-content:space-between;align-items:baseline;border-bottom:1px solid var(--c-border-1);padding-bottom:10px;">
+            <span class="muted" style="font-size:14px;">Avg seconds to classify</span>
+            <span class="mono" style="font-weight:700;">22s</span>
+          </div>
+          <div style="display:flex;justify-content:space-between;align-items:baseline;border-bottom:1px solid var(--c-border-1);padding-bottom:10px;">
+            <span class="muted" style="font-size:14px;">Tickets reviewed by dispatch</span>
+            <span class="mono" style="font-weight:700;">31.2%</span>
+          </div>
+          <div style="display:flex;justify-content:space-between;align-items:baseline;">
+            <span class="muted" style="font-size:14px;">Hours saved per week</span>
+            <span class="mono" style="font-weight:700;color:var(--c-accent);">~17</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="section cta">
+  <svg class="cta__chev" viewBox="0 0 100 110" fill="#fff" aria-hidden="true">
+    <path d="M5 22 L40 55 L5 88 Z" opacity="0.25"/><path d="M25 22 L60 55 L25 88 Z" opacity="0.5"/><path d="M45 22 L80 55 L45 88 Z" opacity="0.8"/><path d="M65 22 L100 55 L65 88 Z" opacity="1"/>
+  </svg>
+  <div class="container">
+    <div class="cta__grid">
+      <div>
+        <h2 class="h-2" style="font-size:46px;color:#fff;">Bring tickets. We'll <span class="accent">classify them live.</span></h2>
+        <p style="font-size:17px;color:#c9d3dd;">Send a CSV of last week's tickets. We'll run them through Nova on a call and show you the calls — clean rate, edge cases, the reasoning behind each classification.</p>
+      </div>
+      <div class="cta__ctas">
+        <a class="btn btn-lg btn-primary btn-arrow" href="/contact/">Book a triage demo</a>
+        <a class="btn btn-lg btn-outline" href="/features/needs-attention/">See dispatch flow →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div data-mn-footer></div>
+<style>
+.mock-frame { background:linear-gradient(135deg,#1c3050 0%,#0a1628 100%); border-radius:var(--r-lg); border:1px solid var(--c-navy-3); box-shadow:var(--shadow-xl); position:relative; overflow:hidden; }
+.mock-frame::after { content:'TRIAGE QUEUE · placeholder'; position:absolute; left:50%; top:50%; transform:translate(-50%,-50%); font-family:var(--font-mono); font-size:11px; color:var(--c-fg-on-dark-3); letter-spacing:.06em; }
+.mock-frame--rules::after { content:'RULES CONSOLE · placeholder'; }
+.mock-frame--threshold::after { content:'THRESHOLD CONFIG · placeholder'; }
+</style>
+<script src="../../js/site.js?v=1"></script>
+</body>
+</html>

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="MSPNova favicon">
+  <rect width="64" height="64" rx="12" fill="#0a1628"></rect>
+  <g transform="translate(11, 9)">
+    <path d="M2 8.8 L16.08 22 L2 35.2 Z" fill="#90D7EC" opacity="0.25"></path>
+    <path d="M10 8.8 L24.08 22 L10 35.2 Z" fill="#90D7EC" opacity="0.4333"></path>
+    <path d="M18 8.8 L32.08 22 L18 35.2 Z" fill="#90D7EC" opacity="0.6167"></path>
+    <path d="M26 8.8 L40.08 22 L26 35.2 Z" fill="#e77457"></path>
+  </g>
+</svg>

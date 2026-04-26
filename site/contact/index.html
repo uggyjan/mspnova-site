@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en" data-mn-root="../">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Contact — Talk to a working dispatcher · MSPNova</title>
+<meta name="description" content="Book a 30-minute demo with someone who runs Nova every day. No SDR gauntlet, no qualification calls. Just dispatch in motion." />
+<link rel="canonical" href="https://mspnova.com/contact/" />
+<link rel="icon" type="image/svg+xml" href="../assets/favicon.svg" />
+<meta name="theme-color" content="#0a1628" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/site.css?v=1" />
+
+<!-- TODO: paste Cloudflare Web Analytics <script> here -->
+</head>
+<body>
+<div data-mn-header></div>
+
+<section class="page-hero">
+  <div class="container">
+    <div class="breadcrumb"><a href="/">Home</a><span class="breadcrumb__sep">/</span>Contact</div>
+    <span class="eyebrow">Contact</span>
+    <h1 class="h-1">Talk to <span class="accent">a working dispatcher.</span></h1>
+    <p class="lede">No SDR gauntlet. No qualification call. Tell us about your current dispatch setup, and we'll show you Nova running on tickets that look like yours.</p>
+  </div>
+</section>
+
+<section class="section bg-light">
+  <div class="container">
+    <div class="grid" style="grid-template-columns:1.2fr 1fr;gap:64px;align-items:start;">
+      <!-- Form -->
+      <!-- TODO: replace with real form ID -->
+      <form class="card" style="padding:36px;" name="demo-request" method="POST" action="https://formspree.io/f/your-form-id" id="contactForm">
+        <input type="hidden" name="_subject" value="MSPNova demo request">
+        <input type="hidden" name="_replyto_subject" value="Thanks for booking a demo with MSPNova">
+        <h3 class="h-3">Book a 30-min demo</h3>
+        <p class="muted" style="font-size:14px;margin:0 0 24px;">We'll reply within one business day with three time slots. Demos run on Google Meet or Teams — your choice.</p>
+        <div class="form">
+          <div class="form__row">
+            <div class="field">
+              <label class="field__label" for="firstName">First name</label>
+              <input type="text" id="firstName" name="firstName" required>
+            </div>
+            <div class="field">
+              <label class="field__label" for="lastName">Last name</label>
+              <input type="text" id="lastName" name="lastName" required>
+            </div>
+          </div>
+          <div class="field">
+            <label class="field__label" for="email">Work email</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          <div class="form__row">
+            <div class="field">
+              <label class="field__label" for="company">Company / MSP name</label>
+              <input type="text" id="company" name="company" required>
+            </div>
+            <div class="field">
+              <label class="field__label" for="role">Your role</label>
+              <select id="role" name="role">
+                <option>Owner / CEO</option>
+                <option>COO / VP Operations</option>
+                <option>Service Manager</option>
+                <option>Dispatcher</option>
+                <option>Senior Engineer</option>
+                <option>Other</option>
+              </select>
+            </div>
+          </div>
+          <div class="form__row">
+            <div class="field">
+              <label class="field__label" for="psa">Which PSA?</label>
+              <select id="psa" name="psa">
+                <option>Autotask</option>
+                <option>ConnectWise Manage</option>
+                <option>HaloPSA</option>
+                <option>Kaseya BMS</option>
+                <option>Other / multiple</option>
+              </select>
+            </div>
+            <div class="field">
+              <label class="field__label" for="size">Team size</label>
+              <select id="size" name="size">
+                <option>1–4 engineers</option>
+                <option>5–10 engineers</option>
+                <option>11–25 engineers</option>
+                <option>26–50 engineers</option>
+                <option>50+ engineers</option>
+              </select>
+            </div>
+          </div>
+          <div class="field">
+            <label class="field__label" for="biggestPain">What's slowing your dispatch down today?</label>
+            <textarea id="biggestPain" name="biggestPain" placeholder="One sentence is fine — the dispatcher is overwhelmed, SLA breaches, manual triage, etc."></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-lg btn-arrow" style="margin-top:8px;justify-content:center;">Send it</button>
+          <div style="font-size:12px;color:var(--c-fg-2);text-align:center;margin-top:8px;">By submitting, you agree to our <a href="/privacy/" class="accent">privacy policy</a>.</div>
+        </div>
+      </form>
+
+      <!-- Side info -->
+      <div>
+        <div class="card" style="margin-bottom:24px;">
+          <span class="eyebrow">Faster ways</span>
+          <h4 class="h-4">Skip the form.</h4>
+          <div style="display:flex;flex-direction:column;gap:12px;margin-top:16px;font-size:14px;">
+            <div style="display:flex;gap:10px;align-items:center;">
+              <span data-icon="message" style="color:var(--c-accent);"></span>
+              <a href="mailto:hello@mspnova.com" class="accent">hello@mspnova.com</a>
+            </div>
+            <div style="display:flex;gap:10px;align-items:center;">
+              <span data-icon="phone" style="color:var(--c-accent);"></span>
+              <!-- TODO: confirm real phone --><a href="tel:+18185551234" class="accent">+1 (818) 555-1234</a>
+            </div>
+            <div style="display:flex;gap:10px;align-items:center;">
+              <span data-icon="target" style="color:var(--c-accent);"></span>
+              <span class="muted">Glendale, CA · We respond M–F, 8 AM–6 PM PT</span>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <span class="eyebrow">What to bring</span>
+          <h4 class="h-4">Make the demo count.</h4>
+          <ul style="margin:16px 0 0;padding:0;list-style:none;display:flex;flex-direction:column;gap:10px;font-size:14px;">
+            <li style="display:flex;gap:10px;"><span data-icon="check" style="color:var(--c-accent);"></span><span>A CSV of last week's tickets (we'll classify them live)</span></li>
+            <li style="display:flex;gap:10px;"><span data-icon="check" style="color:var(--c-accent);"></span><span>Your current SLA targets per contract type</span></li>
+            <li style="display:flex;gap:10px;"><span data-icon="check" style="color:var(--c-accent);"></span><span>An honest answer to "what's the dispatch bottleneck?"</span></li>
+            <li style="display:flex;gap:10px;"><span data-icon="check" style="color:var(--c-accent);"></span><span>30 minutes — that's enough</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Office -->
+<section class="section bg-mute">
+  <div class="container">
+    <div class="grid grid-2" style="align-items:center;gap:64px;">
+      <div>
+        <span class="eyebrow">Where we work</span>
+        <h2 class="h-2" style="font-size:36px;">Glendale, California.</h2>
+        <p class="muted" style="font-size:16px;line-height:1.6;">Nova lives in the same building as Techital's dispatch floor. If you're in the LA area and want to see Nova run on real tickets, ping us — we'll buy you a coffee and walk you through the floor.</p>
+        <div style="margin-top:16px;font-size:14px;line-height:1.7;">
+          <!-- TODO: confirm real address -->
+          <strong>MSPNova / Techital</strong><br/>
+          230 N Brand Blvd, Suite 700<br/>
+          Glendale, CA 91203<br/>
+          United States
+        </div>
+      </div>
+      <div class="card" style="aspect-ratio:4/3;background:linear-gradient(135deg,#1c3050 0%,#0a1628 100%);border-color:var(--c-navy-3);display:flex;align-items:center;justify-content:center;color:var(--c-fg-on-dark-3);font-family:var(--font-mono);font-size:12px;letter-spacing:.06em;">
+        OFFICE PHOTO · placeholder
+      </div>
+    </div>
+  </div>
+</section>
+
+<div data-mn-footer></div>
+
+<script>
+// Light client-side validation + thank-you handoff.
+// Replace formspree action with your endpoint, or wire to WP Forms inside Elementor.
+(function() {
+  var form = document.getElementById('contactForm');
+  if (!form) return;
+  form.addEventListener('submit', function(e) {
+    // Let it submit naturally to the endpoint, but offer a quick visual confirm:
+    var btn = form.querySelector('button[type="submit"]');
+    if (btn) { btn.disabled = true; btn.textContent = 'Sending…'; }
+  });
+})();
+</script>
+<script src="../js/site.js?v=1"></script>
+</body>
+</html>
