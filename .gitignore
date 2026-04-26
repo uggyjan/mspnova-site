@@ -2,3 +2,7 @@ logs/
 *.log
 .DS_Store
 .env*
+
+# Regenerated on each deploy by ~/bin/regen-sitemap.sh
+site/sitemap.xml
+site/robots.txt
