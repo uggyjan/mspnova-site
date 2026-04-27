@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en" data-mn-root="../../">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Call Linking — Every call matched to a ticket · MSPNova</title>
+<meta name="description" content="GoTo Connect calls auto-matched to Autotask companies, contacts, and tickets. AI summaries, live call state on the Status Board, one-click ticket linking from a sortable inbox." />
+<link rel="canonical" href="https://mspnova.com/features/call-linking/" />
+<link rel="icon" type="image/svg+xml" href="../../assets/favicon.svg" />
+<meta name="theme-color" content="#0a1628" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../css/site.css?v=1" />
+</head>
+<body>
+<div data-mn-header></div>
+
+<section class="page-hero">
+  <div class="container">
+    <div class="breadcrumb"><a href="/">Home</a><span class="breadcrumb__sep">/</span><a href="/features/">Features</a><span class="breadcrumb__sep">/</span>Call Linking</div>
+    <span class="eyebrow eyebrow--accent">17 · Phone Integration</span>
+    <h1 class="h-1">Every call. <span class="accent">Matched to a ticket,</span><br/>before the tech finishes typing.</h1>
+    <p class="lede">GoTo Connect calls sync into Nova with the full transcript, AI summary, and a ranked list of candidate tickets — so the tech links the right one in one click instead of digging through Autotask. Live call state shows up on the Status Board the moment the phone rings.</p>
+    <div class="hero__ctas">
+      <a class="btn btn-lg btn-primary btn-arrow" href="/contact/">Book a demo</a>
+      <a class="btn btn-lg btn-outline" href="#how-it-works">How matching works</a>
+    </div>
+  </div>
+</section>
+
+<section style="padding:64px 0 0;">
+  <div class="container">
+    <img src="../../assets/mocks/call-linking.svg" alt="Call Linking inbox — call list on the left, transcript and AI summary with proposed ticket matches on the right" style="display:block; width:100%; height:auto; border-radius:var(--r-lg); border:1px solid var(--c-navy-3); box-shadow:var(--shadow-xl); "/>
+  </div>
+</section>
+
+<!-- The problem -->
+<section class="section">
+  <div class="container">
+    <div style="max-width:780px;">
+      <span class="eyebrow">The problem</span>
+      <h2 class="h-2 mb-24">An hour of phone work, ten minutes of ticket admin.</h2>
+      <p class="muted" style="font-size:17px;line-height:1.6;">Calls come in faster than tickets do. A tech ends a 12-minute support call, then opens Autotask, searches for the company, opens five tickets to find the right one, copy-pastes a summary they wrote in their head, fixes the time entry, and moves on. Multiply by 30 calls a day across the team and you've burned an FTE on data entry that should be automatic.</p>
+      <p class="muted" style="font-size:17px;line-height:1.6;margin-top:16px;">Worse: half those calls don't get linked at all. The ticket reads <em>"called user, resolved"</em> with no transcript, no recording reference, nothing the next tech (or the QBR) can audit.</p>
+    </div>
+  </div>
+</section>
+
+<!-- How it works -->
+<section class="section bg-mute" id="how-it-works">
+  <div class="container">
+    <span class="eyebrow">How matching works</span>
+    <h2 class="h-2 mb-48">From hangup to linked ticket in under a minute.</h2>
+    <div class="grid grid-4">
+      <div class="card">
+        <div class="mono" style="font-size:11px;color:var(--c-accent);font-weight:700;letter-spacing:.08em;">/ STEP 1</div>
+        <h4 class="h-4" style="margin-top:8px;">Sync from GoTo</h4>
+        <p class="muted" style="font-size:14px;line-height:1.55;">Nova pulls call records from GoTo Connect every few minutes — direction, parties, duration, recording URL. No browser plugin, no softphone replacement.</p>
+      </div>
+      <div class="card">
+        <div class="mono" style="font-size:11px;color:var(--c-accent);font-weight:700;letter-spacing:.08em;">/ STEP 2</div>
+        <h4 class="h-4" style="margin-top:8px;">Resolve company &amp; contact</h4>
+        <p class="muted" style="font-size:14px;line-height:1.55;">Caller-ID → Autotask contact lookup. Unknown numbers get logged with a "first time we've seen this caller" flag so dispatch can decide whether to add them.</p>
+      </div>
+      <div class="card">
+        <div class="mono" style="font-size:11px;color:var(--c-accent);font-weight:700;letter-spacing:.08em;">/ STEP 3</div>
+        <h4 class="h-4" style="margin-top:8px;">Transcribe &amp; summarize</h4>
+        <p class="muted" style="font-size:14px;line-height:1.55;">Call audio is transcribed and an AI summary is written in plain English. Sentiment (positive / neutral / negative) is auto-tagged. Topic tags surface across the inbox.</p>
+      </div>
+      <div class="card">
+        <div class="mono" style="font-size:11px;color:var(--c-accent);font-weight:700;letter-spacing:.08em;">/ STEP 4</div>
+        <h4 class="h-4" style="margin-top:8px;">Propose ticket matches</h4>
+        <p class="muted" style="font-size:14px;line-height:1.55;">Nova ranks candidate tickets by content similarity, time proximity, company match, and active assignment. Top three appear next to the call with a "Link" button. Tech clicks once.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- What gets matched -->
+<section class="section">
+  <div class="container">
+    <span class="eyebrow">The matching signal</span>
+    <h2 class="h-2 mb-24">Four ranking signals, weighted together.</h2>
+    <p class="lede" style="max-width:680px;">Every candidate ticket gets a score 0–100. Anything above 30% surfaces as a suggestion. The dispatcher and tech can override; overrides feed the learning loop.</p>
+
+    <div class="deepdive__rules" style="margin-top:48px;display:grid;grid-template-columns:repeat(2,1fr);gap:24px;">
+      <div class="card" style="padding:28px;">
+        <div class="mono" style="font-size:11px;color:var(--c-accent);font-weight:700;">CONTENT SIMILARITY</div>
+        <h4 class="h-4" style="margin:8px 0;">What was said vs. what's in the ticket</h4>
+        <p class="muted" style="font-size:14px;line-height:1.6;">Embeddings compare the call summary against open ticket subjects, descriptions, and recent notes for the same company. Strong content match alone can push a ticket to 70%+.</p>
+      </div>
+      <div class="card" style="padding:28px;">
+        <div class="mono" style="font-size:11px;color:var(--c-accent);font-weight:700;">TIME PROXIMITY</div>
+        <h4 class="h-4" style="margin:8px 0;">Tickets created or updated within the call window</h4>
+        <p class="muted" style="font-size:14px;line-height:1.6;">A ticket logged 4 minutes after the call ended scores higher than one from yesterday. Combined with company match, time alone is often enough.</p>
+      </div>
+      <div class="card" style="padding:28px;">
+        <div class="mono" style="font-size:11px;color:var(--c-accent);font-weight:700;">COMPANY MATCH</div>
+        <h4 class="h-4" style="margin:8px 0;">Caller-ID resolved to an Autotask company</h4>
+        <p class="muted" style="font-size:14px;line-height:1.6;">Tickets for the same company always rank above unrelated ones. When caller-ID misses, Nova falls back to the assigned tech's open work for the time window.</p>
+      </div>
+      <div class="card" style="padding:28px;">
+        <div class="mono" style="font-size:11px;color:var(--c-accent);font-weight:700;">ACTIVE ASSIGNMENT</div>
+        <h4 class="h-4" style="margin:8px 0;">Who's the tech actually working with</h4>
+        <p class="muted" style="font-size:14px;line-height:1.6;">A ticket assigned to the tech on the call ranks above the same ticket sitting in someone else's queue. Stops cross-talk between dispatchers.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Live state -->
+<section class="section bg-dark">
+  <div class="container">
+    <span class="eyebrow eyebrow--on-dark">Live call state</span>
+    <h2 class="h-2 mb-24" style="color:#fff;">The Status Board lights up <span class="accent">when the phone rings.</span></h2>
+    <p class="lede" style="color:var(--c-fg-on-dark-2);max-width:680px;">GoTo Connect's webhooks push presence into Nova in real time. The dispatch wall shows who's on a call, with whom, and for how long — without anyone touching their status.</p>
+
+    <ul class="deepdive__bullets" style="margin-top:32px;color:var(--c-fg-on-dark-1);">
+      <li><span data-icon="check"></span><span>Inbound ringing → Status Board flips that tech to "on call (incoming)" with caller name + company</span></li>
+      <li><span data-icon="check"></span><span>Outbound dial → "on call (outgoing)" with the dialed contact resolved against Autotask</span></li>
+      <li><span data-icon="check"></span><span>Call duration ticker visible to dispatch — long calls (&gt;20 min) flag for follow-up</span></li>
+      <li><span data-icon="check"></span><span>Hung up → Nova waits 60s, then runs the linker and posts a Teams DM with the proposed ticket</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- Inbox features -->
+<section class="section bg-mute">
+  <div class="container">
+    <span class="eyebrow">The call inbox</span>
+    <h2 class="h-2 mb-48">A second queue, just for phone work.</h2>
+    <div class="grid grid-3">
+      <div class="card">
+        <h4 class="h-4">Search the transcripts, not just metadata</h4>
+        <p class="muted" style="font-size:14px;line-height:1.6;">Find every call that mentioned "Outlook profile" in the last 30 days. The body is indexed, not just caller name and date.</p>
+      </div>
+      <div class="card">
+        <h4 class="h-4">Filter by sentiment, direction, sync state</h4>
+        <p class="muted" style="font-size:14px;line-height:1.6;">Show me unlinked inbound calls from this week with negative sentiment — that's the QBR-prep view in one filter.</p>
+      </div>
+      <div class="card">
+        <h4 class="h-4">Topic tags applied automatically</h4>
+        <p class="muted" style="font-size:14px;line-height:1.6;">Printer connectivity, password reset, M365 license, vendor escalation. Tags surface volume trends that the ticket subject line never captures.</p>
+      </div>
+      <div class="card">
+        <h4 class="h-4">Recording &amp; transcript open in GoTo</h4>
+        <p class="muted" style="font-size:14px;line-height:1.6;">One-click jump to the full GoTo Connect record. Audio and transcript stay where they live; Nova just owns the linking layer.</p>
+      </div>
+      <div class="card">
+        <h4 class="h-4">Purge transcript / delete record</h4>
+        <p class="muted" style="font-size:14px;line-height:1.6;">Per-call privacy controls for sensitive calls. Both actions are audited; admin role required.</p>
+      </div>
+      <div class="card">
+        <h4 class="h-4">Manual ticket search fallback</h4>
+        <p class="muted" style="font-size:14px;line-height:1.6;">When the proposed matches are wrong, search by ticket number, title, or company. The match becomes training data for next time.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section">
+  <div class="container">
+    <span class="eyebrow">FAQ</span>
+    <h2 class="h-2 mb-48">Common questions.</h2>
+    <div class="grid grid-2" style="gap:32px;">
+      <div>
+        <h4 class="h-4">Do we need to switch our phone system?</h4>
+        <p class="muted" style="line-height:1.65;">No. GoTo Connect is the supported provider on day one. Microsoft Teams Phone is on the roadmap. If you're on RingCentral, Zoom Phone, or Dialpad — tell us; we add providers based on customer ask.</p>
+      </div>
+      <div>
+        <h4 class="h-4">What about HIPAA / sensitive call content?</h4>
+        <p class="muted" style="line-height:1.65;">Recordings stay in GoTo. Nova stores the transcript and summary; both can be purged per-call or retention-capped per tenant. Anthropic's enterprise terms (zero retention) cover the AI summarization.</p>
+      </div>
+      <div>
+        <h4 class="h-4">How accurate is the auto-matching?</h4>
+        <p class="muted" style="line-height:1.65;">Roughly 80% of inbound calls land on the correct ticket as the top suggestion at typical MSPs we've measured. Time-proximity-only matches are flagged so the tech knows the system isn't certain.</p>
+      </div>
+      <div>
+        <h4 class="h-4">Can we hide certain call types from the inbox?</h4>
+        <p class="muted" style="line-height:1.65;">Yes. Per-extension and per-line filters — internal calls, voicemail-only, calls under 30 seconds. Configured in Admin → Phone Integration.</p>
+      </div>
+      <div>
+        <h4 class="h-4">What if the caller isn't in Autotask?</h4>
+        <p class="muted" style="line-height:1.65;">Nova logs the call with the caller-ID and a "create contact" prompt. The dispatcher can add them to a company, leave the call as orphaned, or hide it (e.g., a personal call).</p>
+      </div>
+      <div>
+        <h4 class="h-4">Does it consume Anthropic tokens for every call?</h4>
+        <p class="muted" style="line-height:1.65;">Yes — transcript + summary use your Anthropic key. Typical 10-minute call is &lt; $0.05. Calls under 30 seconds skip summarization by default.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Related -->
+<section class="section bg-mute">
+  <div class="container">
+    <span class="eyebrow">Related</span>
+    <h2 class="h-2 mb-48">What plugs in next to this.</h2>
+    <div class="grid grid-3">
+      <a href="/features/field-ops/" class="card" style="text-decoration:none;color:inherit;">
+        <div class="mono" style="font-size:11px;color:var(--c-accent);font-weight:700;">/ 04 — FIELD OPS</div>
+        <h4 class="h-4" style="margin-top:8px;">Status Board</h4>
+        <p class="muted" style="font-size:14px;line-height:1.55;">Where live call state shows up. On-call, in-meeting, available — visible to dispatch in real time.</p>
+      </a>
+      <a href="/integrations/#goto" class="card" style="text-decoration:none;color:inherit;">
+        <div class="mono" style="font-size:11px;color:var(--c-accent);font-weight:700;">/ INTEGRATIONS</div>
+        <h4 class="h-4" style="margin-top:8px;">GoTo Connect</h4>
+        <p class="muted" style="font-size:14px;line-height:1.55;">The phone-system integration that powers call linking and live presence on the dispatch board.</p>
+      </a>
+      <a href="/features/triage/" class="card" style="text-decoration:none;color:inherit;">
+        <div class="mono" style="font-size:11px;color:var(--c-accent);font-weight:700;">/ 01 — TRIAGE</div>
+        <h4 class="h-4" style="margin-top:8px;">AI Triage</h4>
+        <p class="muted" style="font-size:14px;line-height:1.55;">When a phone call creates a new ticket via voicemail-to-ticket, AI Triage classifies it the same way email tickets land.</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="section cta">
+  <svg class="cta__chev" viewBox="0 0 100 110" fill="#fff" aria-hidden="true">
+    <path d="M5 22 L40 55 L5 88 Z" opacity="0.25"/><path d="M25 22 L60 55 L25 88 Z" opacity="0.5"/><path d="M45 22 L80 55 L45 88 Z" opacity="0.8"/><path d="M65 22 L100 55 L65 88 Z" opacity="1"/>
+  </svg>
+  <div class="container">
+    <div class="cta__grid">
+      <div>
+        <h2 class="h-2" style="font-size:46px;color:#fff;">Stop linking calls <span class="accent">by hand.</span></h2>
+        <p style="font-size:17px;color:#c9d3dd;line-height:1.55;">In the demo we'll connect your GoTo tenant, replay yesterday's calls, and show you the matches Nova would have proposed.</p>
+      </div>
+      <div class="cta__ctas">
+        <a class="btn btn-lg btn-primary btn-arrow" href="/contact/">Book a demo</a>
+        <a class="btn btn-lg btn-outline" href="/integrations/">All integrations →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div data-mn-footer></div>
+<script src="../../js/site.js?v=1"></script>
+</body>
+</html>

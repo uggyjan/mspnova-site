@@ -1,0 +1,199 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 800" preserveAspectRatio="xMidYMid slice" font-family="-apple-system, BlinkMacSystemFont, &#39;Segoe UI&#39;, system-ui, sans-serif">
+<defs>
+  <linearGradient id="bgGrad" x1="0" x2="0" y1="0" y2="1">
+    <stop offset="0" stop-color="#0e1f3a"></stop><stop offset="1" stop-color="#091428"></stop>
+  </linearGradient>
+</defs>
+<rect width="1280" height="800" fill="url(#bgGrad)"></rect>
+
+
+<rect x="0" y="0" width="1280" height="56" fill="#06101f"></rect>
+<rect x="0" y="55" width="1280" height="1" fill="#1f3358"></rect>
+<circle cx="32" cy="28" r="9" fill="#d45a3a"></circle>
+<text x="50" y="33" fill="#e6edf5" font-size="14" font-weight="700" letter-spacing="0.04em">NOVA</text>
+<g fill="#8a9bb4" font-size="12" font-weight="600">
+  <text x="140" y="33">Dispatch</text>
+  <rect x="195" y="22" width="22" height="14" rx="7" fill="#d45a3a"></rect><text x="200" y="32" fill="#fff" font-size="10" font-weight="700">12</text>
+  <text x="240" y="33">Pulse</text>
+  <text x="295" y="33">My Day</text>
+  <text x="355" y="33">Service Mgmt</text>
+  <text x="445" y="33" fill="#e6edf5">Call Linking</text>
+  <rect x="440" y="40" width="80" height="2" fill="#d45a3a"></rect>
+  <text x="535" y="33">Client Success</text>
+  <text x="630" y="33">Guide</text>
+</g>
+<g fill="#8a9bb4" font-size="12" font-weight="600">
+  <text x="1140" y="33">📊 Finance ▾</text>
+</g>
+
+
+<g>
+  <text x="32" y="98" fill="#e6edf5" font-size="22" font-weight="700">Call Linking</text>
+  <rect x="270" y="80" width="92" height="28" rx="6" fill="#3b6cf3"></rect>
+  <text x="284" y="98" fill="#fff" font-size="12" font-weight="700">Sync Calls</text>
+  <text x="32" y="118" fill="#6b7d99" font-size="11">Last sync: Apr 29, 11:08 AM · 76 calls</text>
+
+  
+  <rect x="32" y="132" width="330" height="36" rx="8" fill="#0d1d35" stroke="#1f3358"></rect>
+  <text x="48" y="155" fill="#3b6cf3" font-size="12">🔍</text>
+  <text x="68" y="155" fill="#6b7d99" font-size="12">Search keywords, caller, company</text>
+
+  
+  <g font-size="11" font-weight="600">
+    <rect x="32" y="180" width="100" height="30" rx="6" fill="#0d1d35" stroke="#1f3358"></rect>
+    <text x="42" y="199" fill="#8a9bb4">All</text>
+    <text x="118" y="199" fill="#6b7d99">▾</text>
+
+    <rect x="140" y="180" width="100" height="30" rx="6" fill="#0d1d35" stroke="#1f3358"></rect>
+    <text x="150" y="199" fill="#8a9bb4">All</text>
+    <text x="226" y="199" fill="#6b7d99">▾</text>
+
+    <rect x="248" y="180" width="114" height="30" rx="6" fill="#0d1d35" stroke="#1f3358"></rect>
+    <text x="258" y="199" fill="#8a9bb4">All Sentiment</text>
+    <text x="350" y="199" fill="#6b7d99">▾</text>
+  </g>
+
+  
+  
+  <rect x="20" y="226" width="354" height="62" fill="#0a1d3d" stroke="#3b6cf3"></rect>
+  <text x="32" y="245" fill="#e6edf5" font-size="13" font-weight="700">Jamie Doyle</text>
+  <text x="148" y="245" fill="#8a9bb4" font-size="12">2:18</text>
+  <text x="290" y="245" fill="#8a9bb4" font-size="11">Apr 29, 9:42 AM</text>
+  <rect x="32" y="256" width="36" height="18" rx="3" fill="#1a3a5c"></rect>
+  <text x="40" y="269" fill="#7fb3ff" font-size="10" font-weight="700">OUT</text>
+  <text x="76" y="269" fill="#3b6cf3" font-size="11" font-weight="600">Jamie Doyle</text>
+  <text x="158" y="269" fill="#6b7d99" font-size="11">· 2:18</text>
+
+  
+  <rect x="20" y="296" width="354" height="62" fill="#08172e"></rect>
+  <text x="32" y="315" fill="#e6edf5" font-size="13" font-weight="700">Marcus Chen</text>
+  <text x="150" y="315" fill="#8a9bb4" font-size="12">3:14</text>
+  <text x="290" y="315" fill="#8a9bb4" font-size="11">Apr 29, 9:21 AM</text>
+  <rect x="32" y="326" width="36" height="18" rx="3" fill="#1a3a5c"></rect>
+  <text x="40" y="339" fill="#7fb3ff" font-size="10" font-weight="700">OUT</text>
+  <text x="76" y="339" fill="#3b6cf3" font-size="11" font-weight="600">Marcus Chen</text>
+  <text x="158" y="339" fill="#6b7d99" font-size="11">· 1:42</text>
+
+  
+  <rect x="20" y="366" width="354" height="62" fill="#0a1a35"></rect>
+  <text x="32" y="385" fill="#e6edf5" font-size="13" font-weight="700">Priya Raman</text>
+  <text x="142" y="385" fill="#8a9bb4" font-size="12">2:54</text>
+  <text x="290" y="385" fill="#8a9bb4" font-size="11">Apr 29, 9:14 AM</text>
+  <rect x="32" y="396" width="36" height="18" rx="3" fill="#1a3a5c"></rect>
+  <text x="40" y="409" fill="#7fb3ff" font-size="10" font-weight="700">OUT</text>
+  <text x="76" y="409" fill="#3b6cf3" font-size="11" font-weight="600">Sarah Whitfield</text>
+  <text x="174" y="409" fill="#6b7d99" font-size="11">· 1:08</text>
+
+  
+  <rect x="20" y="436" width="354" height="78" fill="#08172e"></rect>
+  <text x="32" y="455" fill="#e6edf5" font-size="13" font-weight="700">REYES, T.</text>
+  <text x="120" y="455" fill="#8a9bb4" font-size="12">(415) 555-0144</text>
+  <text x="290" y="455" fill="#8a9bb4" font-size="11">Apr 29, 8:49 AM</text>
+  <rect x="32" y="466" width="28" height="18" rx="3" fill="#2a3a1a"></rect>
+  <text x="40" y="479" fill="#a8e063" font-size="10" font-weight="700">IN</text>
+  <text x="68" y="479" fill="#3b6cf3" font-size="11" font-weight="600">Sarah Whitfield</text>
+  <text x="166" y="479" fill="#6b7d99" font-size="11">· 18:46</text>
+  <rect x="296" y="466" width="64" height="18" rx="3" fill="#1f2638"></rect>
+  <text x="306" y="479" fill="#9ba8c0" font-size="10" font-weight="700">NEUTRAL</text>
+  <text x="32" y="500" fill="#6b7d99" font-size="11">The caller reported issues connecting remotely to their work PC...</text>
+
+  
+  <rect x="20" y="522" width="354" height="62" fill="#0a1a35"></rect>
+  <text x="32" y="541" fill="#e6edf5" font-size="13" font-weight="700">OKONKWO, A.</text>
+  <text x="142" y="541" fill="#8a9bb4" font-size="12">(682) 555-6798</text>
+  <text x="290" y="541" fill="#8a9bb4" font-size="11">Apr 29, 8:27 AM</text>
+  <rect x="32" y="552" width="28" height="18" rx="3" fill="#2a3a1a"></rect>
+  <text x="40" y="565" fill="#a8e063" font-size="10" font-weight="700">IN</text>
+  <text x="68" y="565" fill="#d4a574" font-size="11" font-weight="600">⚠ Cobalt Foods Group ↗</text>
+
+  
+  <rect x="20" y="592" width="354" height="62" fill="#08172e"></rect>
+  <text x="32" y="611" fill="#e6edf5" font-size="13" font-weight="700">Holly Tran</text>
+  <text x="120" y="611" fill="#8a9bb4" font-size="12">4:02</text>
+  <text x="290" y="611" fill="#8a9bb4" font-size="11">Apr 29, 8:11 AM</text>
+  <rect x="32" y="622" width="36" height="18" rx="3" fill="#1a3a5c"></rect>
+  <text x="40" y="635" fill="#7fb3ff" font-size="10" font-weight="700">OUT</text>
+  <text x="76" y="635" fill="#3b6cf3" font-size="11" font-weight="600">Holly Tran</text>
+  <text x="148" y="635" fill="#6b7d99" font-size="11">· 4:02</text>
+
+  
+  <rect x="380" y="80" width="1" height="700" fill="#1f3358"></rect>
+</g>
+
+
+<g>
+  <text x="408" y="98" fill="#3b6cf3" font-size="13" font-weight="600">← Inbound Call</text>
+
+  
+  <g font-size="13">
+    <text x="408" y="135" fill="#6b7d99">Caller</text>
+    <text x="600" y="135" fill="#e6edf5" font-weight="700" letter-spacing="0.04em">DOYLE JAMIE</text>
+    <text x="600" y="153" fill="#8a9bb4" font-size="12">(818) 555-8934</text>
+
+    <text x="408" y="190" fill="#6b7d99">Company</text>
+    <text x="600" y="190" fill="#3b6cf3" font-weight="600">Helix Diagnostics ↗</text>
+
+    <text x="408" y="225" fill="#6b7d99">Tech</text>
+    <text x="600" y="225" fill="#e6edf5">Riley Bennett</text>
+
+    <text x="408" y="260" fill="#6b7d99">Duration</text>
+    <text x="600" y="260" fill="#e6edf5">50:29</text>
+
+    <text x="408" y="295" fill="#6b7d99">Time</text>
+    <text x="600" y="295" fill="#e6edf5">Apr 29, 7:31:34 AM — Apr 29, 8:22:03 AM</text>
+
+    <text x="408" y="330" fill="#6b7d99">Sentiment</text>
+    <rect x="600" y="316" width="78" height="22" rx="4" fill="#1a3a2a"></rect>
+    <text x="612" y="332" fill="#7dd87d" font-size="11" font-weight="700">POSITIVE</text>
+  </g>
+
+  
+  <rect x="600" y="360" width="262" height="36" rx="8" fill="#3b6cf3"></rect>
+  <text x="616" y="383" fill="#fff" font-size="12" font-weight="700">View Transcript &amp; Recording in GoTo ↗</text>
+
+  
+  <rect x="408" y="424" width="852" height="180" rx="8" fill="#0d1d35" stroke="#1f3358"></rect>
+  <text x="424" y="450" fill="#3b6cf3" font-size="13" font-weight="700">AI Summary:</text>
+  <g fill="#c9d3dd" font-size="12">
+    <text x="498" y="450">The call involved troubleshooting printing issues for multiple users. The agent</text>
+    <text x="424" y="470">identified two affected devices — a Zebra label printer at the front desk and a shared MFP in the lab —</text>
+    <text x="424" y="490">and walked the caller through reboot, driver-update, and connectivity-check steps. Both devices were</text>
+    <text x="424" y="510">restored to working state and the agent documented the resolution path for the next on-call rotation.</text>
+    <text x="424" y="530">Caller confirmed printing is functional from all four affected workstations before disconnect.</text>
+  </g>
+
+  
+  <g font-size="11" font-weight="600">
+    <rect x="424" y="554" width="226" height="28" rx="14" fill="#0a1a35" stroke="#1f3358"></rect>
+    <text x="438" y="572" fill="#8fb3ff">Printer driver update and troubleshooting</text>
+
+    <rect x="660" y="554" width="220" height="28" rx="14" fill="#0a1a35" stroke="#1f3358"></rect>
+    <text x="674" y="572" fill="#8fb3ff">Printer connectivity and configuration</text>
+
+    <rect x="890" y="554" width="148" height="28" rx="14" fill="#0a1a35" stroke="#1f3358"></rect>
+    <text x="904" y="572" fill="#8fb3ff">Remote support</text>
+  </g>
+
+  
+  <text x="408" y="640" fill="#6b7d99" font-size="11" font-weight="700" letter-spacing="0.08em">PROPOSED TICKET MATCHES</text>
+
+  
+  <rect x="408" y="654" width="852" height="48" rx="8" fill="#0d1d35" stroke="#3b6cf3"></rect>
+  <rect x="424" y="668" width="48" height="20" rx="4" fill="#1a3a2a"></rect>
+  <text x="436" y="682" fill="#7dd87d" font-size="11" font-weight="700">92%</text>
+  <text x="486" y="676" fill="#e6edf5" font-size="13" font-weight="700">T20458 · Front-desk Zebra printer offline (Helix Diagnostics)</text>
+  <text x="486" y="694" fill="#8a9bb4" font-size="11">Assigned: Riley Bennett · Updated 8 min ago · Content + time + company match</text>
+  <rect x="1192" y="666" width="60" height="24" rx="4" fill="#3b6cf3"></rect>
+  <text x="1206" y="683" fill="#fff" font-size="11" font-weight="700">Link</text>
+
+  
+  <rect x="408" y="712" width="852" height="42" rx="8" fill="#0d1d35" stroke="#1f3358"></rect>
+  <rect x="424" y="724" width="48" height="20" rx="4" fill="#3a3520"></rect>
+  <text x="436" y="738" fill="#e8c46c" font-size="11" font-weight="700">38%</text>
+  <text x="486" y="731" fill="#c9d3dd" font-size="12">T20312 · Lab MFP scan-to-folder failing (Helix Diagnostics)</text>
+  <text x="486" y="747" fill="#6b7d99" font-size="11">Assigned: Mei Anderson · 3 days old · Company match only</text>
+  <rect x="1192" y="722" width="60" height="22" rx="4" fill="transparent" stroke="#3b6cf3"></rect>
+  <text x="1206" y="738" fill="#3b6cf3" font-size="11" font-weight="700">Link</text>
+</g>
+
+</svg>

@@ -92,6 +92,11 @@
   border-bottom: 1px solid var(--c-border-1);
 }
 .fpill:last-child { border-bottom: none; }
+.fpill--link { text-decoration: none; color: inherit; transition: background .15s, padding .15s; border-radius: 8px; }
+.fpill--link:hover { background: rgba(255,107,53,0.05); padding-left: 12px; padding-right: 12px; }
+.fpill--link:hover .fpill__title { color: var(--c-accent); }
+.fpill--link:hover .fpill__arrow { transform: translateX(4px); }
+.fpill__arrow { display: inline-block; color: var(--c-accent); font-weight: 700; transition: transform .15s; margin-left: 4px; }
 .fpill__num {
   font-family: var(--font-mono); font-size: 11px; font-weight: 700;
   letter-spacing: 0.1em; color: var(--c-accent);
@@ -251,10 +256,10 @@
       <span></span>
     </div>
     <div class="fgroup__body">
-      <img class="fgroup__mock" src="../assets/mocks/call-linking-shot.png" alt="Phone integration — calls auto-matched to companies and tickets" onerror="this.src='../assets/mocks/m365-sync.svg'" />
+      <img class="fgroup__mock" src="../assets/mocks/call-linking.svg" alt="Phone integration — calls auto-matched to companies and tickets" />
       <div class="fpills">
         <div class="fpill"><span class="fpill__num">/ 16</span><div><h3 class="fpill__title">Teams Integration</h3><p class="fpill__hook">Channel cards, DMs, P1 acknowledgments. Replaces the "did you see that ticket?" Slack thread.</p></div></div>
-        <div class="fpill"><span class="fpill__num">/ 17</span><div><h3 class="fpill__title">Phone Integration</h3><p class="fpill__hook">Inbound calls auto-matched to Autotask company + contact. Live call state from Teams + GoTo Connect.</p></div></div>
+        <a class="fpill fpill--link" href="/features/call-linking/"><span class="fpill__num">/ 17</span><div><h3 class="fpill__title">Phone Integration <span class="fpill__arrow">→</span></h3><p class="fpill__hook">GoTo Connect calls auto-matched to companies, contacts, and tickets. AI summaries, transcripts, live call state on the Status Board.</p></div></a>
         <div class="fpill"><span class="fpill__num">/ 18</span><div><h3 class="fpill__title">CIPP / M365 Sync</h3><p class="fpill__hook">Reconciles M365 license counts against contract service units. Catches over- and under-billing.</p></div></div>
       </div>
     </div>
