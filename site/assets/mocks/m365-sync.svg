@@ -1,0 +1,176 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 800" preserveAspectRatio="xMidYMid slice" font-family="-apple-system, BlinkMacSystemFont, &#39;Segoe UI&#39;, system-ui, sans-serif">
+<defs>
+  <linearGradient id="bgGrad" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#0e1f3a"></stop><stop offset="1" stop-color="#091428"></stop></linearGradient>
+  <linearGradient id="hi" x1="0" x2="1"><stop offset="0" stop-color="#22c55e"></stop><stop offset="1" stop-color="#16a34a"></stop></linearGradient>
+  <linearGradient id="warn" x1="0" x2="1"><stop offset="0" stop-color="#eab308"></stop><stop offset="1" stop-color="#ca8a04"></stop></linearGradient>
+  <linearGradient id="lo" x1="0" x2="1"><stop offset="0" stop-color="#ef4444"></stop><stop offset="1" stop-color="#b91c1c"></stop></linearGradient>
+</defs>
+<rect width="1280" height="800" fill="url(#bgGrad)"></rect>
+
+<rect x="0" y="0" width="1280" height="56" fill="#06101f"></rect>
+<rect x="0" y="55" width="1280" height="1" fill="#1f3358"></rect>
+<circle cx="32" cy="28" r="9" fill="#d45a3a"></circle>
+<text x="50" y="33" fill="#e6edf5" font-size="14" font-weight="700" letter-spacing="0.04em">NOVA</text>
+<g font-size="12" font-weight="600"><text x="140" y="33" fill="#8a9bb4">Home</text><text x="200" y="33" fill="#8a9bb4">Triage</text><text x="268" y="33" fill="#8a9bb4">Needs Attention</text><text x="388" y="33" fill="#8a9bb4">Dispatch Queue</text><text x="500" y="33" fill="#8a9bb4">Pulse</text><text x="558" y="33" fill="#e6edf5">Status</text><rect x="554" y="40" width="50" height="2" fill="#d45a3a"></rect><text x="618" y="33" fill="#8a9bb4">Flash</text></g>
+<circle cx="1230" cy="28" r="14" fill="#16294a" stroke="#1f3358"></circle>
+<text x="1230" y="33" fill="#8a9bb4" font-size="11" font-weight="700" text-anchor="middle">A</text>
+<text x="1200" y="33" fill="#8a9bb4" font-size="11" text-anchor="end">Avery</text>
+
+<text x="40" y="108" fill="#e6edf5" font-size="22" font-weight="700">Microsoft 365 reconciliation</text>
+<text x="40" y="130" fill="#8a9bb4" font-size="12">CIPP sync · 38 tenants · 4 over-billing · 2 under-billing · last sync 4m ago</text>
+
+
+<g transform="translate(40,160)">
+  <rect width="380" height="84" rx="10" fill="#0c1c36" stroke="#1f3358"></rect>
+  <text x="20" y="32" fill="#8a9bb4" font-size="11" letter-spacing=".06em">TENANTS SYNCED</text>
+  <text x="20" y="68" fill="#e6edf5" font-size="32" font-weight="800">38</text>
+  <text x="78" y="68" fill="#22c55e" font-size="11">/ 38 mapped</text>
+</g>
+<g transform="translate(436,160)">
+  <rect width="380" height="84" rx="10" fill="#1f111233" stroke="#7f1d1d"></rect>
+  <text x="20" y="32" fill="#fca5a5" font-size="11" letter-spacing=".06em">OVER-BILLING DETECTED</text>
+  <text x="20" y="68" fill="#fca5a5" font-size="32" font-weight="800">$2,847</text>
+  <text x="180" y="68" fill="#fca5a5" font-size="11">/ month · 4 clients</text>
+</g>
+<g transform="translate(832,160)">
+  <rect width="408" height="84" rx="10" fill="#1f1f1233" stroke="#854d0e"></rect>
+  <text x="20" y="32" fill="#fde68a" font-size="11" letter-spacing=".06em">UNDER-BILLING DETECTED</text>
+  <text x="20" y="68" fill="#fde68a" font-size="32" font-weight="800">$1,124</text>
+  <text x="180" y="68" fill="#fde68a" font-size="11">/ month · 2 clients (lost revenue)</text>
+</g>
+
+
+<g transform="translate(40,272)">
+  <rect width="1200" height="36" rx="8" fill="#0a1830"></rect>
+  <text x="20" y="23" fill="#8a9bb4" font-size="11" letter-spacing=".06em">TENANT</text>
+  <text x="240" y="23" fill="#8a9bb4" font-size="11" letter-spacing=".06em">CONTRACT SU</text>
+  <text x="360" y="23" fill="#8a9bb4" font-size="11" letter-spacing=".06em">M365 ACTUAL</text>
+  <text x="480" y="23" fill="#8a9bb4" font-size="11" letter-spacing=".06em">DELTA</text>
+  <text x="580" y="23" fill="#8a9bb4" font-size="11" letter-spacing=".06em">PRODUCT</text>
+  <text x="800" y="23" fill="#8a9bb4" font-size="11" letter-spacing=".06em">$ IMPACT / MO</text>
+  <text x="940" y="23" fill="#8a9bb4" font-size="11" letter-spacing=".06em">CONFIDENCE</text>
+  <text x="1080" y="23" fill="#8a9bb4" font-size="11" letter-spacing=".06em">ACTION</text>
+</g>
+
+
+<g transform="translate(40,320)">
+  <rect width="1200" height="40" rx="8" fill="#0c1c36" stroke="#1f3358"></rect>
+  <text x="20" y="25" fill="#e6edf5" font-size="12" font-weight="600">Cresta Studios</text>
+  <text x="240" y="25" fill="#a9b8d0" font-size="12">42</text>
+  <text x="360" y="25" fill="#a9b8d0" font-size="12">37</text>
+  <text x="480" y="25" fill="#fca5a5" font-size="12" font-weight="700">-5</text>
+  <text x="580" y="25" fill="#8a9bb4" font-size="11">M365 Business Premium</text>
+  <text x="800" y="25" fill="#fca5a5" font-size="12" font-weight="700">-$110</text>
+  <rect x="940" y="14" width="42" height="20" rx="10" fill="#22c55e22" stroke="#22c55e"></rect>
+  <text x="961" y="28" fill="#22c55e" font-size="10" font-weight="700" text-anchor="middle">High</text>
+  <rect x="1080" y="10" width="100" height="24" rx="6" fill="#16294a" stroke="#1f3358"></rect>
+  <text x="1130" y="26" fill="#a9b8d0" font-size="11" text-anchor="middle">Reconcile</text>
+</g>
+<g transform="translate(40,364)">
+  <rect width="1200" height="40" rx="8" fill="#0a1830" stroke="#1f3358"></rect>
+  <text x="20" y="25" fill="#e6edf5" font-size="12" font-weight="600">Bayline Health</text>
+  <text x="240" y="25" fill="#a9b8d0" font-size="12">18</text>
+  <text x="360" y="25" fill="#a9b8d0" font-size="12">24</text>
+  <text x="480" y="25" fill="#fde68a" font-size="12" font-weight="700">+6</text>
+  <text x="580" y="25" fill="#8a9bb4" font-size="11">M365 Business Standard</text>
+  <text x="800" y="25" fill="#fde68a" font-size="12" font-weight="700">+$78</text>
+  <rect x="940" y="14" width="42" height="20" rx="10" fill="#22c55e22" stroke="#22c55e"></rect>
+  <text x="961" y="28" fill="#22c55e" font-size="10" font-weight="700" text-anchor="middle">High</text>
+  <rect x="1080" y="10" width="100" height="24" rx="6" fill="#16294a" stroke="#1f3358"></rect>
+  <text x="1130" y="26" fill="#a9b8d0" font-size="11" text-anchor="middle">Reconcile</text>
+</g>
+<g transform="translate(40,408)">
+  <rect width="1200" height="40" rx="8" fill="#0c1c36" stroke="#1f3358"></rect>
+  <text x="20" y="25" fill="#e6edf5" font-size="12" font-weight="600">Greenfield Realty</text>
+  <text x="240" y="25" fill="#a9b8d0" font-size="12">12</text>
+  <text x="360" y="25" fill="#a9b8d0" font-size="12">12</text>
+  <text x="480" y="25" fill="#22c55e" font-size="12" font-weight="700">0</text>
+  <text x="580" y="25" fill="#8a9bb4" font-size="11">M365 Business Basic</text>
+  <text x="800" y="25" fill="#5e7392" font-size="12" font-weight="400">$0</text>
+  <rect x="940" y="14" width="42" height="20" rx="10" fill="#22c55e22" stroke="#22c55e"></rect>
+  <text x="961" y="28" fill="#22c55e" font-size="10" font-weight="700" text-anchor="middle">High</text>
+  <rect x="1080" y="10" width="100" height="24" rx="6" fill="transparent" stroke="transparent"></rect>
+  <text x="1130" y="26" fill="#5e7392" font-size="11" text-anchor="middle">—</text>
+</g>
+<g transform="translate(40,452)">
+  <rect width="1200" height="40" rx="8" fill="#0a1830" stroke="#1f3358"></rect>
+  <text x="20" y="25" fill="#e6edf5" font-size="12" font-weight="600">Northwind Logistics</text>
+  <text x="240" y="25" fill="#a9b8d0" font-size="12">85</text>
+  <text x="360" y="25" fill="#a9b8d0" font-size="12">72</text>
+  <text x="480" y="25" fill="#fca5a5" font-size="12" font-weight="700">-13</text>
+  <text x="580" y="25" fill="#8a9bb4" font-size="11">M365 E3</text>
+  <text x="800" y="25" fill="#fca5a5" font-size="12" font-weight="700">-$468</text>
+  <rect x="940" y="14" width="40" height="20" rx="10" fill="#eab30822" stroke="#eab308"></rect>
+  <text x="960" y="28" fill="#eab308" font-size="10" font-weight="700" text-anchor="middle">Med</text>
+  <rect x="1080" y="10" width="100" height="24" rx="6" fill="#16294a" stroke="#1f3358"></rect>
+  <text x="1130" y="26" fill="#a9b8d0" font-size="11" text-anchor="middle">Reconcile</text>
+</g>
+<g transform="translate(40,496)">
+  <rect width="1200" height="40" rx="8" fill="#0c1c36" stroke="#1f3358"></rect>
+  <text x="20" y="25" fill="#e6edf5" font-size="12" font-weight="600">Beacon Manufacturing</text>
+  <text x="240" y="25" fill="#a9b8d0" font-size="12">34</text>
+  <text x="360" y="25" fill="#a9b8d0" font-size="12">34</text>
+  <text x="480" y="25" fill="#22c55e" font-size="12" font-weight="700">0</text>
+  <text x="580" y="25" fill="#8a9bb4" font-size="11">M365 Business Premium</text>
+  <text x="800" y="25" fill="#5e7392" font-size="12" font-weight="400">$0</text>
+  <rect x="940" y="14" width="42" height="20" rx="10" fill="#22c55e22" stroke="#22c55e"></rect>
+  <text x="961" y="28" fill="#22c55e" font-size="10" font-weight="700" text-anchor="middle">High</text>
+  <rect x="1080" y="10" width="100" height="24" rx="6" fill="transparent" stroke="transparent"></rect>
+  <text x="1130" y="26" fill="#5e7392" font-size="11" text-anchor="middle">—</text>
+</g>
+<g transform="translate(40,540)">
+  <rect width="1200" height="40" rx="8" fill="#0a1830" stroke="#1f3358"></rect>
+  <text x="20" y="25" fill="#e6edf5" font-size="12" font-weight="600">Maris Legal</text>
+  <text x="240" y="25" fill="#a9b8d0" font-size="12">22</text>
+  <text x="360" y="25" fill="#a9b8d0" font-size="12">24</text>
+  <text x="480" y="25" fill="#fde68a" font-size="12" font-weight="700">+2</text>
+  <text x="580" y="25" fill="#8a9bb4" font-size="11">M365 Business Premium</text>
+  <text x="800" y="25" fill="#fde68a" font-size="12" font-weight="700">+$44</text>
+  <rect x="940" y="14" width="42" height="20" rx="10" fill="#22c55e22" stroke="#22c55e"></rect>
+  <text x="961" y="28" fill="#22c55e" font-size="10" font-weight="700" text-anchor="middle">High</text>
+  <rect x="1080" y="10" width="100" height="24" rx="6" fill="#16294a" stroke="#1f3358"></rect>
+  <text x="1130" y="26" fill="#a9b8d0" font-size="11" text-anchor="middle">Reconcile</text>
+</g>
+<g transform="translate(40,584)">
+  <rect width="1200" height="40" rx="8" fill="#0c1c36" stroke="#1f3358"></rect>
+  <text x="20" y="25" fill="#e6edf5" font-size="12" font-weight="600">Pacifica Dental Group</text>
+  <text x="240" y="25" fill="#a9b8d0" font-size="12">14</text>
+  <text x="360" y="25" fill="#a9b8d0" font-size="12">8</text>
+  <text x="480" y="25" fill="#fca5a5" font-size="12" font-weight="700">-6</text>
+  <text x="580" y="25" fill="#8a9bb4" font-size="11">M365 Business Basic</text>
+  <text x="800" y="25" fill="#fca5a5" font-size="12" font-weight="700">-$36</text>
+  <rect x="940" y="14" width="42" height="20" rx="10" fill="#22c55e22" stroke="#22c55e"></rect>
+  <text x="961" y="28" fill="#22c55e" font-size="10" font-weight="700" text-anchor="middle">High</text>
+  <rect x="1080" y="10" width="100" height="24" rx="6" fill="#16294a" stroke="#1f3358"></rect>
+  <text x="1130" y="26" fill="#a9b8d0" font-size="11" text-anchor="middle">Reconcile</text>
+</g>
+<g transform="translate(40,628)">
+  <rect width="1200" height="40" rx="8" fill="#0a1830" stroke="#1f3358"></rect>
+  <text x="20" y="25" fill="#e6edf5" font-size="12" font-weight="600">Riverline Capital</text>
+  <text x="240" y="25" fill="#a9b8d0" font-size="12">9</text>
+  <text x="360" y="25" fill="#a9b8d0" font-size="12">9</text>
+  <text x="480" y="25" fill="#22c55e" font-size="12" font-weight="700">0</text>
+  <text x="580" y="25" fill="#8a9bb4" font-size="11">M365 E3</text>
+  <text x="800" y="25" fill="#5e7392" font-size="12" font-weight="400">$0</text>
+  <rect x="940" y="14" width="42" height="20" rx="10" fill="#22c55e22" stroke="#22c55e"></rect>
+  <text x="961" y="28" fill="#22c55e" font-size="10" font-weight="700" text-anchor="middle">High</text>
+  <rect x="1080" y="10" width="100" height="24" rx="6" fill="transparent" stroke="transparent"></rect>
+  <text x="1130" y="26" fill="#5e7392" font-size="11" text-anchor="middle">—</text>
+</g>
+<g transform="translate(40,672)">
+  <rect width="1200" height="40" rx="8" fill="#0c1c36" stroke="#1f3358"></rect>
+  <text x="20" y="25" fill="#e6edf5" font-size="12" font-weight="600">Atlas Civic Studio</text>
+  <text x="240" y="25" fill="#a9b8d0" font-size="12">28</text>
+  <text x="360" y="25" fill="#a9b8d0" font-size="12">22</text>
+  <text x="480" y="25" fill="#fca5a5" font-size="12" font-weight="700">-6</text>
+  <text x="580" y="25" fill="#8a9bb4" font-size="11">M365 Business Premium</text>
+  <text x="800" y="25" fill="#fca5a5" font-size="12" font-weight="700">-$132</text>
+  <rect x="940" y="14" width="40" height="20" rx="10" fill="#ef444422" stroke="#ef4444"></rect>
+  <text x="960" y="28" fill="#ef4444" font-size="10" font-weight="700" text-anchor="middle">Low</text>
+  <rect x="1080" y="10" width="100" height="24" rx="6" fill="#16294a" stroke="#1f3358"></rect>
+  <text x="1130" y="26" fill="#a9b8d0" font-size="11" text-anchor="middle">Reconcile</text>
+</g>
+
+<text x="40" y="780" fill="#5e7392" font-size="11">Reconcile pushes a contract-edit ticket to Autotask · billing reads can&#39;t change without dispatcher approval</text>
+</svg>

@@ -1,0 +1,109 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 800" preserveAspectRatio="xMidYMid slice" font-family="-apple-system, BlinkMacSystemFont, &#39;Segoe UI&#39;, system-ui, sans-serif">
+  <defs>
+    <linearGradient id="brandGrad" x1="0" x2="1"><stop offset="0" stop-color="#1e40af"></stop><stop offset="1" stop-color="#3b82f6"></stop></linearGradient>
+  </defs>
+
+  
+  <rect width="1280" height="800" fill="#f5f6f8"></rect>
+
+  
+  <rect x="0" y="0" width="1280" height="64" fill="url(#brandGrad)"></rect>
+  <rect x="32" y="20" width="24" height="24" rx="6" fill="#fff" opacity="0.95"></rect>
+  <text x="40" y="38" fill="#1e40af" font-size="14" font-weight="800" text-anchor="middle">A</text>
+  <text x="68" y="40" fill="#fff" font-size="15" font-weight="700">Acme IT Support Portal</text>
+  <text x="68" y="56" fill="#dbeafe" font-size="11">Powered by Techital MSP</text>
+
+  <g fill="#dbeafe" font-size="13" font-weight="600">
+    <text x="940" y="40">My Tickets</text>
+    <text x="1030" y="40" fill="#fff">Submit</text>
+    <rect x="1023" y="48" width="58" height="2" fill="#fff"></rect>
+    <text x="1110" y="40">Knowledge</text>
+  </g>
+  <circle cx="1230" cy="32" r="14" fill="#fff" opacity="0.2"></circle>
+  <text x="1230" y="37" fill="#fff" font-size="11" font-weight="700" text-anchor="middle">JK</text>
+
+  
+  <text x="40" y="124" fill="#0f172a" font-size="28" font-weight="700">Hi Halden — what&#39;s going on?</text>
+  <text x="40" y="150" fill="#64748b" font-size="14">Tell us in plain words. We&#39;ll route it to the right tech and let you know when work starts.</text>
+
+  
+  <g transform="translate(40,180)">
+    <rect width="800" height="160" rx="14" fill="#fff" stroke="#cbd5e1"></rect>
+    <text x="24" y="40" fill="#0f172a" font-size="15" font-weight="500">My Outlook keeps disconnecting from M365 — happening to a few of us in the ops team since this morning. We can reconnect but it drops every 10 min or so...</text>
+    <text x="24" y="64" fill="#0f172a" font-size="15" font-weight="500">Tried: restart Outlook, restart laptop. No change.</text>
+    <line x1="24" y1="100" x2="776" y2="100" stroke="#e2e8f0"></line>
+    <g transform="translate(24,118)">
+      <rect width="32" height="28" rx="6" fill="#f1f5f9"></rect>
+      <text x="16" y="20" fill="#64748b" font-size="14" text-anchor="middle">📎</text>
+      <rect x="40" y="0" width="120" height="28" rx="6" fill="#f1f5f9"></rect>
+      <text x="100" y="19" fill="#475569" font-size="11" font-weight="600" text-anchor="middle">screenshot.png</text>
+      <text x="180" y="19" fill="#94a3b8" font-size="11">Attach more</text>
+    </g>
+    <rect x="640" y="116" width="136" height="32" rx="8" fill="#1e40af"></rect>
+    <text x="708" y="136" fill="#fff" font-size="13" font-weight="700" text-anchor="middle">Send to support →</text>
+  </g>
+
+  
+  <g transform="translate(880,180)">
+    <rect width="360" height="160" rx="14" fill="#eff6ff" stroke="#bfdbfe"></rect>
+    <circle cx="24" cy="28" r="10" fill="#1e40af"></circle>
+    <text x="24" y="32" fill="#fff" font-size="11" font-weight="800" text-anchor="middle">i</text>
+    <text x="44" y="32" fill="#1e40af" font-size="13" font-weight="700">Quick check first</text>
+
+    <text x="24" y="60" fill="#1e3a8a" font-size="12" font-weight="600">Acme is impacted right now</text>
+    <text x="24" y="78" fill="#475569" font-size="11">3 tickets in the last 2 hours — your team&#39;s on it.</text>
+
+    <line x1="24" y1="96" x2="336" y2="96" stroke="#bfdbfe"></line>
+
+    <text x="24" y="118" fill="#1e3a8a" font-size="12" font-weight="600">ETA: First response 15 min</text>
+    <text x="24" y="136" fill="#475569" font-size="11">Devon is investigating root cause now.</text>
+  </g>
+
+  
+  <text x="40" y="392" fill="#0f172a" font-size="16" font-weight="700">Your recent tickets</text>
+  <text x="40" y="412" fill="#64748b" font-size="12">3 open · 12 closed in the last 30 days</text>
+
+  
+    <g transform="translate(40,430)">
+      <rect width="1200" height="68" rx="12" fill="#fff" stroke="#e2e8f0"></rect>
+      <text x="20" y="28" fill="#1e40af" font-size="11" font-weight="700" font-family="ui-monospace,Menlo,monospace">T-48217</text>
+      <text x="20" y="50" fill="#94a3b8" font-size="10">Submitted by you</text>
+
+      <text x="120" y="28" fill="#0f172a" font-size="14" font-weight="600">Outlook keeps disconnecting from M365</text>
+      <text x="120" y="50" fill="#64748b" font-size="12">Working with: Routing…</text>
+
+      <rect x="940" y="22" width="180" height="24" rx="12" fill="#dbeafe"></rect>
+      <text x="1030" y="38" fill="#1e40af" font-size="11" font-weight="700" text-anchor="middle">Submitted just now</text>
+
+      <text x="1170" y="40" fill="#94a3b8" font-size="14" text-anchor="end">›</text>
+    </g>
+    <g transform="translate(40,514)">
+      <rect width="1200" height="68" rx="12" fill="#fff" stroke="#e2e8f0"></rect>
+      <text x="20" y="28" fill="#1e40af" font-size="11" font-weight="700" font-family="ui-monospace,Menlo,monospace">T-48089</text>
+      <text x="20" y="50" fill="#94a3b8" font-size="10">Submitted by you</text>
+
+      <text x="120" y="28" fill="#0f172a" font-size="14" font-weight="600">Need conference room TV unmuted remotely</text>
+      <text x="120" y="50" fill="#64748b" font-size="12">Working with: Sarah L.</text>
+
+      <rect x="940" y="22" width="180" height="24" rx="12" fill="#dcfce7"></rect>
+      <text x="1030" y="38" fill="#15803d" font-size="11" font-weight="700" text-anchor="middle">Resolved · 2 days ago</text>
+
+      <text x="1170" y="40" fill="#94a3b8" font-size="14" text-anchor="end">›</text>
+    </g>
+    <g transform="translate(40,598)">
+      <rect width="1200" height="68" rx="12" fill="#fff" stroke="#e2e8f0"></rect>
+      <text x="20" y="28" fill="#1e40af" font-size="11" font-weight="700" font-family="ui-monospace,Menlo,monospace">T-48052</text>
+      <text x="20" y="50" fill="#94a3b8" font-size="10">Submitted by you</text>
+
+      <text x="120" y="28" fill="#0f172a" font-size="14" font-weight="600">New laptop request — Marketing hire</text>
+      <text x="120" y="50" fill="#64748b" font-size="12">Working with: Procurement</text>
+
+      <rect x="940" y="22" width="180" height="24" rx="12" fill="#fef3c7"></rect>
+      <text x="1030" y="38" fill="#a16207" font-size="11" font-weight="700" text-anchor="middle">In progress · ETA Friday</text>
+
+      <text x="1170" y="40" fill="#94a3b8" font-size="14" text-anchor="end">›</text>
+    </g>
+
+  
+  <text x="640" y="780" fill="#94a3b8" font-size="11" text-anchor="middle">Need it now? Call (818) 555-0142 — Help desk Mon–Fri 7 AM – 7 PM PST</text>
+</svg>

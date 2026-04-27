@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=1600" />
+<title>MSPNova · Triage Queue</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="_app-shell.css?v=2" />
+<style>
+  body { width: 1600px; height: 1000px; overflow: hidden; }
+
+  /* ─── Triage queue ─── */
+  .triage {
+    flex: 1;
+    display: grid;
+    grid-template-columns: 1fr 440px;
+    min-height: 0;
+  }
+
+  .queue {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid var(--line-1);
+  }
+  .queue__list {
+    overflow: hidden;
+    padding: 8px 18px 18px;
+    display: flex; flex-direction: column; gap: 8px;
+  }
+
+  /* Ticket row */
+  .tk {
+    background: var(--bg-card);
+    border: 1px solid var(--line-1);
+    border-radius: var(--r-md);
+    padding: 12px 14px;
+    display: grid;
+    grid-template-columns: 56px 1fr 200px 110px;
+    align-items: center;
+    gap: 14px;
+    position: relative;
+  }
+  .tk.is-selected {
+    border-color: var(--accent);
+    background: var(--bg-card-2);
+    box-shadow: 0 0 0 1px var(--accent), 0 8px 32px rgba(212,90,58,0.12);
+  }
+  .tk.is-new::before {
+    content: '';
+    position: absolute; left: -1px; top: 8px; bottom: 8px;
+    width: 3px; border-radius: 3px;
+    background: var(--accent);
+  }
+  .tk__id { font-family: var(--font-mono); font-size: 11px; color: var(--fg-3); font-weight: 600; }
+  .tk__age { font-size: 10px; color: var(--fg-mute); margin-top: 2px; font-family: var(--font-mono); }
+
+  .tk__main { min-width: 0; }
+  .tk__sub { font-size: 13px; font-weight: 600; color: var(--fg-1); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .tk__meta { display: flex; align-items: center; gap: 10px; margin-top: 4px; font-size: 11px; color: var(--fg-3); }
+  .tk__meta b { color: var(--fg-2); font-weight: 600; }
+  .tk__meta-sep { color: var(--line-2); }
+
+  .tk__class { display: flex; flex-direction: column; gap: 4px; font-size: 11px; }
+  .tk__class-row { display: flex; align-items: center; gap: 6px; color: var(--fg-2); }
+  .tk__class-key { width: 56px; color: var(--fg-mute); font-size: 10px; text-transform: uppercase; letter-spacing: 0.06em; font-weight: 700; }
+  .tk__class-val { font-weight: 600; }
+
+  .tk__actions { display: flex; flex-direction: column; align-items: stretch; gap: 5px; }
+  .tk__pull-btn {
+    background: var(--accent);
+    color: #fff;
+    border: 0;
+    padding: 6px 10px;
+    border-radius: 6px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    cursor: default;
+    display: flex; align-items: center; justify-content: center; gap: 5px;
+  }
+  .tk__sec-btn {
+    background: transparent; border: 1px solid var(--line-2);
+    border-radius: 6px;
+    padding: 4px 8px;
+    font-size: 11px; color: var(--fg-2);
+  }
+
+  /* AI badge */
+  .ai {
+    display: inline-flex; align-items: center; gap: 5px;
+    font-size: 10px; font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    background: rgba(212,90,58,0.12);
+    color: #ffb59c;
+    padding: 2px 7px;
+    border-radius: 99px;
+  }
+  .ai__dot { width: 5px; height: 5px; border-radius: 50%; background: var(--accent); animation: pulse 1.6s ease-in-out infinite; }
+  @keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: 0.3; } }
+
+  /* ─── Right rail: detail ─── */
+  .detail {
+    background: var(--bg-panel);
+    overflow: hidden;
+    display: flex; flex-direction: column;
+  }
+  .detail__head {
+    padding: 18px 22px 14px;
+    border-bottom: 1px solid var(--line-1);
+  }
+  .detail__crumb { font-size: 11px; color: var(--fg-3); margin-bottom: 6px; font-family: var(--font-mono); }
+  .detail__sub { font-size: 16px; font-weight: 700; color: var(--fg-1); line-height: 1.35; }
+
+  .detail__pills { display: flex; gap: 6px; margin-top: 12px; flex-wrap: wrap; }
+
+  .detail__body { padding: 18px 22px; overflow: hidden; flex: 1; display: flex; flex-direction: column; gap: 18px; }
+
+  .ai-card {
+    background: linear-gradient(180deg, rgba(212,90,58,0.06) 0%, transparent 100%);
+    border: 1px solid rgba(212,90,58,0.20);
+    border-radius: var(--r-md);
+    padding: 14px;
+  }
+  .ai-card__head {
+    display: flex; align-items: center; gap: 8px;
+    margin-bottom: 10px;
+  }
+  .ai-card__head-title { font-size: 12px; font-weight: 700; color: var(--fg-1); }
+  .ai-card__head-time { margin-left: auto; font-family: var(--font-mono); font-size: 10px; color: var(--fg-3); }
+
+  .field {
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    gap: 10px;
+    padding: 7px 0;
+    border-bottom: 1px solid var(--line-1);
+    align-items: baseline;
+  }
+  .field:last-child { border-bottom: 0; }
+  .field__k { font-size: 10px; text-transform: uppercase; letter-spacing: 0.07em; color: var(--fg-mute); font-weight: 700; }
+  .field__v { font-size: 12px; font-weight: 600; color: var(--fg-1); }
+  .field__v--accent { color: var(--accent-2); }
+
+  .reasoning {
+    background: var(--bg-canvas);
+    border: 1px solid var(--line-1);
+    border-radius: var(--r-md);
+    padding: 12px 14px;
+    font-size: 12px;
+    line-height: 1.6;
+    color: var(--fg-2);
+  }
+  .reasoning b { color: var(--fg-1); font-weight: 600; }
+  .reasoning__head { font-size: 10px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--fg-mute); font-weight: 700; margin-bottom: 8px; }
+
+  .actions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    margin-top: auto;
+  }
+  .actions .btn { justify-content: center; padding: 9px 12px; font-size: 13px; }
+  .actions .btn--accept { background: var(--accent); border-color: var(--accent); color: #fff; }
+
+  .stats-strip {
+    display: flex;
+    padding: 10px 18px;
+    gap: 0;
+    background: var(--bg-rail);
+    border-bottom: 1px solid var(--line-1);
+    border-top: 1px solid var(--line-1);
+    margin-top: -1px;
+  }
+  .stat {
+    display: flex; flex-direction: column;
+    padding: 0 18px;
+    border-right: 1px solid var(--line-1);
+    min-width: 130px;
+  }
+  .stat:last-child { border-right: 0; }
+  .stat__n { font-size: 18px; font-weight: 800; color: var(--fg-1); font-family: var(--font-mono); letter-spacing: -0.01em; }
+  .stat__l { font-size: 10px; color: var(--fg-3); text-transform: uppercase; letter-spacing: 0.07em; font-weight: 600; margin-top: 1px; }
+  .stat__delta { font-size: 11px; font-weight: 700; }
+  .stat__delta--up { color: var(--ok); }
+  .stat__delta--accent { color: var(--accent-2); }
+</style>
+</head>
+<body>
+<div class="app">
+
+  <!-- ─── Sidebar ─── -->
+  <aside class="rail">
+    <div class="rail__brand">
+      <span class="rail__brand-mark">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="square" stroke-linejoin="miter">
+          <path d="M3 5 L9 12 L3 19" />
+          <path d="M9 5 L15 12 L9 19" opacity="0.6"/>
+          <path d="M15 5 L21 12 L15 19" opacity="0.3"/>
+        </svg>
+      </span>
+      <span>MSPNOVA</span>
+    </div>
+    <div class="rail__nav">
+      <div class="rail__group">Operate</div>
+      <div class="rail__item is-active">
+        <svg class="rail__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h12"/></svg>
+        Triage Queue
+        <span class="rail__count rail__count--accent">12</span>
+      </div>
+      <div class="rail__item">
+        <svg class="rail__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+        Needs Attention
+        <span class="rail__count rail__count--alert">7</span>
+      </div>
+      <div class="rail__item">
+        <svg class="rail__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M12 3v18"/></svg>
+        All Tickets
+        <span class="rail__count">348</span>
+      </div>
+      <div class="rail__item">
+        <svg class="rail__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M9 9h6v6H9z"/></svg>
+        Status Board
+      </div>
+
+      <div class="rail__group">Insight</div>
+      <div class="rail__item">
+        <svg class="rail__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12l4-4 4 4 4-8 6 12"/></svg>
+        Pulse
+      </div>
+      <div class="rail__item">
+        <svg class="rail__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 3v9l6 3"/></svg>
+        Time &amp; Billing
+      </div>
+      <div class="rail__item">
+        <svg class="rail__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 3v18M19 3v18M3 8h18M3 16h18"/></svg>
+        Reports
+      </div>
+
+      <div class="rail__group">Configure</div>
+      <div class="rail__item">
+        <svg class="rail__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>
+        Rules &amp; Thresholds
+      </div>
+      <div class="rail__item">
+        <svg class="rail__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09a1.65 1.65 0 0 0-1-1.51 1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09a1.65 1.65 0 0 0 1.51-1 1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+        Settings
+      </div>
+    </div>
+    <div class="rail__foot">
+      <div class="avatar avatar--violet">JD</div>
+      <div>
+        <div class="rail__user-name">Jamie Doyle</div>
+        <div class="rail__user-role">Dispatcher · Acme MSP</div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ─── Topbar ─── -->
+  <header class="top">
+    <span class="top__title">Triage Queue</span>
+    <span class="top__crumb">Home <b>›</b> Operate <b>›</b> Triage</span>
+    <div class="top__search">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+      <span>Search tickets, clients, contacts</span>
+      <span class="top__kbd">⌘K</span>
+    </div>
+    <div class="top__bell">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"/></svg>
+    </div>
+    <div class="avatar avatar--violet avatar--sm">JD</div>
+  </header>
+
+  <!-- ─── Page ─── -->
+  <main class="page">
+
+    <div class="page__head">
+      <div class="page__head-row">
+        <div>
+          <div class="page__title">Incoming triage</div>
+          <div class="page__sub">Autotask · all queues · classified by Nova in the last 30 min</div>
+        </div>
+        <div class="spacer"></div>
+        <button class="btn btn--ghost">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12a9 9 0 0 1 15-6.7L21 8"/><path d="M21 3v5h-5"/></svg>
+          Refresh · 14s ago
+        </button>
+        <button class="btn">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M6 12h12M10 18h4"/></svg>
+          Filter
+        </button>
+        <button class="btn btn--primary">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+          New ticket
+        </button>
+      </div>
+
+      <div class="page__head-row">
+        <div class="tabs">
+          <span class="tab is-active">New <span class="tab__count">12</span></span>
+          <span class="tab">In review <span class="tab__count">5</span></span>
+          <span class="tab">Auto-routed today <span class="tab__count">87</span></span>
+          <span class="tab">Overrides <span class="tab__count">3</span></span>
+        </div>
+        <div class="spacer"></div>
+        <div class="chips">
+          <span class="chip is-active">All priorities</span>
+          <span class="chip">P1 only</span>
+          <span class="chip">VIP clients</span>
+          <span class="chip">Security queue</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="stats-strip">
+      <div class="stat">
+        <div class="stat__n">22<span style="font-size:13px;color:var(--fg-3);">s</span></div>
+        <div class="stat__l">Avg triage time</div>
+      </div>
+      <div class="stat">
+        <div class="stat__n">12<span style="font-size:13px;color:var(--fg-3);">/12</span></div>
+        <div class="stat__l">Classified</div>
+      </div>
+      <div class="stat">
+        <div class="stat__n">9 <span class="stat__delta stat__delta--up">▲</span></div>
+        <div class="stat__l">Auto-routed</div>
+      </div>
+      <div class="stat">
+        <div class="stat__n">3</div>
+        <div class="stat__l">Awaiting review</div>
+      </div>
+      <div class="stat">
+        <div class="stat__n">11<span style="font-size:13px;color:var(--fg-3);">m</span></div>
+        <div class="stat__l">Within 12-min SLA</div>
+      </div>
+      <div class="stat">
+        <div class="stat__n">$0.34</div>
+        <div class="stat__l">AI spend, today</div>
+      </div>
+    </div>
+
+    <div class="triage">
+      <!-- Queue -->
+      <section class="queue">
+        <div class="queue__list">
+
+          <!-- Selected ticket -->
+          <article class="tk is-selected is-new">
+            <div>
+              <div class="tk__id">#48721</div>
+              <div class="tk__age">just now</div>
+            </div>
+            <div class="tk__main">
+              <div class="tk__sub">Outlook keeps prompting for password — Megan Hu, Globex Finance</div>
+              <div class="tk__meta">
+                <span class="ai"><span class="ai__dot"></span>Classified</span>
+                <span class="tk__meta-sep">·</span>
+                <b>Globex Industries</b>
+                <span class="tk__meta-sep">·</span>
+                <span>via email</span>
+                <span class="tk__meta-sep">·</span>
+                <span>Contract: <b>Standard</b></span>
+              </div>
+            </div>
+            <div class="tk__class">
+              <div class="tk__class-row"><span class="tk__class-key">Priority</span><span class="prio prio--p2"><span class="prio__dot"></span>P2</span></div>
+              <div class="tk__class-row"><span class="tk__class-key">Queue</span><span class="tk__class-val">M365 / Identity</span></div>
+              <div class="tk__class-row"><span class="tk__class-key">Type</span><span class="tk__class-val">Auth · MFA loop</span></div>
+            </div>
+            <div class="tk__actions">
+              <button class="tk__pull-btn">Accept &amp; route</button>
+              <button class="tk__sec-btn">Override</button>
+            </div>
+          </article>
+
+          <article class="tk is-new">
+            <div>
+              <div class="tk__id">#48720</div>
+              <div class="tk__age">2m</div>
+            </div>
+            <div class="tk__main">
+              <div class="tk__sub">Server room AC alarm — temperature 84°F, rising</div>
+              <div class="tk__meta">
+                <span class="ai"><span class="ai__dot"></span>Classified</span>
+                <span class="tk__meta-sep">·</span>
+                <b>Acme Holdings</b>
+                <span class="tk__meta-sep">·</span>
+                <span>via SNMP webhook</span>
+                <span class="tk__meta-sep">·</span>
+                <span>Contract: <b>Premium</b></span>
+              </div>
+            </div>
+            <div class="tk__class">
+              <div class="tk__class-row"><span class="tk__class-key">Priority</span><span class="prio prio--p1"><span class="prio__dot"></span>P1</span></div>
+              <div class="tk__class-row"><span class="tk__class-key">Queue</span><span class="tk__class-val">On-site critical</span></div>
+              <div class="tk__class-row"><span class="tk__class-key">Type</span><span class="tk__class-val">Facilities · environmental</span></div>
+            </div>
+            <div class="tk__actions">
+              <button class="tk__pull-btn">Accept &amp; route</button>
+              <button class="tk__sec-btn">Override</button>
+            </div>
+          </article>
+
+          <article class="tk">
+            <div>
+              <div class="tk__id">#48719</div>
+              <div class="tk__age">4m</div>
+            </div>
+            <div class="tk__main">
+              <div class="tk__sub">New hire onboarding · 4 license adds, laptop deployment</div>
+              <div class="tk__meta">
+                <span class="ai"><span class="ai__dot"></span>Classified</span>
+                <span class="tk__meta-sep">·</span>
+                <b>Initech LLC</b>
+                <span class="tk__meta-sep">·</span>
+                <span>via portal</span>
+                <span class="tk__meta-sep">·</span>
+                <span>Contract: <b>Standard</b></span>
+              </div>
+            </div>
+            <div class="tk__class">
+              <div class="tk__class-row"><span class="tk__class-key">Priority</span><span class="prio prio--p3"><span class="prio__dot"></span>P3</span></div>
+              <div class="tk__class-row"><span class="tk__class-key">Queue</span><span class="tk__class-val">Onboarding</span></div>
+              <div class="tk__class-row"><span class="tk__class-key">Type</span><span class="tk__class-val">Provisioning · scheduled</span></div>
+            </div>
+            <div class="tk__actions">
+              <button class="tk__pull-btn">Accept &amp; route</button>
+              <button class="tk__sec-btn">Override</button>
+            </div>
+          </article>
+
+          <article class="tk">
+            <div>
+              <div class="tk__id">#48718</div>
+              <div class="tk__age">6m</div>
+            </div>
+            <div class="tk__main">
+              <div class="tk__sub">Printer offline · floor 3 · "tried turning it off and on"</div>
+              <div class="tk__meta">
+                <span class="ai"><span class="ai__dot"></span>Classified</span>
+                <span class="tk__meta-sep">·</span>
+                <b>Soylent Corp</b>
+                <span class="tk__meta-sep">·</span>
+                <span>via email</span>
+                <span class="tk__meta-sep">·</span>
+                <span>Contract: <b>Standard</b></span>
+              </div>
+            </div>
+            <div class="tk__class">
+              <div class="tk__class-row"><span class="tk__class-key">Priority</span><span class="prio prio--p4"><span class="prio__dot"></span>P4</span></div>
+              <div class="tk__class-row"><span class="tk__class-key">Queue</span><span class="tk__class-val">Hardware</span></div>
+              <div class="tk__class-row"><span class="tk__class-key">Type</span><span class="tk__class-val">Print · network</span></div>
+            </div>
+            <div class="tk__actions">
+              <button class="tk__pull-btn">Accept &amp; route</button>
+              <button class="tk__sec-btn">Override</button>
+            </div>
+          </article>
+
+          <article class="tk">
+            <div>
+              <div class="tk__id">#48717</div>
+              <div class="tk__age">8m</div>
+            </div>
+            <div class="tk__main">
+              <div class="tk__sub">Suspicious login attempts on CFO account · 14 failures from RU IP</div>
+              <div class="tk__meta">
+                <span class="ai"><span class="ai__dot"></span>Classified</span>
+                <span class="tk__meta-sep">·</span>
+                <b>Wayne Enterprises</b>
+                <span class="tk__meta-sep">·</span>
+                <span>via Defender alert</span>
+                <span class="tk__meta-sep">·</span>
+                <span>Contract: <b>Premium</b></span>
+              </div>
+            </div>
+            <div class="tk__class">
+              <div class="tk__class-row"><span class="tk__class-key">Priority</span><span class="prio prio--p1"><span class="prio__dot"></span>P1</span></div>
+              <div class="tk__class-row"><span class="tk__class-key">Queue</span><span class="tk__class-val">Security · always reviewed</span></div>
+              <div class="tk__class-row"><span class="tk__class-key">Type</span><span class="tk__class-val">Identity · brute force</span></div>
+            </div>
+            <div class="tk__actions">
+              <button class="tk__pull-btn">Accept &amp; route</button>
+              <button class="tk__sec-btn">Override</button>
+            </div>
+          </article>
+
+          <article class="tk">
+            <div>
+              <div class="tk__id">#48716</div>
+              <div class="tk__age">11m</div>
+            </div>
+            <div class="tk__main">
+              <div class="tk__sub">Teams meeting audio cutting in &amp; out — only on VPN</div>
+              <div class="tk__meta">
+                <span class="ai"><span class="ai__dot"></span>Classified</span>
+                <span class="tk__meta-sep">·</span>
+                <b>Stark Industries</b>
+                <span class="tk__meta-sep">·</span>
+                <span>via portal</span>
+                <span class="tk__meta-sep">·</span>
+                <span>Contract: <b>Standard</b></span>
+              </div>
+            </div>
+            <div class="tk__class">
+              <div class="tk__class-row"><span class="tk__class-key">Priority</span><span class="prio prio--p3"><span class="prio__dot"></span>P3</span></div>
+              <div class="tk__class-row"><span class="tk__class-key">Queue</span><span class="tk__class-val">Network</span></div>
+              <div class="tk__class-row"><span class="tk__class-key">Type</span><span class="tk__class-val">VPN · QoS</span></div>
+            </div>
+            <div class="tk__actions">
+              <button class="tk__pull-btn">Accept &amp; route</button>
+              <button class="tk__sec-btn">Override</button>
+            </div>
+          </article>
+
+        </div>
+      </section>
+
+      <!-- Detail panel -->
+      <aside class="detail">
+        <div class="detail__head">
+          <div class="detail__crumb">#48721 · received 11:42 am · email</div>
+          <div class="detail__sub">Outlook keeps prompting for password — Megan Hu, Globex Finance</div>
+          <div class="detail__pills">
+            <span class="prio prio--p2"><span class="prio__dot"></span>P2</span>
+            <span class="chip chip--info">Globex Industries</span>
+            <span class="chip">Standard contract</span>
+            <span class="chip chip--ok">SLA: 1h 47m</span>
+          </div>
+        </div>
+
+        <div class="detail__body">
+          <div class="ai-card">
+            <div class="ai-card__head">
+              <span class="ai"><span class="ai__dot"></span>Nova classified</span>
+              <span class="ai-card__head-title" style="margin-left: 4px;">7 dimensions</span>
+              <span class="ai-card__head-time">in 18s</span>
+            </div>
+            <div class="field"><div class="field__k">Priority</div><div class="field__v field__v--accent">P2 · Medium</div></div>
+            <div class="field"><div class="field__k">Issue</div><div class="field__v">Authentication / MFA loop</div></div>
+            <div class="field"><div class="field__k">Queue</div><div class="field__v">M365 / Identity</div></div>
+            <div class="field"><div class="field__k">Category</div><div class="field__v">Access · token expiry</div></div>
+            <div class="field"><div class="field__k">Sub-cat</div><div class="field__v">Outlook · cached creds</div></div>
+            <div class="field"><div class="field__k">Work type</div><div class="field__v">Remote support</div></div>
+            <div class="field"><div class="field__k">Source</div><div class="field__v">Email · contact known</div></div>
+          </div>
+
+          <div class="reasoning">
+            <div class="reasoning__head">Reasoning</div>
+            <p style="margin: 0;">Subject contains the phrase <b>"keeps prompting for password"</b> with an Outlook reference — that pattern, paired with a Globex contact whose tenant has had <b>3 similar tickets in 30 days</b>, points to a cached-credential / token expiry issue. Routing to <b>M365 / Identity</b> instead of the general help desk because the engineer there resolved the prior three.</p>
+          </div>
+
+          <div class="actions">
+            <button class="btn btn--ghost">Override</button>
+            <button class="btn btn--accept">Accept &amp; route to M365</button>
+          </div>
+        </div>
+      </aside>
+    </div>
+
+  </main>
+</div>
+</body>
+</html>

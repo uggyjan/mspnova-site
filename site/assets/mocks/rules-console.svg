@@ -1,0 +1,169 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 800" preserveAspectRatio="xMidYMid slice" font-family="-apple-system, BlinkMacSystemFont, &#39;Segoe UI&#39;, system-ui, sans-serif">
+<defs>
+  <linearGradient id="bgGrad" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#0e1f3a"></stop><stop offset="1" stop-color="#091428"></stop></linearGradient>
+  <linearGradient id="confHi" x1="0" x2="1"><stop offset="0" stop-color="#22c55e"></stop><stop offset="1" stop-color="#16a34a"></stop></linearGradient>
+  <linearGradient id="confMed" x1="0" x2="1"><stop offset="0" stop-color="#eab308"></stop><stop offset="1" stop-color="#ca8a04"></stop></linearGradient>
+  <linearGradient id="confLo" x1="0" x2="1"><stop offset="0" stop-color="#ef4444"></stop><stop offset="1" stop-color="#b91c1c"></stop></linearGradient>
+</defs>
+<rect width="1280" height="800" fill="url(#bgGrad)"></rect>
+
+  <rect x="0" y="0" width="1280" height="56" fill="#06101f"></rect>
+  <rect x="0" y="55" width="1280" height="1" fill="#1f3358"></rect>
+  <circle cx="32" cy="28" r="9" fill="#d45a3a"></circle>
+  <text x="50" y="33" fill="#e6edf5" font-size="14" font-weight="700" letter-spacing="0.04em">NOVA</text>
+  <g fill="#8a9bb4" font-size="12" font-weight="600"><text x="140" y="33" fill="#8a9bb4">Home</text><text x="200" y="33" fill="#e6edf5">Triage</text><rect x="195" y="40" width="42" height="2" fill="#d45a3a"></rect><text x="270" y="33" fill="#8a9bb4">Needs Attention</text><text x="385" y="33" fill="#8a9bb4">Dispatch Queue</text><text x="495" y="33" fill="#8a9bb4">Pulse</text><text x="555" y="33" fill="#8a9bb4">Status</text></g>
+  <circle cx="1230" cy="28" r="14" fill="#16294a" stroke="#1f3358"></circle>
+  <text x="1230" y="33" fill="#8a9bb4" font-size="11" font-weight="700" text-anchor="middle">A</text>
+  <text x="1200" y="33" fill="#8a9bb4" font-size="11" text-anchor="end">Avery</text>
+
+  <text x="40" y="108" fill="#e6edf5" font-size="22" font-weight="700">Triage Rules</text>
+  <text x="40" y="130" fill="#8a9bb4" font-size="12">14 active rules · 2 drafts · last applied 3m ago</text>
+
+  <rect x="1080" y="92" width="160" height="36" rx="10" fill="#d45a3a"></rect>
+  <text x="1160" y="115" fill="#fff" font-size="12" font-weight="700" text-anchor="middle">+ New rule</text>
+
+  
+  <g transform="translate(40,160)">
+    <rect width="380" height="600" rx="14" fill="#0c1c36" stroke="#1f3358"></rect>
+    <text x="20" y="32" fill="#5e7392" font-size="11" font-weight="700" letter-spacing="0.08em">RULES</text>
+
+    
+      <g transform="translate(0,50)">
+        <rect x="0" y="0" width="380" height="60" fill="transparent"></rect>
+        
+        <text x="20" y="22" fill="#e6edf5" font-size="13" font-weight="600">M365 outage signal</text>
+        <text x="20" y="40" fill="#8a9bb4" font-size="11">≥3 mailbox tickets in 30 min → P1 + alert</text>
+        
+        <rect x="332" y="20" width="32" height="18" rx="9" fill="#d45a3a"></rect>
+        <circle cx="354" cy="29" r="7" fill="#fff"></circle>
+      </g>
+      <g transform="translate(0,118)">
+        <rect x="0" y="0" width="380" height="60" fill="#102545"></rect>
+        <rect x="0" y="0" width="3" height="60" fill="#d45a3a"></rect>
+        <text x="20" y="22" fill="#e6edf5" font-size="13" font-weight="600">Backup job failed</text>
+        <text x="20" y="40" fill="#8a9bb4" font-size="11">Subject contains &#34;backup&#34; + &#34;failed&#34; → P2</text>
+        
+        <rect x="332" y="20" width="32" height="18" rx="9" fill="#d45a3a"></rect>
+        <circle cx="354" cy="29" r="7" fill="#fff"></circle>
+      </g>
+      <g transform="translate(0,186)">
+        <rect x="0" y="0" width="380" height="60" fill="transparent"></rect>
+        
+        <text x="20" y="22" fill="#e6edf5" font-size="13" font-weight="600">New hire onboarding</text>
+        <text x="20" y="40" fill="#8a9bb4" font-size="11">Subject &#34;new hire&#34; → Procurement queue</text>
+        
+        <rect x="332" y="20" width="32" height="18" rx="9" fill="#d45a3a"></rect>
+        <circle cx="354" cy="29" r="7" fill="#fff"></circle>
+      </g>
+      <g transform="translate(0,254)">
+        <rect x="0" y="0" width="380" height="60" fill="transparent"></rect>
+        
+        <text x="20" y="22" fill="#e6edf5" font-size="13" font-weight="600">VIP escalation</text>
+        <text x="20" y="40" fill="#8a9bb4" font-size="11">Sender in VIP list → P2 minimum</text>
+        
+        <rect x="332" y="20" width="32" height="18" rx="9" fill="#d45a3a"></rect>
+        <circle cx="354" cy="29" r="7" fill="#fff"></circle>
+      </g>
+      <g transform="translate(0,322)">
+        <rect x="0" y="0" width="380" height="60" fill="transparent"></rect>
+        
+        <text x="20" y="22" fill="#e6edf5" font-size="13" font-weight="600">Printer keywords</text>
+        <text x="20" y="40" fill="#8a9bb4" font-size="11">&#34;printer&#34; + &#34;offline&#34; → Hardware queue</text>
+        
+        <rect x="332" y="20" width="32" height="18" rx="9" fill="#d45a3a"></rect>
+        <circle cx="354" cy="29" r="7" fill="#fff"></circle>
+      </g>
+      <g transform="translate(0,390)">
+        <rect x="0" y="0" width="380" height="60" fill="transparent"></rect>
+        
+        <text x="20" y="22" fill="#e6edf5" font-size="13" font-weight="600">After-hours overrides</text>
+        <text x="20" y="40" fill="#8a9bb4" font-size="11">After 6 PM PST → on-call rotation</text>
+        
+        <rect x="332" y="20" width="32" height="18" rx="9" fill="#d45a3a"></rect>
+        <circle cx="354" cy="29" r="7" fill="#fff"></circle>
+      </g>
+      <g transform="translate(0,458)">
+        <rect x="0" y="0" width="380" height="60" fill="transparent"></rect>
+        
+        <text x="20" y="22" fill="#e6edf5" font-size="13" font-weight="600">Test company filter</text>
+        <text x="20" y="40" fill="#8a9bb4" font-size="11">XYZ Test → low priority, no notify</text>
+        
+        <rect x="332" y="20" width="32" height="18" rx="9" fill="#d45a3a"></rect>
+        <circle cx="354" cy="29" r="7" fill="#fff"></circle>
+      </g>
+      <g transform="translate(0,526)">
+        <rect x="0" y="0" width="380" height="60" fill="transparent"></rect>
+        
+        <text x="20" y="22" fill="#e6edf5" font-size="13" font-weight="600">Holiday SLA shift</text>
+        <text x="20" y="40" fill="#8a9bb4" font-size="11">Federal holidays → Best Effort SLA</text>
+        
+        <rect x="332" y="20" width="32" height="18" rx="9" fill="#1f3358"></rect>
+        <circle cx="342" cy="29" r="7" fill="#fff"></circle>
+      </g>
+  </g>
+
+  
+  <g transform="translate(440,160)">
+    <rect width="800" height="600" rx="14" fill="#0c1c36" stroke="#1f3358"></rect>
+
+    <text x="24" y="38" fill="#e6edf5" font-size="16" font-weight="700">Backup job failed</text>
+    <text x="24" y="58" fill="#8a9bb4" font-size="12">Triggers when ticket subject contains both keywords</text>
+
+    
+    <g transform="translate(24,86)">
+      <text x="0" y="0" fill="#d45a3a" font-size="11" font-weight="700" letter-spacing="0.08em" font-family="ui-monospace,Menlo,monospace">WHEN</text>
+      <rect x="0" y="14" width="752" height="56" rx="8" fill="#0a1830" stroke="#1f3358"></rect>
+      <text x="20" y="38" fill="#8a9bb4" font-size="12">Subject</text>
+      <rect x="80" y="24" width="80" height="22" rx="4" fill="#16294a"></rect>
+      <text x="120" y="39" fill="#a9b8d0" font-size="11" text-anchor="middle">contains</text>
+      <rect x="170" y="24" width="120" height="22" rx="4" fill="#16294a" stroke="#d45a3a"></rect>
+      <text x="230" y="39" fill="#e6edf5" font-size="11" text-anchor="middle" font-family="ui-monospace,Menlo,monospace">&#34;backup&#34;</text>
+      <text x="305" y="39" fill="#5e7392" font-size="11">AND</text>
+      <rect x="340" y="24" width="120" height="22" rx="4" fill="#16294a" stroke="#d45a3a"></rect>
+      <text x="400" y="39" fill="#e6edf5" font-size="11" text-anchor="middle" font-family="ui-monospace,Menlo,monospace">&#34;failed&#34;</text>
+      <text x="475" y="39" fill="#5e7392" font-size="11" font-style="italic">+ add condition</text>
+    </g>
+
+    
+    <g transform="translate(24,180)">
+      <text x="0" y="0" fill="#d45a3a" font-size="11" font-weight="700" letter-spacing="0.08em" font-family="ui-monospace,Menlo,monospace">THEN</text>
+      <rect x="0" y="14" width="752" height="180" rx="8" fill="#0a1830" stroke="#1f3358"></rect>
+
+      <text x="20" y="42" fill="#8a9bb4" font-size="12">Set priority</text>
+      <rect x="120" y="28" width="64" height="22" rx="4" fill="#3b1818" stroke="#ef4444"></rect>
+      <text x="152" y="43" fill="#ef4444" font-size="11" font-weight="800" text-anchor="middle">P2</text>
+
+      <text x="20" y="80" fill="#8a9bb4" font-size="12">Issue type</text>
+      <rect x="120" y="66" width="180" height="22" rx="4" fill="#16294a"></rect>
+      <text x="210" y="81" fill="#a9b8d0" font-size="11" text-anchor="middle">Backup / Server</text>
+
+      <text x="20" y="118" fill="#8a9bb4" font-size="12">Route to queue</text>
+      <rect x="120" y="104" width="180" height="22" rx="4" fill="#16294a"></rect>
+      <text x="210" y="119" fill="#a9b8d0" font-size="11" text-anchor="middle">Needs Attention</text>
+
+      <text x="20" y="156" fill="#8a9bb4" font-size="12">Notify</text>
+      <rect x="120" y="142" width="120" height="22" rx="4" fill="#16294a"></rect>
+      <text x="180" y="157" fill="#a9b8d0" font-size="11" text-anchor="middle">#nova-alerts</text>
+      <rect x="248" y="142" width="80" height="22" rx="4" fill="#16294a"></rect>
+      <text x="288" y="157" fill="#a9b8d0" font-size="11" text-anchor="middle">+ Avery</text>
+    </g>
+
+    
+    <g transform="translate(24,398)">
+      <text x="0" y="0" fill="#d45a3a" font-size="11" font-weight="700" letter-spacing="0.08em" font-family="ui-monospace,Menlo,monospace">MATCH PREVIEW · LAST 30 DAYS</text>
+      <rect x="0" y="14" width="752" height="86" rx="8" fill="#0a1830" stroke="#1f3358"></rect>
+      <text x="20" y="46" fill="#22c55e" font-size="28" font-weight="700" font-family="ui-monospace,Menlo,monospace">14</text>
+      <text x="60" y="46" fill="#8a9bb4" font-size="12">tickets would have matched</text>
+      <text x="20" y="78" fill="#5e7392" font-size="11">Acme · Mercer · Northwind · Pinewood — 0 false positives flagged by Avery.</text>
+    </g>
+
+    
+    <g transform="translate(24,524)">
+      <rect x="0" y="0" width="100" height="36" rx="8" fill="#16294a" stroke="#1f3358"></rect>
+      <text x="50" y="23" fill="#a9b8d0" font-size="12" font-weight="600" text-anchor="middle">Cancel</text>
+      <rect x="640" y="0" width="112" height="36" rx="8" fill="#d45a3a"></rect>
+      <text x="696" y="23" fill="#fff" font-size="12" font-weight="700" text-anchor="middle">Save &amp; enable</text>
+    </g>
+  </g>
+
+</svg>

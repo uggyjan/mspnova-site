@@ -1,0 +1,183 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 800" preserveAspectRatio="xMidYMid slice" font-family="-apple-system, BlinkMacSystemFont, &#39;Segoe UI&#39;, system-ui, sans-serif">
+<defs>
+  <linearGradient id="bgGrad" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#0e1f3a"></stop><stop offset="1" stop-color="#091428"></stop></linearGradient>
+</defs>
+<rect width="1280" height="800" fill="url(#bgGrad)"></rect>
+<rect x="0" y="0" width="1280" height="56" fill="#06101f"></rect>
+  <rect x="0" y="55" width="1280" height="1" fill="#1f3358"></rect>
+  <circle cx="32" cy="28" r="9" fill="#d45a3a"></circle>
+  <text x="50" y="33" fill="#e6edf5" font-size="14" font-weight="700" letter-spacing="0.04em">NOVA</text>
+  <g fill="#8a9bb4" font-size="12" font-weight="600">
+    <text x="140" y="33">Home</text><text x="200" y="33">Triage</text>
+    <text x="270" y="33">Needs Attention</text><text x="385" y="33">Dispatch Queue</text>
+    <text x="495" y="33">Pulse</text><text x="555" y="33">Status</text>
+    </g>
+  <circle cx="1230" cy="28" r="14" fill="#16294a" stroke="#1f3358"></circle>
+  <text x="1230" y="33" fill="#8a9bb4" font-size="11" font-weight="700" text-anchor="middle">A</text>
+  <text x="1200" y="33" fill="#8a9bb4" font-size="11" text-anchor="end">Avery</text>
+
+  <text x="40" y="108" fill="#e6edf5" font-size="22" font-weight="700">Security &amp; Compliance</text>
+  <text x="40" y="130" fill="#8a9bb4" font-size="12">Northwind MSP · last audit Oct 12 · next review Apr 12 · 0 open findings</text>
+
+  
+  <g transform="translate(40,160)">
+    <rect width="1200" height="84" rx="14" fill="rgba(34,197,94,0.06)" stroke="#22c55e"></rect>
+    <circle cx="44" cy="42" r="20" fill="#22c55e"></circle>
+    <path d="M34 42l8 8 16-16" stroke="#0c1c36" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"></path>
+    <text x="80" y="36" fill="#22c55e" font-size="16" font-weight="700">Posture: Strong</text>
+    <text x="80" y="56" fill="#a9b8d0" font-size="12">All controls passing · MFA enforced on 247/247 accounts · key rotation current · backups verified 4h ago</text>
+
+    <text x="1100" y="36" fill="#5e7392" font-size="11" text-anchor="end">SCORE</text>
+    <text x="1180" y="48" fill="#22c55e" font-size="32" font-weight="700" font-family="ui-monospace,Menlo,monospace" text-anchor="end">98<tspan fill="#5e7392" font-size="16">/100</tspan></text>
+  </g>
+
+  
+  <g transform="translate(40,272)">
+    <text x="0" y="0" fill="#5e7392" font-size="11" font-weight="700" letter-spacing="0.08em">FRAMEWORKS</text>
+
+    
+      <g transform="translate(0,14)">
+        <rect width="184" height="100" rx="12" fill="#0c1c36" stroke="#1f3358"></rect>
+        <text x="20" y="28" fill="#e6edf5" font-size="13" font-weight="700">SOC 2 Type II</text>
+        <rect x="20" y="38" width="80" height="18" rx="4" fill="#22c55e" opacity="0.15"></rect>
+        <text x="60" y="51" fill="#22c55e" font-size="10" font-weight="700" text-anchor="middle">Certified</text>
+        <text x="20" y="78" fill="#8a9bb4" font-size="10">Renewed Oct 12, 2024</text>
+        <text x="164" y="92" fill="#60a5fa" font-size="10" text-anchor="end">view ›</text>
+      </g>
+      <g transform="translate(200,14)">
+        <rect width="184" height="100" rx="12" fill="#0c1c36" stroke="#1f3358"></rect>
+        <text x="20" y="28" fill="#e6edf5" font-size="13" font-weight="700">ISO 27001</text>
+        <rect x="20" y="38" width="80" height="18" rx="4" fill="#22c55e" opacity="0.15"></rect>
+        <text x="60" y="51" fill="#22c55e" font-size="10" font-weight="700" text-anchor="middle">Certified</text>
+        <text x="20" y="78" fill="#8a9bb4" font-size="10">Renewed Aug 03, 2024</text>
+        <text x="164" y="92" fill="#60a5fa" font-size="10" text-anchor="end">view ›</text>
+      </g>
+      <g transform="translate(400,14)">
+        <rect width="184" height="100" rx="12" fill="#0c1c36" stroke="#1f3358"></rect>
+        <text x="20" y="28" fill="#e6edf5" font-size="13" font-weight="700">GDPR</text>
+        <rect x="20" y="38" width="80" height="18" rx="4" fill="#22c55e" opacity="0.15"></rect>
+        <text x="60" y="51" fill="#22c55e" font-size="10" font-weight="700" text-anchor="middle">Compliant</text>
+        <text x="20" y="78" fill="#8a9bb4" font-size="10">DPA signed · EU rep on file</text>
+        <text x="164" y="92" fill="#60a5fa" font-size="10" text-anchor="end">view ›</text>
+      </g>
+      <g transform="translate(600,14)">
+        <rect width="184" height="100" rx="12" fill="#0c1c36" stroke="#1f3358"></rect>
+        <text x="20" y="28" fill="#e6edf5" font-size="13" font-weight="700">HIPAA</text>
+        <rect x="20" y="38" width="80" height="18" rx="4" fill="#60a5fa" opacity="0.15"></rect>
+        <text x="60" y="51" fill="#60a5fa" font-size="10" font-weight="700" text-anchor="middle">BAA available</text>
+        <text x="20" y="78" fill="#8a9bb4" font-size="10">For healthcare clients</text>
+        <text x="164" y="92" fill="#60a5fa" font-size="10" text-anchor="end">view ›</text>
+      </g>
+      <g transform="translate(800,14)">
+        <rect width="184" height="100" rx="12" fill="#0c1c36" stroke="#1f3358"></rect>
+        <text x="20" y="28" fill="#e6edf5" font-size="13" font-weight="700">CMMC L2</text>
+        <rect x="20" y="38" width="80" height="18" rx="4" fill="#eab308" opacity="0.15"></rect>
+        <text x="60" y="51" fill="#eab308" font-size="10" font-weight="700" text-anchor="middle">In progress</text>
+        <text x="20" y="78" fill="#8a9bb4" font-size="10">Target: Q3 2026</text>
+        <text x="164" y="92" fill="#60a5fa" font-size="10" text-anchor="end">view ›</text>
+      </g>
+
+    <g transform="translate(1000,14)">
+      <rect width="200" height="100" rx="12" fill="#0a1830" stroke="#1f3358" stroke-dasharray="4 4"></rect>
+      <text x="20" y="40" fill="#a9b8d0" font-size="12" font-weight="600">+ Add framework</text>
+      <text x="20" y="64" fill="#5e7392" font-size="10">PCI-DSS · NIST 800-171</text>
+      <text x="20" y="80" fill="#5e7392" font-size="10">FedRAMP · others</text>
+    </g>
+  </g>
+
+  
+  <g transform="translate(40,420)">
+    <text x="0" y="0" fill="#5e7392" font-size="11" font-weight="700" letter-spacing="0.08em">KEY CONTROLS · LIVE</text>
+
+    
+      <g transform="translate(0,20)">
+        <rect width="280" height="100" rx="12" fill="#0c1c36" stroke="#1f3358"></rect>
+        <text x="20" y="32" fill="#22c55e" font-size="22" font-weight="700">⚿</text>
+        <text x="56" y="32" fill="#e6edf5" font-size="13" font-weight="600">MFA enforcement</text>
+
+        <text x="20" y="64" fill="#e6edf5" font-size="20" font-weight="700" font-family="ui-monospace,Menlo,monospace">247/247</text>
+        <text x="20" y="84" fill="#8a9bb4" font-size="10">all accounts · enforced 90d</text>
+
+        <rect x="248" y="76" width="20" height="14" rx="3" fill="#22c55e" opacity="0.15"></rect>
+        <path d="M252 83l3 3 6-6" stroke="#22c55e" stroke-width="1.5" fill="none" stroke-linecap="round"></path>
+      </g>
+      <g transform="translate(300,20)">
+        <rect width="280" height="100" rx="12" fill="#0c1c36" stroke="#1f3358"></rect>
+        <text x="20" y="32" fill="#22c55e" font-size="22" font-weight="700">⚿</text>
+        <text x="56" y="32" fill="#e6edf5" font-size="13" font-weight="600">Encryption at rest</text>
+
+        <text x="20" y="64" fill="#e6edf5" font-size="20" font-weight="700" font-family="ui-monospace,Menlo,monospace">AES-256</text>
+        <text x="20" y="84" fill="#8a9bb4" font-size="10">all tenants · KMS-managed</text>
+
+        <rect x="248" y="76" width="20" height="14" rx="3" fill="#22c55e" opacity="0.15"></rect>
+        <path d="M252 83l3 3 6-6" stroke="#22c55e" stroke-width="1.5" fill="none" stroke-linecap="round"></path>
+      </g>
+      <g transform="translate(600,20)">
+        <rect width="280" height="100" rx="12" fill="#0c1c36" stroke="#1f3358"></rect>
+        <text x="20" y="32" fill="#22c55e" font-size="22" font-weight="700">⚿</text>
+        <text x="56" y="32" fill="#e6edf5" font-size="13" font-weight="600">Encryption in transit</text>
+
+        <text x="20" y="64" fill="#e6edf5" font-size="20" font-weight="700" font-family="ui-monospace,Menlo,monospace">TLS 1.3</text>
+        <text x="20" y="84" fill="#8a9bb4" font-size="10">minimum across all endpoints</text>
+
+        <rect x="248" y="76" width="20" height="14" rx="3" fill="#22c55e" opacity="0.15"></rect>
+        <path d="M252 83l3 3 6-6" stroke="#22c55e" stroke-width="1.5" fill="none" stroke-linecap="round"></path>
+      </g>
+      <g transform="translate(900,20)">
+        <rect width="280" height="100" rx="12" fill="#0c1c36" stroke="#1f3358"></rect>
+        <text x="20" y="32" fill="#22c55e" font-size="22" font-weight="700">⚿</text>
+        <text x="56" y="32" fill="#e6edf5" font-size="13" font-weight="600">Access reviews</text>
+
+        <text x="20" y="64" fill="#e6edf5" font-size="20" font-weight="700" font-family="ui-monospace,Menlo,monospace">Quarterly</text>
+        <text x="20" y="84" fill="#8a9bb4" font-size="10">next: Apr 12 · automated</text>
+
+        <rect x="248" y="76" width="20" height="14" rx="3" fill="#22c55e" opacity="0.15"></rect>
+        <path d="M252 83l3 3 6-6" stroke="#22c55e" stroke-width="1.5" fill="none" stroke-linecap="round"></path>
+      </g>
+      <g transform="translate(0,140)">
+        <rect width="280" height="100" rx="12" fill="#0c1c36" stroke="#1f3358"></rect>
+        <text x="20" y="32" fill="#22c55e" font-size="22" font-weight="700">⟳</text>
+        <text x="56" y="32" fill="#e6edf5" font-size="13" font-weight="600">Backup verification</text>
+
+        <text x="20" y="64" fill="#e6edf5" font-size="20" font-weight="700" font-family="ui-monospace,Menlo,monospace">Daily</text>
+        <text x="20" y="84" fill="#8a9bb4" font-size="10">last verified 4h ago · 287 GB</text>
+
+        <rect x="248" y="76" width="20" height="14" rx="3" fill="#22c55e" opacity="0.15"></rect>
+        <path d="M252 83l3 3 6-6" stroke="#22c55e" stroke-width="1.5" fill="none" stroke-linecap="round"></path>
+      </g>
+      <g transform="translate(300,140)">
+        <rect width="280" height="100" rx="12" fill="#0c1c36" stroke="#1f3358"></rect>
+        <text x="20" y="32" fill="#22c55e" font-size="22" font-weight="700">⌕</text>
+        <text x="56" y="32" fill="#e6edf5" font-size="13" font-weight="600">Vulnerability scans</text>
+
+        <text x="20" y="64" fill="#e6edf5" font-size="20" font-weight="700" font-family="ui-monospace,Menlo,monospace">Weekly</text>
+        <text x="20" y="84" fill="#8a9bb4" font-size="10">last scan: 0 critical · 2 low</text>
+
+        <rect x="248" y="76" width="20" height="14" rx="3" fill="#22c55e" opacity="0.15"></rect>
+        <path d="M252 83l3 3 6-6" stroke="#22c55e" stroke-width="1.5" fill="none" stroke-linecap="round"></path>
+      </g>
+      <g transform="translate(600,140)">
+        <rect width="280" height="100" rx="12" fill="#0c1c36" stroke="#1f3358"></rect>
+        <text x="20" y="32" fill="#22c55e" font-size="22" font-weight="700">⚑</text>
+        <text x="56" y="32" fill="#e6edf5" font-size="13" font-weight="600">Incident response</text>
+
+        <text x="20" y="64" fill="#e6edf5" font-size="20" font-weight="700" font-family="ui-monospace,Menlo,monospace">Tested</text>
+        <text x="20" y="84" fill="#8a9bb4" font-size="10">tabletop done Q4 2024</text>
+
+        <rect x="248" y="76" width="20" height="14" rx="3" fill="#22c55e" opacity="0.15"></rect>
+        <path d="M252 83l3 3 6-6" stroke="#22c55e" stroke-width="1.5" fill="none" stroke-linecap="round"></path>
+      </g>
+      <g transform="translate(900,140)">
+        <rect width="280" height="100" rx="12" fill="#0c1c36" stroke="#1f3358"></rect>
+        <text x="20" y="32" fill="#a78bfa" font-size="22" font-weight="700">⌖</text>
+        <text x="56" y="32" fill="#e6edf5" font-size="13" font-weight="600">Pen test</text>
+
+        <text x="20" y="64" fill="#e6edf5" font-size="20" font-weight="700" font-family="ui-monospace,Menlo,monospace">Annual</text>
+        <text x="20" y="84" fill="#8a9bb4" font-size="10">next: Sept 2025 · external</text>
+
+        <rect x="248" y="76" width="20" height="14" rx="3" fill="#a78bfa" opacity="0.15"></rect>
+        <path d="M252 83l3 3 6-6" stroke="#a78bfa" stroke-width="1.5" fill="none" stroke-linecap="round"></path>
+      </g>
+  </g>
+
+</svg>

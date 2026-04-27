@@ -1,0 +1,193 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 800" preserveAspectRatio="xMidYMid slice" font-family="-apple-system, BlinkMacSystemFont, &#39;Segoe UI&#39;, system-ui, sans-serif">
+<defs>
+  <linearGradient id="bgGrad" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#0e1f3a"></stop><stop offset="1" stop-color="#091428"></stop></linearGradient>
+  <linearGradient id="hi" x1="0" x2="1"><stop offset="0" stop-color="#22c55e"></stop><stop offset="1" stop-color="#16a34a"></stop></linearGradient>
+  <linearGradient id="warn" x1="0" x2="1"><stop offset="0" stop-color="#eab308"></stop><stop offset="1" stop-color="#ca8a04"></stop></linearGradient>
+  <linearGradient id="lo" x1="0" x2="1"><stop offset="0" stop-color="#ef4444"></stop><stop offset="1" stop-color="#b91c1c"></stop></linearGradient>
+</defs>
+<rect width="1280" height="800" fill="url(#bgGrad)"></rect>
+
+<rect x="0" y="0" width="1280" height="56" fill="#06101f"></rect>
+<rect x="0" y="55" width="1280" height="1" fill="#1f3358"></rect>
+<circle cx="32" cy="28" r="9" fill="#d45a3a"></circle>
+<text x="50" y="33" fill="#e6edf5" font-size="14" font-weight="700" letter-spacing="0.04em">NOVA</text>
+<g font-size="12" font-weight="600"><text x="140" y="33" fill="#8a9bb4">Home</text><text x="200" y="33" fill="#8a9bb4">Triage</text><text x="268" y="33" fill="#8a9bb4">Needs Attention</text><text x="388" y="33" fill="#8a9bb4">Dispatch Queue</text><text x="500" y="33" fill="#8a9bb4">Pulse</text><text x="558" y="33" fill="#e6edf5">Status</text><rect x="554" y="40" width="50" height="2" fill="#d45a3a"></rect><text x="618" y="33" fill="#8a9bb4">Flash</text></g>
+<circle cx="1230" cy="28" r="14" fill="#16294a" stroke="#1f3358"></circle>
+<text x="1230" y="33" fill="#8a9bb4" font-size="11" font-weight="700" text-anchor="middle">A</text>
+<text x="1200" y="33" fill="#8a9bb4" font-size="11" text-anchor="end">Avery</text>
+
+<text x="40" y="108" fill="#e6edf5" font-size="22" font-weight="700">Time Clock</text>
+<text x="40" y="130" fill="#8a9bb4" font-size="12">Pay period · Apr 14–27 · 8 techs · 2 missed clockouts pending approval</text>
+
+
+<g transform="translate(40,160)">
+  <rect width="288" height="84" rx="10" fill="#0c1c36" stroke="#1f3358"></rect>
+  <text x="20" y="32" fill="#8a9bb4" font-size="11" letter-spacing=".06em">REGULAR HOURS</text>
+  <text x="20" y="64" fill="#e6edf5" font-size="28" font-weight="800">312.5</text>
+  <text x="200" y="64" fill="#8a9bb4" font-size="12">/ 320 sched</text>
+</g>
+<g transform="translate(344,160)">
+  <rect width="288" height="84" rx="10" fill="#0c1c36" stroke="#1f3358"></rect>
+  <text x="20" y="32" fill="#8a9bb4" font-size="11" letter-spacing=".06em">OVERTIME</text>
+  <text x="20" y="64" fill="#e6edf5" font-size="28" font-weight="800">14.0</text>
+  <text x="138" y="64" fill="#eab308" font-size="12">▲ 4h vs last period</text>
+</g>
+<g transform="translate(648,160)">
+  <rect width="288" height="84" rx="10" fill="#0c1c36" stroke="#1f3358"></rect>
+  <text x="20" y="32" fill="#8a9bb4" font-size="11" letter-spacing=".06em">PTO USED</text>
+  <text x="20" y="64" fill="#e6edf5" font-size="28" font-weight="800">16</text>
+  <text x="74" y="64" fill="#8a9bb4" font-size="12">hrs · 2 days</text>
+</g>
+<g transform="translate(952,160)">
+  <rect width="288" height="84" rx="10" fill="#0c1c36" stroke="#1f3358"></rect>
+  <text x="20" y="32" fill="#8a9bb4" font-size="11" letter-spacing=".06em">TO APPROVE</text>
+  <text x="20" y="64" fill="#ef4444" font-size="28" font-weight="800">2</text>
+  <text x="60" y="64" fill="#8a9bb4" font-size="12">missed clockouts</text>
+</g>
+
+
+<g transform="translate(40,272)">
+  <rect width="1200" height="36" rx="8" fill="#0a1830"></rect>
+  <text x="20" y="23" fill="#8a9bb4" font-size="11" letter-spacing=".06em">TECH</text>
+  <text x="200" y="23" fill="#8a9bb4" font-size="11" letter-spacing=".06em">CLOCK IN</text>
+  <text x="320" y="23" fill="#8a9bb4" font-size="11" letter-spacing=".06em">CLOCK OUT</text>
+  <text x="440" y="23" fill="#8a9bb4" font-size="11" letter-spacing=".06em">LUNCH</text>
+  <text x="540" y="23" fill="#8a9bb4" font-size="11" letter-spacing=".06em">REGULAR</text>
+  <text x="660" y="23" fill="#8a9bb4" font-size="11" letter-spacing=".06em">OT</text>
+  <text x="740" y="23" fill="#8a9bb4" font-size="11" letter-spacing=".06em">DEVIATION</text>
+  <text x="900" y="23" fill="#8a9bb4" font-size="11" letter-spacing=".06em">STATUS</text>
+</g>
+
+
+<g transform="translate(40,320)">
+  <rect width="1200" height="44" rx="8" fill="#0c1c36" stroke="#1f3358"></rect>
+  <circle cx="22" cy="22" r="12" fill="#16294a"></circle>
+  <text x="22" y="26" fill="#a9b8d0" font-size="10" font-weight="700" text-anchor="middle">AK</text>
+  <text x="44" y="20" fill="#e6edf5" font-size="12" font-weight="600">Avery K.</text>
+  <text x="44" y="34" fill="#5e7392" font-size="10">Tier 2</text>
+  <text x="200" y="27" fill="#a9b8d0" font-size="12">7:52 AM</text>
+  <text x="320" y="27" fill="#a9b8d0" font-size="12">5:34 PM</text>
+  <text x="440" y="27" fill="#a9b8d0" font-size="12">30m</text>
+  <text x="540" y="27" fill="#e6edf5" font-size="12" font-weight="600">40.0h</text>
+  <text x="660" y="27" fill="#eab308" font-size="12" font-weight="600">2.0h</text>
+  <text x="740" y="27" fill="#8a9bb4" font-size="11">+8m early</text>
+  <rect x="900" y="12" width="30" height="20" rx="10" fill="#22c55e22" stroke="#22c55e"></rect>
+  <text x="915" y="26" fill="#22c55e" font-size="10" font-weight="700" text-anchor="middle">OK</text>
+</g>
+<g transform="translate(40,372)">
+  <rect width="1200" height="44" rx="8" fill="#0a1830" stroke="#1f3358"></rect>
+  <circle cx="22" cy="22" r="12" fill="#16294a"></circle>
+  <text x="22" y="26" fill="#a9b8d0" font-size="10" font-weight="700" text-anchor="middle">DS</text>
+  <text x="44" y="20" fill="#e6edf5" font-size="12" font-weight="600">Devon S.</text>
+  <text x="44" y="34" fill="#5e7392" font-size="10">Tech Lead</text>
+  <text x="200" y="27" fill="#a9b8d0" font-size="12">8:04 AM</text>
+  <text x="320" y="27" fill="#ef4444" font-size="12">—</text>
+  <text x="440" y="27" fill="#a9b8d0" font-size="12">—</text>
+  <text x="540" y="27" fill="#e6edf5" font-size="12" font-weight="600">38.5h</text>
+  <text x="660" y="27" fill="#eab308" font-size="12" font-weight="600">4.5h</text>
+  <text x="740" y="27" fill="#8a9bb4" font-size="11">+4m late</text>
+  <rect x="900" y="12" width="84" height="20" rx="10" fill="#ef444422" stroke="#ef4444"></rect>
+  <text x="942" y="26" fill="#ef4444" font-size="10" font-weight="700" text-anchor="middle">No clockout</text>
+</g>
+<g transform="translate(40,424)">
+  <rect width="1200" height="44" rx="8" fill="#0c1c36" stroke="#1f3358"></rect>
+  <circle cx="22" cy="22" r="12" fill="#16294a"></circle>
+  <text x="22" y="26" fill="#a9b8d0" font-size="10" font-weight="700" text-anchor="middle">JP</text>
+  <text x="44" y="20" fill="#e6edf5" font-size="12" font-weight="600">Jordan P.</text>
+  <text x="44" y="34" fill="#5e7392" font-size="10">Service Mgr</text>
+  <text x="200" y="27" fill="#a9b8d0" font-size="12">7:48 AM</text>
+  <text x="320" y="27" fill="#a9b8d0" font-size="12">5:12 PM</text>
+  <text x="440" y="27" fill="#a9b8d0" font-size="12">45m</text>
+  <text x="540" y="27" fill="#e6edf5" font-size="12" font-weight="600">40.0h</text>
+  <text x="660" y="27" fill="#eab308" font-size="12" font-weight="600">1.0h</text>
+  <text x="740" y="27" fill="#8a9bb4" font-size="11">on time</text>
+  <rect x="900" y="12" width="30" height="20" rx="10" fill="#22c55e22" stroke="#22c55e"></rect>
+  <text x="915" y="26" fill="#22c55e" font-size="10" font-weight="700" text-anchor="middle">OK</text>
+</g>
+<g transform="translate(40,476)">
+  <rect width="1200" height="44" rx="8" fill="#0a1830" stroke="#1f3358"></rect>
+  <circle cx="22" cy="22" r="12" fill="#16294a"></circle>
+  <text x="22" y="26" fill="#a9b8d0" font-size="10" font-weight="700" text-anchor="middle">RT</text>
+  <text x="44" y="20" fill="#e6edf5" font-size="12" font-weight="600">Rowan T.</text>
+  <text x="44" y="34" fill="#5e7392" font-size="10">Account Mgr</text>
+  <text x="200" y="27" fill="#a9b8d0" font-size="12">8:30 AM</text>
+  <text x="320" y="27" fill="#a9b8d0" font-size="12">4:58 PM</text>
+  <text x="440" y="27" fill="#a9b8d0" font-size="12">60m</text>
+  <text x="540" y="27" fill="#e6edf5" font-size="12" font-weight="600">40.0h</text>
+  <text x="660" y="27" fill="#5e7392" font-size="12" font-weight="400">0.0h</text>
+  <text x="740" y="27" fill="#8a9bb4" font-size="11">on time</text>
+  <rect x="900" y="12" width="30" height="20" rx="10" fill="#22c55e22" stroke="#22c55e"></rect>
+  <text x="915" y="26" fill="#22c55e" font-size="10" font-weight="700" text-anchor="middle">OK</text>
+</g>
+<g transform="translate(40,528)">
+  <rect width="1200" height="44" rx="8" fill="#0c1c36" stroke="#1f3358"></rect>
+  <circle cx="22" cy="22" r="12" fill="#16294a"></circle>
+  <text x="22" y="26" fill="#a9b8d0" font-size="10" font-weight="700" text-anchor="middle">SP</text>
+  <text x="44" y="20" fill="#e6edf5" font-size="12" font-weight="600">Sasha P.</text>
+  <text x="44" y="34" fill="#5e7392" font-size="10">Tier 2</text>
+  <text x="200" y="27" fill="#a9b8d0" font-size="12">8:15 AM</text>
+  <text x="320" y="27" fill="#ef4444" font-size="12">—</text>
+  <text x="440" y="27" fill="#a9b8d0" font-size="12">30m</text>
+  <text x="540" y="27" fill="#e6edf5" font-size="12" font-weight="600">36.0h</text>
+  <text x="660" y="27" fill="#eab308" font-size="12" font-weight="600">3.5h</text>
+  <text x="740" y="27" fill="#8a9bb4" font-size="11">+15m late</text>
+  <rect x="900" y="12" width="84" height="20" rx="10" fill="#ef444422" stroke="#ef4444"></rect>
+  <text x="942" y="26" fill="#ef4444" font-size="10" font-weight="700" text-anchor="middle">No clockout</text>
+</g>
+<g transform="translate(40,580)">
+  <rect width="1200" height="44" rx="8" fill="#0a1830" stroke="#1f3358"></rect>
+  <circle cx="22" cy="22" r="12" fill="#16294a"></circle>
+  <text x="22" y="26" fill="#a9b8d0" font-size="10" font-weight="700" text-anchor="middle">KR</text>
+  <text x="44" y="20" fill="#e6edf5" font-size="12" font-weight="600">Kai R.</text>
+  <text x="44" y="34" fill="#5e7392" font-size="10">Tier 1</text>
+  <text x="200" y="27" fill="#a9b8d0" font-size="12">8:00 AM</text>
+  <text x="320" y="27" fill="#a9b8d0" font-size="12">5:00 PM</text>
+  <text x="440" y="27" fill="#a9b8d0" font-size="12">30m</text>
+  <text x="540" y="27" fill="#e6edf5" font-size="12" font-weight="600">40.0h</text>
+  <text x="660" y="27" fill="#5e7392" font-size="12" font-weight="400">0.0h</text>
+  <text x="740" y="27" fill="#8a9bb4" font-size="11">on time</text>
+  <rect x="900" y="12" width="30" height="20" rx="10" fill="#22c55e22" stroke="#22c55e"></rect>
+  <text x="915" y="26" fill="#22c55e" font-size="10" font-weight="700" text-anchor="middle">OK</text>
+</g>
+<g transform="translate(40,632)">
+  <rect width="1200" height="44" rx="8" fill="#0c1c36" stroke="#1f3358"></rect>
+  <circle cx="22" cy="22" r="12" fill="#16294a"></circle>
+  <text x="22" y="26" fill="#a9b8d0" font-size="10" font-weight="700" text-anchor="middle">EW</text>
+  <text x="44" y="20" fill="#e6edf5" font-size="12" font-weight="600">Emi W.</text>
+  <text x="44" y="34" fill="#5e7392" font-size="10">Tier 1</text>
+  <text x="200" y="27" fill="#a9b8d0" font-size="12">9:00 AM</text>
+  <text x="320" y="27" fill="#a9b8d0" font-size="12">5:30 PM</text>
+  <text x="440" y="27" fill="#a9b8d0" font-size="12">30m</text>
+  <text x="540" y="27" fill="#e6edf5" font-size="12" font-weight="600">37.5h</text>
+  <text x="660" y="27" fill="#5e7392" font-size="12" font-weight="400">0.0h</text>
+  <text x="740" y="27" fill="#8a9bb4" font-size="11">PTO Mon</text>
+  <rect x="900" y="12" width="36" height="20" rx="10" fill="#a78bfa22" stroke="#a78bfa"></rect>
+  <text x="918" y="26" fill="#a78bfa" font-size="10" font-weight="700" text-anchor="middle">PTO</text>
+</g>
+<g transform="translate(40,684)">
+  <rect width="1200" height="44" rx="8" fill="#0a1830" stroke="#1f3358"></rect>
+  <circle cx="22" cy="22" r="12" fill="#16294a"></circle>
+  <text x="22" y="26" fill="#a9b8d0" font-size="10" font-weight="700" text-anchor="middle">NL</text>
+  <text x="44" y="20" fill="#e6edf5" font-size="12" font-weight="600">Niko L.</text>
+  <text x="44" y="34" fill="#5e7392" font-size="10">Tier 1</text>
+  <text x="200" y="27" fill="#a9b8d0" font-size="12">7:55 AM</text>
+  <text x="320" y="27" fill="#a9b8d0" font-size="12">5:01 PM</text>
+  <text x="440" y="27" fill="#a9b8d0" font-size="12">45m</text>
+  <text x="540" y="27" fill="#e6edf5" font-size="12" font-weight="600">40.5h</text>
+  <text x="660" y="27" fill="#eab308" font-size="12" font-weight="600">2.5h</text>
+  <text x="740" y="27" fill="#8a9bb4" font-size="11">+5m late</text>
+  <rect x="900" y="12" width="30" height="20" rx="10" fill="#22c55e22" stroke="#22c55e"></rect>
+  <text x="915" y="26" fill="#22c55e" font-size="10" font-weight="700" text-anchor="middle">OK</text>
+</g>
+
+
+<g transform="translate(40,740)">
+  <rect width="1200" height="44" rx="10" fill="#0c1c36" stroke="#1f3358"></rect>
+  <text x="20" y="28" fill="#8a9bb4" font-size="12">8 techs · 312.5 reg + 14 OT = 326.5 total billable hours</text>
+  <rect x="980" y="8" width="100" height="28" rx="6" fill="#16294a" stroke="#1f3358"></rect>
+  <text x="1030" y="26" fill="#a9b8d0" font-size="11" text-anchor="middle">Approve all</text>
+  <rect x="1090" y="8" width="100" height="28" rx="6" fill="#d45a3a"></rect>
+  <text x="1140" y="26" fill="#fff" font-size="11" font-weight="700" text-anchor="middle">Export to QB</text>
+</g>
+</svg>

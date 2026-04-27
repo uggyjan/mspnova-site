@@ -9,10 +9,11 @@
   // Resolves to <root>assets/mspnova-logo.svg or mspnova-logo-on-dark.svg
   // depending on background. Path-rewriting happens later via data-mn-root.
   function logo({ onDark = false, scale = 1 } = {}) {
-    var src = onDark ? '/assets/mspnova-logo-on-dark.svg' : '/assets/mspnova-logo.svg';
+    var src = onDark ? '/assets/mspnova-logo-on-dark.svg?v=3' : '/assets/mspnova-logo.svg?v=3';
     var height = Math.round(40 * scale);
+    var width = Math.round(240 * scale * (height / 40));
     return '<a href="/" class="nv-logo-static" aria-label="MSPNova home">'
-      + '<img src="' + src + '" alt="MSPNova" height="' + height + '" style="display:block;height:' + height + 'px;width:auto;"/>'
+      + '<img src="' + src + '" alt="MSPNova" width="' + width + '" height="' + height + '" style="display:block;height:' + height + 'px;width:' + width + 'px;max-width:none;flex-shrink:0;"/>'
       + '</a>';
   }
   // ---------- HEADER ----------
@@ -38,7 +39,6 @@
     <nav class="site-nav" aria-label="Primary">
       ${items.map(i => `<a href="${i.href}" class="${isActive(i.href) ? 'is-active' : ''}">${i.label}</a>`).join('')}
     </nav>
-    <a href="/contact/" class="site-header__signin">Client sign in</a>
     <a href="/contact/" class="btn btn-primary btn-sm btn-arrow site-header__cta">Book a demo</a>
     <button class="site-header__menu-btn" aria-label="Open menu" aria-expanded="false" data-mn-menu>
       <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"></path></svg>
@@ -65,7 +65,6 @@
         ['Pricing', '/pricing/'],
       ]},
       { t: 'Solutions', items: [
-        ['For ConnectWise migrations', '/customers/'],
         ['For Autotask MSPs', '/integrations/#autotask'],
         ['White-label portal', '/features/client-portal/'],
         ['Microsoft Teams', '/integrations/#teams'],
@@ -85,9 +84,6 @@
     ];
     const socials = [
       { id: 'linkedin', href: 'https://www.linkedin.com/company/mspnova/', svg: '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5C4.98 4.881 3.87 6 2.5 6S.02 4.881.02 3.5C.02 2.12 1.13 1 2.5 1s2.48 1.12 2.48 2.5zM5 8H0v16h5V8zm7.982 0H8.014v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0V24H24V13.869c0-7.88-8.922-7.593-11.018-3.714V8z"/></svg>' },
-      { id: 'twitter', href: 'https://twitter.com/mspnova', svg: '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>' },
-      { id: 'youtube', href: 'https://youtube.com/@mspnova', svg: '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>' },
-      { id: 'github', href: 'https://github.com/mspnova', svg: '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.55 0-.27-.01-.99-.02-1.95-3.2.69-3.88-1.54-3.88-1.54-.52-1.32-1.27-1.67-1.27-1.67-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.02 1.75 2.68 1.24 3.34.95.1-.74.4-1.24.72-1.53-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.18-3.1-.12-.29-.51-1.46.11-3.04 0 0 .96-.31 3.15 1.18.91-.25 1.89-.38 2.86-.39.97.01 1.95.14 2.86.39 2.18-1.49 3.14-1.18 3.14-1.18.62 1.58.23 2.75.11 3.04.74.81 1.18 1.84 1.18 3.1 0 4.43-2.69 5.4-5.25 5.69.41.36.78 1.06.78 2.13 0 1.54-.01 2.78-.01 3.16 0 .31.21.67.8.55C20.22 21.39 23.5 17.08 23.5 12 23.5 5.65 18.35.5 12 .5z"/></svg>' },
     ];
     const year = new Date().getFullYear();
     return `

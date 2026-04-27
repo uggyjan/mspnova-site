@@ -1,0 +1,210 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 800" preserveAspectRatio="xMidYMid slice" font-family="-apple-system, BlinkMacSystemFont, &#39;Segoe UI&#39;, system-ui, sans-serif">
+<defs>
+  <linearGradient id="bgGrad" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#0e1f3a"></stop><stop offset="1" stop-color="#091428"></stop></linearGradient>
+  <linearGradient id="confHi" x1="0" x2="1"><stop offset="0" stop-color="#22c55e"></stop><stop offset="1" stop-color="#16a34a"></stop></linearGradient>
+  <linearGradient id="confMed" x1="0" x2="1"><stop offset="0" stop-color="#eab308"></stop><stop offset="1" stop-color="#ca8a04"></stop></linearGradient>
+  <linearGradient id="confLo" x1="0" x2="1"><stop offset="0" stop-color="#ef4444"></stop><stop offset="1" stop-color="#b91c1c"></stop></linearGradient>
+</defs>
+<rect width="1280" height="800" fill="url(#bgGrad)"></rect>
+
+  <rect x="0" y="0" width="1280" height="56" fill="#06101f"></rect>
+  <rect x="0" y="55" width="1280" height="1" fill="#1f3358"></rect>
+  <circle cx="32" cy="28" r="9" fill="#d45a3a"></circle>
+  <text x="50" y="33" fill="#e6edf5" font-size="14" font-weight="700" letter-spacing="0.04em">NOVA</text>
+  <g fill="#8a9bb4" font-size="12" font-weight="600"><text x="140" y="33" fill="#8a9bb4">Home</text><text x="200" y="33" fill="#8a9bb4">Triage</text><text x="270" y="33" fill="#e6edf5">Needs Attention</text><rect x="265" y="40" width="105" height="2" fill="#d45a3a"></rect><text x="385" y="33" fill="#8a9bb4">Dispatch Queue</text><text x="495" y="33" fill="#8a9bb4">Pulse</text><text x="555" y="33" fill="#8a9bb4">Status</text></g>
+  <circle cx="1230" cy="28" r="14" fill="#16294a" stroke="#1f3358"></circle>
+  <text x="1230" y="33" fill="#8a9bb4" font-size="11" font-weight="700" text-anchor="middle">A</text>
+  <text x="1200" y="33" fill="#8a9bb4" font-size="11" text-anchor="end">Avery</text>
+
+  <text x="40" y="108" fill="#e6edf5" font-size="22" font-weight="700">Needs Attention</text>
+  <text x="40" y="130" fill="#8a9bb4" font-size="12">Active dispatch queue · 8 tickets ready to assign · 2 awaiting client</text>
+
+  
+  <rect x="900" y="92" width="340" height="36" rx="10" fill="#0c1c36" stroke="#1f3358"></rect>
+  <text x="916" y="115" fill="#5e7392" font-size="12">Search company, ticket #, tech…</text>
+  <circle cx="1225" cy="110" r="6" stroke="#5e7392" fill="none"></circle>
+
+  
+  <g transform="translate(40,158)">
+    <rect width="1200" height="40" rx="10" fill="#0a1830"></rect>
+    <rect x="0" y="0" width="160" height="40" rx="10" fill="#102545"></rect>
+    <rect x="0" y="36" width="160" height="4" rx="2" fill="#d45a3a"></rect>
+    <text x="80" y="25" fill="#e6edf5" font-size="12" font-weight="700" text-anchor="middle">All ready · 8</text>
+    <text x="240" y="25" fill="#8a9bb4" font-size="12" text-anchor="middle">P1/P2 · 3</text>
+    <text x="340" y="25" fill="#8a9bb4" font-size="12" text-anchor="middle">Gold SLA · 5</text>
+    <text x="450" y="25" fill="#8a9bb4" font-size="12" text-anchor="middle">Awaiting client · 2</text>
+    <text x="580" y="25" fill="#8a9bb4" font-size="12" text-anchor="middle">Held for review · 1</text>
+  </g>
+
+  
+  
+    <g transform="translate(40,218)">
+      <rect width="1200" height="68" rx="10" fill="#102545" stroke="#d45a3a" stroke-width="1.5"></rect>
+      <text x="20" y="28" fill="#60a5fa" font-size="12" font-weight="700" font-family="ui-monospace,Menlo,monospace">T-48217</text>
+      <text x="20" y="50" fill="#5e7392" font-size="10">12m in queue</text>
+
+      <text x="120" y="28" fill="#e6edf5" font-size="13" font-weight="600">Acme Holdings · MS</text>
+      <text x="120" y="50" fill="#8a9bb4" font-size="12">Outlook keeps disconnecting from M365 — multiple users impacted</text>
+
+      
+      <text x="780" y="32" fill="#5e7392" font-size="10" font-weight="600" letter-spacing="0.06em">SLA</text>
+      <text x="780" y="50" fill="#ef4444" font-size="11" font-weight="600">Gold · 26m to breach</text>
+
+      
+      <text x="940" y="32" fill="#5e7392" font-size="10" font-weight="600" letter-spacing="0.06em">ASSIGNED</text>
+      <text x="940" y="50" fill="#8a9bb4" font-size="12" font-weight="400">— Unassigned</text>
+
+      
+      <rect x="1080" y="22" width="44" height="22" rx="6" fill="#3b1818" stroke="#ef4444"></rect>
+      <text x="1102" y="37" fill="#ef4444" font-size="11" font-weight="800" text-anchor="middle">P2</text>
+
+      
+      <rect x="1140" y="22" width="44" height="22" rx="6" fill="#d45a3a"></rect>
+      <text x="1162" y="37" fill="#fff" font-size="10" font-weight="700" text-anchor="middle">PULL</text>
+    </g>
+    <g transform="translate(40,298)">
+      <rect width="1200" height="68" rx="10" fill="#0c1c36" stroke="#1f3358" stroke-width="1"></rect>
+      <text x="20" y="28" fill="#60a5fa" font-size="12" font-weight="700" font-family="ui-monospace,Menlo,monospace">T-48213</text>
+      <text x="20" y="50" fill="#5e7392" font-size="10">24m in queue</text>
+
+      <text x="120" y="28" fill="#e6edf5" font-size="13" font-weight="600">Acme Holdings · MS</text>
+      <text x="120" y="50" fill="#8a9bb4" font-size="12">Server alert — backup job failed overnight on FS-02</text>
+
+      
+      <text x="780" y="32" fill="#5e7392" font-size="10" font-weight="600" letter-spacing="0.06em">SLA</text>
+      <text x="780" y="50" fill="#eab308" font-size="11" font-weight="600">Gold · 1h 12m</text>
+
+      
+      <text x="940" y="32" fill="#5e7392" font-size="10" font-weight="600" letter-spacing="0.06em">ASSIGNED</text>
+      <text x="940" y="50" fill="#22c55e" font-size="12" font-weight="600">Devon S.</text>
+
+      
+      <rect x="1080" y="22" width="44" height="22" rx="6" fill="#3b1818" stroke="#ef4444"></rect>
+      <text x="1102" y="37" fill="#ef4444" font-size="11" font-weight="800" text-anchor="middle">P2</text>
+
+      
+      <rect x="1140" y="22" width="44" height="22" rx="6" fill="#1d2e4f"></rect>
+      <text x="1162" y="37" fill="#a9b8d0" font-size="10" font-weight="700" text-anchor="middle">PULL</text>
+    </g>
+    <g transform="translate(40,378)">
+      <rect width="1200" height="68" rx="10" fill="#0c1c36" stroke="#1f3358" stroke-width="1"></rect>
+      <text x="20" y="28" fill="#60a5fa" font-size="12" font-weight="700" font-family="ui-monospace,Menlo,monospace">T-48215</text>
+      <text x="20" y="50" fill="#5e7392" font-size="10">17m in queue</text>
+
+      <text x="120" y="28" fill="#e6edf5" font-size="13" font-weight="600">Greenfield Logistics · MS</text>
+      <text x="120" y="50" fill="#8a9bb4" font-size="12">Printer on 3rd floor offline since this morning — sales team blocked</text>
+
+      
+      <text x="780" y="32" fill="#5e7392" font-size="10" font-weight="600" letter-spacing="0.06em">SLA</text>
+      <text x="780" y="50" fill="#eab308" font-size="11" font-weight="600">Gold · 43m</text>
+
+      
+      <text x="940" y="32" fill="#5e7392" font-size="10" font-weight="600" letter-spacing="0.06em">ASSIGNED</text>
+      <text x="940" y="50" fill="#8a9bb4" font-size="12" font-weight="400">— Unassigned</text>
+
+      
+      <rect x="1080" y="22" width="44" height="22" rx="6" fill="#3b1818" stroke="#ef4444"></rect>
+      <text x="1102" y="37" fill="#ef4444" font-size="11" font-weight="800" text-anchor="middle">P1</text>
+
+      
+      <rect x="1140" y="22" width="44" height="22" rx="6" fill="#1d2e4f"></rect>
+      <text x="1162" y="37" fill="#a9b8d0" font-size="10" font-weight="700" text-anchor="middle">PULL</text>
+    </g>
+    <g transform="translate(40,458)">
+      <rect width="1200" height="68" rx="10" fill="#0c1c36" stroke="#1f3358" stroke-width="1"></rect>
+      <text x="20" y="28" fill="#60a5fa" font-size="12" font-weight="700" font-family="ui-monospace,Menlo,monospace">T-48216</text>
+      <text x="20" y="50" fill="#5e7392" font-size="10">14m in queue</text>
+
+      <text x="120" y="28" fill="#e6edf5" font-size="13" font-weight="600">Pinewood Dental · TS</text>
+      <text x="120" y="50" fill="#8a9bb4" font-size="12">VPN credentials reset request for new hire — Niani Forst</text>
+
+      
+      <text x="780" y="32" fill="#5e7392" font-size="10" font-weight="600" letter-spacing="0.06em">SLA</text>
+      <text x="780" y="50" fill="#8a9bb4" font-size="11" font-weight="600">Best effort</text>
+
+      
+      <text x="940" y="32" fill="#5e7392" font-size="10" font-weight="600" letter-spacing="0.06em">ASSIGNED</text>
+      <text x="940" y="50" fill="#22c55e" font-size="12" font-weight="600">Sarah L.</text>
+
+      
+      <rect x="1080" y="22" width="44" height="22" rx="6" fill="#2a2509" stroke="#eab308"></rect>
+      <text x="1102" y="37" fill="#eab308" font-size="11" font-weight="800" text-anchor="middle">P3</text>
+
+      
+      <rect x="1140" y="22" width="44" height="22" rx="6" fill="#1d2e4f"></rect>
+      <text x="1162" y="37" fill="#a9b8d0" font-size="10" font-weight="700" text-anchor="middle">PULL</text>
+    </g>
+    <g transform="translate(40,538)">
+      <rect width="1200" height="68" rx="10" fill="#0c1c36" stroke="#1f3358" stroke-width="1"></rect>
+      <text x="20" y="28" fill="#60a5fa" font-size="12" font-weight="700" font-family="ui-monospace,Menlo,monospace">T-48212</text>
+      <text x="20" y="50" fill="#5e7392" font-size="10">28m in queue</text>
+
+      <text x="120" y="28" fill="#e6edf5" font-size="13" font-weight="600">Pinewood Dental · TS</text>
+      <text x="120" y="50" fill="#8a9bb4" font-size="12">Wi-Fi slow in operatory 4 — affecting imaging software</text>
+
+      
+      <text x="780" y="32" fill="#5e7392" font-size="10" font-weight="600" letter-spacing="0.06em">SLA</text>
+      <text x="780" y="50" fill="#8a9bb4" font-size="11" font-weight="600">Best effort</text>
+
+      
+      <text x="940" y="32" fill="#5e7392" font-size="10" font-weight="600" letter-spacing="0.06em">ASSIGNED</text>
+      <text x="940" y="50" fill="#8a9bb4" font-size="12" font-weight="400">— Unassigned</text>
+
+      
+      <rect x="1080" y="22" width="44" height="22" rx="6" fill="#2a2509" stroke="#eab308"></rect>
+      <text x="1102" y="37" fill="#eab308" font-size="11" font-weight="800" text-anchor="middle">P3</text>
+
+      
+      <rect x="1140" y="22" width="44" height="22" rx="6" fill="#1d2e4f"></rect>
+      <text x="1162" y="37" fill="#a9b8d0" font-size="10" font-weight="700" text-anchor="middle">PULL</text>
+    </g>
+    <g transform="translate(40,618)">
+      <rect width="1200" height="68" rx="10" fill="#0c1c36" stroke="#1f3358" stroke-width="1"></rect>
+      <text x="20" y="28" fill="#60a5fa" font-size="12" font-weight="700" font-family="ui-monospace,Menlo,monospace">T-48214</text>
+      <text x="20" y="50" fill="#5e7392" font-size="10">32m in queue</text>
+
+      <text x="120" y="28" fill="#e6edf5" font-size="13" font-weight="600">Mercer Construction · TS</text>
+      <text x="120" y="50" fill="#8a9bb4" font-size="12">New laptop request — onboarding for project manager starting Monday</text>
+
+      
+      <text x="780" y="32" fill="#5e7392" font-size="10" font-weight="600" letter-spacing="0.06em">SLA</text>
+      <text x="780" y="50" fill="#8a9bb4" font-size="11" font-weight="600">Best effort</text>
+
+      
+      <text x="940" y="32" fill="#5e7392" font-size="10" font-weight="600" letter-spacing="0.06em">ASSIGNED</text>
+      <text x="940" y="50" fill="#60a5fa" font-size="12" font-weight="600">Procurement</text>
+
+      
+      <rect x="1080" y="22" width="44" height="22" rx="6" fill="#0f2030" stroke="#60a5fa"></rect>
+      <text x="1102" y="37" fill="#60a5fa" font-size="11" font-weight="800" text-anchor="middle">P4</text>
+
+      
+      <rect x="1140" y="22" width="44" height="22" rx="6" fill="#1d2e4f"></rect>
+      <text x="1162" y="37" fill="#a9b8d0" font-size="10" font-weight="700" text-anchor="middle">PULL</text>
+    </g>
+    <g transform="translate(40,698)">
+      <rect width="1200" height="68" rx="10" fill="#0c1c36" stroke="#1f3358" stroke-width="1"></rect>
+      <text x="20" y="28" fill="#60a5fa" font-size="12" font-weight="700" font-family="ui-monospace,Menlo,monospace">T-48210</text>
+      <text x="20" y="50" fill="#5e7392" font-size="10">42m in queue</text>
+
+      <text x="120" y="28" fill="#e6edf5" font-size="13" font-weight="600">Cresta Studios · MS</text>
+      <text x="120" y="50" fill="#8a9bb4" font-size="12">2FA push not arriving on iPhone — VP needs access for board prep</text>
+
+      
+      <text x="780" y="32" fill="#5e7392" font-size="10" font-weight="600" letter-spacing="0.06em">SLA</text>
+      <text x="780" y="50" fill="#ef4444" font-size="11" font-weight="600">Gold · 18m</text>
+
+      
+      <text x="940" y="32" fill="#5e7392" font-size="10" font-weight="600" letter-spacing="0.06em">ASSIGNED</text>
+      <text x="940" y="50" fill="#22c55e" font-size="12" font-weight="600">Jamal D.</text>
+
+      
+      <rect x="1080" y="22" width="44" height="22" rx="6" fill="#3b1818" stroke="#ef4444"></rect>
+      <text x="1102" y="37" fill="#ef4444" font-size="11" font-weight="800" text-anchor="middle">P2</text>
+
+      
+      <rect x="1140" y="22" width="44" height="22" rx="6" fill="#1d2e4f"></rect>
+      <text x="1162" y="37" fill="#a9b8d0" font-size="10" font-weight="700" text-anchor="middle">PULL</text>
+    </g>
+
+</svg>

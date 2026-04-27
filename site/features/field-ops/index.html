@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Field Ops — Mobile check-in, status board, Flash Ticket · MSPNova</title>
-<meta name="description" content="Mobile check-in/out for techs in the field. Real-time status board for dispatch. Flash Ticket from a touch panel for shared on-site devices." />
+<title>Field Ops — Mobile check-in &amp; status board · MSPNova</title>
+<meta name="description" content="Mobile check-in/out for techs in the field. Real-time status board for dispatch. Built for the dispatcher who needs to know where every tech is — right now." />
 <link rel="canonical" href="https://mspnova.com/features/field-ops/" />
 <link rel="icon" type="image/svg+xml" href="../../assets/favicon.svg" />
 <meta name="theme-color" content="#0a1628" />
@@ -23,11 +23,17 @@
     <div class="breadcrumb"><a href="/">Home</a><span class="breadcrumb__sep">/</span><a href="/features/">Features</a><span class="breadcrumb__sep">/</span>Field Ops</div>
     <span class="eyebrow eyebrow--accent">04 · Field Ops</span>
     <h1 class="h-1">Where your <span class="accent">people are,</span><br/>and what they're doing.</h1>
-    <p class="lede">Techs check in and out from their phone. The dispatcher sees the live status board — who's on-site, who's at lunch, who's running long. Shared touch panels at client sites let walk-ups Flash a ticket without finding a help desk number.</p>
+    <p class="lede">Techs check in and out from their phone. The dispatcher sees the live status board — who's on-site, who's at lunch, who's running long. The same data flows back to Autotask as time entries, so payroll and billing stay clean without anyone re-typing a thing.</p>
     <div class="hero__ctas">
       <a class="btn btn-lg btn-primary btn-arrow" href="/contact/">Book a demo</a>
       <a class="btn btn-lg btn-outline" href="#status">See the status board</a>
     </div>
+  </div>
+</section>
+
+<section style="padding:64px 0 0;">
+  <div class="container">
+    <img src="../../assets/mocks/mobile-checkin.png" alt="Field-ops mobile app — geofenced onsite check-in" style="display:block; width:100%; height:auto; border-radius:var(--r-lg); border:1px solid var(--c-navy-3); box-shadow:var(--shadow-xl); "/>
   </div>
 </section>
 
@@ -36,7 +42,7 @@
     <div class="grid grid-4" style="gap:32px;">
       <div><div class="hero__stat-n">Real-time</div><div class="hero__stat-l">Tech status board</div></div>
       <div><div class="hero__stat-n">Mobile-first</div><div class="hero__stat-l">Check-in / check-out</div></div>
-      <div><div class="hero__stat-n">Touch panel</div><div class="hero__stat-l">Flash Ticket UI</div></div>
+      <div><div class="hero__stat-n">Auto time</div><div class="hero__stat-l">Entries write to Autotask</div></div>
       <div><div class="hero__stat-n">Live ETA</div><div class="hero__stat-l">Overrun alerts</div></div>
     </div>
   </div>
@@ -57,7 +63,7 @@
           <li><span data-icon="check"></span><span>Mileage capture for billable travel</span></li>
         </ul>
       </div>
-      <div class="deepdive__shot mock-frame mock-frame--mobile" aria-label="Mobile check-in"></div>
+      <img class="deepdive__shot mock-frame" src="../../assets/mocks/mobile-checkin.png" alt="Mobile field-ops app — onsite geofenced check-in and timer"/>
     </div>
   </div>
 </section>
@@ -77,27 +83,7 @@
           <li><span data-icon="check"></span><span>Filter by location, skill, or contract</span></li>
         </ul>
       </div>
-      <div class="deepdive__shot mock-frame mock-frame--status" aria-label="Status board"></div>
-    </div>
-  </div>
-</section>
-
-<!-- Flash Ticket -->
-<section class="bg-light">
-  <div class="container deepdive">
-    <div class="deepdive__grid">
-      <div>
-        <div class="deepdive__head">/ Flash Ticket</div>
-        <h3 class="h-2" style="font-size:36px;">A touch panel at the client site. Tap to open a ticket.</h3>
-        <p class="muted" style="font-size:16px;line-height:1.6;">For client sites with shared spaces (front desks, conference rooms, kiosks): a 10" touch panel mounted on the wall. Common issue tiles ("Wi-Fi down," "printer jammed," "AV not working") create a triaged Autotask ticket with location auto-filled. No looking up help desk numbers. No Outlook.</p>
-        <ul class="deepdive__bullets">
-          <li><span data-icon="check"></span><span>Configurable tile set per client site</span></li>
-          <li><span data-icon="check"></span><span>Auto-fills location, sublocation, and reporter</span></li>
-          <li><span data-icon="check"></span><span>Optional voice memo for context</span></li>
-          <li><span data-icon="check"></span><span>Confirmation screen with ETA and ticket number</span></li>
-        </ul>
-      </div>
-      <div class="deepdive__shot mock-frame mock-frame--flash" aria-label="Flash Ticket panel"></div>
+      <img class="deepdive__shot mock-frame" src="../../assets/mocks/status-board.svg" alt="Live status board — team availability and SLA pulse timeline"/>
     </div>
   </div>
 </section>
@@ -123,11 +109,8 @@
 
 <div data-mn-footer></div>
 <style>
-.mock-frame { background:linear-gradient(135deg,#1c3050 0%,#0a1628 100%); border-radius:var(--r-lg); border:1px solid var(--c-navy-3); box-shadow:var(--shadow-xl); position:relative; overflow:hidden; }
-.mock-frame::after { content:'placeholder'; position:absolute; left:50%; top:50%; transform:translate(-50%,-50%); font-family:var(--font-mono); font-size:11px; color:var(--c-fg-on-dark-3); letter-spacing:.06em; }
-.mock-frame--mobile::after { content:'MOBILE CHECK-IN · placeholder'; }
-.mock-frame--status::after { content:'STATUS BOARD · placeholder'; }
-.mock-frame--flash::after  { content:'FLASH TICKET PANEL · placeholder'; }
+.mock-frame { display:block; width:100%; height:auto; border-radius:var(--r-lg); border:1px solid var(--c-navy-3); box-shadow:var(--shadow-xl); background:#0a1628; overflow:hidden; }
+
 </style>
 <script src="../../js/site.js?v=1"></script>
 </body>

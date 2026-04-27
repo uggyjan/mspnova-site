@@ -3,21 +3,124 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Features — MSPNova · AI dispatch, Needs Attention, Pulse, Field Ops</title>
-<meta name="description" content="Nova covers ticket triage, dispatch prioritization, daily huddles, and field operations — all in one platform that sits alongside your PSA." />
+<title>Features — MSPNova · 20 capabilities for MSP operations</title>
+<meta name="description" content="Twenty features grouped around the people who use them — triage, dispatchers, techs, clients, and the plumbing underneath. AI dispatch end-to-end for managed service providers." />
 <link rel="canonical" href="https://mspnova.com/features/" />
 <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg" />
 <meta name="theme-color" content="#0a1628" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://mspnova.com/features/" />
-<meta property="og:title" content="MSPNova features — AI dispatch end-to-end" />
-<meta property="og:description" content="Triage, Needs Attention, Pulse, Field Ops, Client Portal. Four modules. One operator." />
+<meta property="og:title" content="MSPNova features — 20 capabilities, 6 jobs" />
+<meta property="og:description" content="From AI triage to M365 reconciliation. The full operating system MSPs run their day on." />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../css/site.css?v=1" />
 
-<!-- TODO: paste Cloudflare Web Analytics <script> here -->
+<style>
+/* Compact features hub — short scan-first page, deep dives linked out. */
+
+/* Quick-jump pill bar under hero */
+.feat-jump {
+  position: sticky; top: 64px; z-index: 30;
+  background: var(--c-bg-1);
+  border-bottom: 1px solid var(--c-border-1);
+  padding: 14px 0;
+}
+.feat-jump__row {
+  display: flex; gap: 8px; flex-wrap: wrap;
+  align-items: center;
+}
+.feat-jump__label {
+  font-family: var(--font-mono); font-size: 11px; font-weight: 700;
+  letter-spacing: 0.1em; color: var(--c-fg-2); text-transform: uppercase;
+  margin-right: 8px;
+}
+.feat-jump a {
+  display: inline-block; padding: 7px 14px;
+  font-size: 13px; font-weight: 600;
+  color: var(--c-fg-1); text-decoration: none;
+  border: 1px solid var(--c-border-1); border-radius: 100px;
+  background: var(--c-bg-1); transition: all .15s;
+}
+.feat-jump a:hover { border-color: var(--c-accent); color: var(--c-accent); }
+
+/* Compact group section */
+.fgroup { padding: 64px 0; border-bottom: 1px solid var(--c-border-1); scroll-margin-top: 140px; }
+.fgroup--alt { background: var(--c-bg-mute, #f4f1ea); }
+.fgroup__top { display: grid; grid-template-columns: auto 1fr auto; gap: 32px; align-items: end; margin-bottom: 32px; }
+.fgroup__num {
+  font-family: var(--font-mono); font-size: 14px; font-weight: 700;
+  letter-spacing: 0.06em; color: var(--c-accent);
+  padding: 8px 14px;
+  border: 1px solid var(--c-accent);
+  border-radius: 4px;
+  display: inline-block;
+}
+.fgroup__head h2 { font-size: 32px; line-height: 1.1; letter-spacing: -0.02em; margin: 0; }
+.fgroup__head .lede { font-size: 15px; color: var(--c-fg-1); line-height: 1.55; margin: 8px 0 0; }
+.fgroup__deep {
+  font-size: 13px; font-weight: 600;
+  color: var(--c-accent); text-decoration: none;
+  white-space: nowrap;
+}
+.fgroup__deep:hover { text-decoration: underline; }
+@media (max-width: 980px) {
+  .fgroup__top { grid-template-columns: auto 1fr; }
+  .fgroup__deep { grid-column: 1 / -1; }
+  .fgroup__head h2 { font-size: 26px; }
+}
+
+/* Body grid: image on one side, feature pill list on other */
+.fgroup__body { display: grid; grid-template-columns: 1.2fr 1fr; gap: 32px; align-items: start; }
+.fgroup__body--reverse { grid-template-columns: 1fr 1.2fr; }
+@media (max-width: 980px) { .fgroup__body, .fgroup__body--reverse { grid-template-columns: 1fr; } }
+
+.fgroup__mock {
+  display: block; width: 100%; height: auto;
+  border-radius: var(--r-md);
+  border: 1px solid var(--c-navy-3);
+  box-shadow: var(--shadow-md);
+}
+.fgroup__body--reverse .fgroup__mock { order: 2; }
+
+.fpills { display: flex; flex-direction: column; gap: 0; }
+.fpill {
+  display: grid; grid-template-columns: 50px 1fr;
+  gap: 14px; align-items: baseline;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--c-border-1);
+}
+.fpill:last-child { border-bottom: none; }
+.fpill__num {
+  font-family: var(--font-mono); font-size: 11px; font-weight: 700;
+  letter-spacing: 0.1em; color: var(--c-accent);
+}
+.fpill__title { font-size: 16px; font-weight: 700; line-height: 1.3; margin: 0 0 4px; }
+.fpill__hook { font-size: 13px; color: var(--c-fg-2); line-height: 1.5; margin: 0; }
+
+/* Compact deep-dive strip (kept) */
+.deepdive-strip {
+  padding: 56px 0; background: var(--c-navy-0); color: var(--c-fg-on-dark-1);
+}
+.deepdive-strip__head { display: flex; justify-content: space-between; align-items: end; margin-bottom: 28px; flex-wrap: wrap; gap: 16px; }
+.deepdive-strip h3 { color: #fff; font-size: 26px; margin: 0; letter-spacing: -0.01em; }
+.deepdive-strip .muted { color: var(--c-fg-on-dark-2); margin: 4px 0 0; }
+.deepdive-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px; }
+@media (max-width: 980px) { .deepdive-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 540px) { .deepdive-grid { grid-template-columns: 1fr; } }
+.deepdive-card {
+  display: block; padding: 18px;
+  background: var(--c-navy-1); border: 1px solid var(--c-navy-3);
+  border-radius: var(--r-md);
+  text-decoration: none; color: inherit;
+  transition: border-color .15s, transform .15s;
+}
+.deepdive-card:hover { border-color: var(--c-accent); transform: translateY(-2px); }
+.deepdive-card__num { font-family: var(--font-mono); font-size: 11px; font-weight: 700; letter-spacing: 0.1em; color: var(--c-accent); }
+.deepdive-card__title { font-size: 16px; font-weight: 700; color: #fff; margin: 8px 0 0; }
+.deepdive-card__arrow { font-size: 12px; color: var(--c-fg-on-dark-2); margin-top: 14px; }
+</style>
 </head>
 <body>
 <div data-mn-header></div>
@@ -25,91 +128,202 @@
 <section class="page-hero">
   <div class="container">
     <div class="breadcrumb"><a href="/">Home</a><span class="breadcrumb__sep">/</span>Features</div>
-    <span class="eyebrow">Product</span>
-    <h1 class="h-1">Five modules. One operating system for your MSP.</h1>
-    <p class="lede">Nova doesn't replace your PSA — it's the dispatch layer that lives on top of it. Each module handles one piece of the day so your team stops context-switching and starts shipping.</p>
+    <span class="eyebrow">Product · 20 capabilities</span>
+    <h1 class="h-1">Everything an MSP <span class="accent">runs on, in one place.</span></h1>
+    <p class="lede">Nova covers the day from the moment a ticket lands to the moment payroll exports. Twenty features, organized around the people who use them — not the org chart that built them.</p>
   </div>
 </section>
 
-<!-- Module overview -->
-<section class="section bg-light">
+<!-- Quick-jump pills -->
+<nav class="feat-jump" aria-label="Jump to feature group">
+  <div class="container feat-jump__row">
+    <span class="feat-jump__label">Jump to</span>
+    <a href="#triage">01 — Triage</a>
+    <a href="#dispatch">02 — Dispatch</a>
+    <a href="#techs">03 — Techs</a>
+    <a href="#clients">04 — Clients</a>
+    <a href="#plumbing">05 — Plumbing</a>
+    <a href="#learns">06 — It learns</a>
+  </div>
+</nav>
+
+<!-- ============== GROUP 1: TRIAGE ============== -->
+<section class="fgroup" id="triage">
   <div class="container">
-    <div class="grid-bordered grid-2">
-      <a class="card--feature" href="/features/triage/" style="text-decoration:none;color:inherit;">
-        <div style="display:flex;align-items:center;gap:16px;margin-bottom:18px;">
-          <div class="card__num">01</div><div style="flex:1;height:1px;background:var(--c-border-1);"></div>
-          <span data-icon="cpu" style="color:var(--c-fg-2);"></span>
-        </div>
-        <h3 class="h-3">AI Triage</h3>
-        <p class="muted">Two-pass classification (Sonnet + Opus) on every new ticket. Auto-accept above 85% confidence, dispatcher reviews the rest.</p>
-        <span class="btn btn-link" style="margin-top:auto;">Read deep dive →</span>
-      </a>
-      <a class="card--feature" href="/features/needs-attention/" style="text-decoration:none;color:inherit;">
-        <div style="display:flex;align-items:center;gap:16px;margin-bottom:18px;">
-          <div class="card__num">02</div><div style="flex:1;height:1px;background:var(--c-border-1);"></div>
-          <span data-icon="dispatch" style="color:var(--c-fg-2);"></span>
-        </div>
-        <h3 class="h-3">Needs Attention</h3>
-        <p class="muted">Composite scoring ranks every open ticket. Pull Ticket prevents cherry-picking. SLA breach alerts before they happen.</p>
-        <span class="btn btn-link" style="margin-top:auto;">Read deep dive →</span>
-      </a>
-      <a class="card--feature" href="/features/pulse/" style="text-decoration:none;color:inherit;">
-        <div style="display:flex;align-items:center;gap:16px;margin-bottom:18px;">
-          <div class="card__num">03</div><div style="flex:1;height:1px;background:var(--c-border-1);"></div>
-          <span data-icon="message" style="color:var(--c-fg-2);"></span>
-        </div>
-        <h3 class="h-3">Pulse</h3>
-        <p class="muted">AI-generated huddle briefings, P1 alerts, end-of-day summaries, per-tech DMs. Nine card types posted to Microsoft Teams.</p>
-        <span class="btn btn-link" style="margin-top:auto;">Read deep dive →</span>
-      </a>
-      <a class="card--feature" href="/features/field-ops/" style="text-decoration:none;color:inherit;">
-        <div style="display:flex;align-items:center;gap:16px;margin-bottom:18px;">
-          <div class="card__num">04</div><div style="flex:1;height:1px;background:var(--c-border-1);"></div>
-          <span data-icon="server" style="color:var(--c-fg-2);"></span>
-        </div>
-        <h3 class="h-3">Field Ops</h3>
-        <p class="muted">Mobile check-in/out, real-time status board, Flash Ticket from a touch panel. The dispatcher sees who's where.</p>
-        <span class="btn btn-link" style="margin-top:auto;">Read deep dive →</span>
-      </a>
-      <a class="card--feature" href="/features/client-portal/" style="text-decoration:none;color:inherit;grid-column:span 2;">
-        <div style="display:flex;align-items:center;gap:16px;margin-bottom:18px;">
-          <div class="card__num">05</div><div style="flex:1;height:1px;background:var(--c-border-1);"></div>
-          <span data-icon="users" style="color:var(--c-fg-2);"></span>
-        </div>
-        <h3 class="h-3">Client Portal</h3>
-        <p class="muted">White-label React portal where your clients see exactly the tickets, SLAs, and CSAT data you want them to see. Branded as you, hosted by us.</p>
-        <span class="btn btn-link" style="margin-top:auto;">Read deep dive →</span>
-      </a>
+    <div class="fgroup__top">
+      <span class="fgroup__num">01</span>
+      <div class="fgroup__head">
+        <h2>Tickets land. <span class="accent">Nova reads them.</span></h2>
+        <p class="lede">Every new Autotask ticket is classified in under 30 seconds — priority, queue, issue type, sub-issue, assignee. The dispatcher reviews and accepts in one click; the obvious ones don't even need that.</p>
+      </div>
+      <a class="fgroup__deep" href="/features/triage/">Deep dive →</a>
+    </div>
+    <div class="fgroup__body">
+      <img class="fgroup__mock" src="../assets/mocks/triage-queue.svg" alt="Nova triage queue — inbound tickets classified with reasoning attached" />
+      <div class="fpills">
+        <div class="fpill"><span class="fpill__num">/ 01</span><div><h3 class="fpill__title">AI Triage</h3><p class="fpill__hook">Every incoming ticket classified in under 90 seconds — priority, queue, issue type, sub-issue, assignee.</p></div></div>
+        <div class="fpill"><span class="fpill__num">/ 02</span><div><h3 class="fpill__title">Auto-Accept</h3><p class="fpill__hook">High-confidence calls (≥85%) skip the dispatcher entirely — written straight to Autotask.</p></div></div>
+        <div class="fpill"><span class="fpill__num">/ 03</span><div><h3 class="fpill__title">Reasoning Attached</h3><p class="fpill__hook">Plain-language reason on every priority, queue, and category suggestion. No black-box calls.</p></div></div>
+        <div class="fpill"><span class="fpill__num">/ 04</span><div><h3 class="fpill__title">Pulse Pattern Detection</h3><p class="fpill__hook">Three M365 tickets in two hours? Nova flags the storm before phones light up.</p></div></div>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- How it fits together -->
-<section class="section bg-mute">
+<!-- ============== GROUP 2: DISPATCH ============== -->
+<section class="fgroup fgroup--alt" id="dispatch">
   <div class="container">
-    <span class="eyebrow">The day, end to end</span>
-    <h2 class="h-2 mb-48">How Nova spends your team's day with you.</h2>
-    <div class="grid grid-4">
-      <div class="card">
-        <div class="mono" style="font-size:11px;color:var(--c-accent);font-weight:700;letter-spacing:.08em;">7:30 AM</div>
-        <h4 class="h-4" style="margin-top:8px;">Pulse drops the briefing</h4>
-        <p class="muted" style="font-size:13px;">Capacity, escalations, on-site schedule, talking points — posted to your dispatch channel before standup.</p>
+    <div class="fgroup__top">
+      <span class="fgroup__num">02</span>
+      <div class="fgroup__head">
+        <h2>One queue. <span class="accent">One brain.</span></h2>
+        <p class="lede">Most MSPs run dispatch out of three browser tabs and a chat thread. Nova replaces it with a single ranked queue, a live status board, and an attention list that flags trouble before it bites.</p>
       </div>
-      <div class="card">
-        <div class="mono" style="font-size:11px;color:var(--c-accent);font-weight:700;letter-spacing:.08em;">ALL DAY</div>
-        <h4 class="h-4" style="margin-top:8px;">Triage runs every 30s</h4>
-        <p class="muted" style="font-size:13px;">New Autotask tickets get classified in under 30 seconds. High-confidence calls auto-accept; the rest land in review.</p>
+      <a class="fgroup__deep" href="/features/needs-attention/">Deep dive →</a>
+    </div>
+    <div class="fgroup__body fgroup__body--reverse">
+      <div class="fpills">
+        <div class="fpill"><span class="fpill__num">/ 05</span><div><h3 class="fpill__title">Smart Dispatch Queue</h3><p class="fpill__hook">Next-best-ticket ranked by priority, age, skill match, capacity, and on-call rotation.</p></div></div>
+        <div class="fpill"><span class="fpill__num">/ 06</span><div><h3 class="fpill__title">Status Board</h3><p class="fpill__hook">Live state of every tech — available, on-site, lunch, on-call, in-meeting. WIN timer flips red after 90 minutes.</p></div></div>
+        <div class="fpill"><span class="fpill__num">/ 07</span><div><h3 class="fpill__title">Needs Attention</h3><p class="fpill__hook">Stalled tickets surface themselves, auto-grouped by reason: Client Response, Vendor Wait, Escalation, Stale.</p></div></div>
+        <div class="fpill"><span class="fpill__num">/ 08</span><div><h3 class="fpill__title">Ticket Aging</h3><p class="fpill__hook">Bucketed 0–1d / 1–3d / 3–7d / 7–14d / 14–30d / 30d+. Stale and zero-touch tickets float to the top.</p></div></div>
+        <div class="fpill"><span class="fpill__num">/ 09</span><div><h3 class="fpill__title">Daily Huddle Briefings</h3><p class="fpill__hook">Automated morning + EOD cards posted to Teams. Read in 90 seconds.</p></div></div>
       </div>
-      <div class="card">
-        <div class="mono" style="font-size:11px;color:var(--c-accent);font-weight:700;letter-spacing:.08em;">ON DEMAND</div>
-        <h4 class="h-4" style="margin-top:8px;">Techs Pull Tickets</h4>
-        <p class="muted" style="font-size:13px;">Engineers get their next best ticket — not a buffet to cherry-pick from. Ranked by SLA, skill match, and scarcity.</p>
+      <img class="fgroup__mock" src="../assets/mocks/needs-attention-shot.png" alt="Needs Attention — auto-detected stalled and SLA-risk tickets, grouped by reason" />
+    </div>
+  </div>
+</section>
+
+<!-- ============== GROUP 3: TECHS ============== -->
+<section class="fgroup" id="techs">
+  <div class="container">
+    <div class="fgroup__top">
+      <span class="fgroup__num">03</span>
+      <div class="fgroup__head">
+        <h2>Check-in to closeout, <span class="accent">in the palm of their hand.</span></h2>
+        <p class="lede">Field techs don't want a portal. They want one tap to clock in, one tap to start a ticket, one tap to get the next thing. Nova quietly logs the hours, miles, and notes payroll needs.</p>
       </div>
-      <div class="card">
-        <div class="mono" style="font-size:11px;color:var(--c-accent);font-weight:700;letter-spacing:.08em;">5:30 PM</div>
-        <h4 class="h-4" style="margin-top:8px;">EOD report</h4>
-        <p class="muted" style="font-size:13px;">Tickets closed, hours billed, what slipped, what's hot tomorrow. Posted to Teams. Read in 90 seconds.</p>
+      <a class="fgroup__deep" href="/features/field-ops/">Deep dive →</a>
+    </div>
+    <div class="fgroup__body">
+      <img class="fgroup__mock" src="../assets/mocks/ticket-qa-shot.png" alt="Ticket QA — every closed ticket scored A–F automatically" onerror="this.src='../assets/mocks/time-clock.svg'" />
+      <div class="fpills">
+        <div class="fpill"><span class="fpill__num">/ 10</span><div><h3 class="fpill__title">Field Ops Check-In</h3><p class="fpill__hook">Tap to arrive, tap to leave, auto-write the time entry. GPS-verified. Lunch tracked.</p></div></div>
+        <div class="fpill"><span class="fpill__num">/ 11</span><div><h3 class="fpill__title">Time Clock & Payroll</h3><p class="fpill__hook">Clock in/out, breaks, missed-clockout approvals, payroll-ready exports. Replaces a separate tool.</p></div></div>
+        <div class="fpill"><span class="fpill__num">/ 12</span><div><h3 class="fpill__title">Ticket QA</h3><p class="fpill__hook">Every closed ticket scored A–F. Flags large/tiny entries, billing mismatches, missing notes.</p></div></div>
+        <div class="fpill"><span class="fpill__num">/ 15</span><div><h3 class="fpill__title">Bulk Operations</h3><p class="fpill__hook">Bulk-create from CSV, bulk-edit fields, bulk-schedule. Hour-long Autotask jobs in seconds.</p></div></div>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== GROUP 4: CLIENTS ============== -->
+<section class="fgroup fgroup--alt" id="clients">
+  <div class="container">
+    <div class="fgroup__top">
+      <span class="fgroup__num">04</span>
+      <div class="fgroup__head">
+        <h2>The portal, the score, <span class="accent">the report.</span></h2>
+        <p class="lede">Three credibility-defining moments happen on a screen the client looks at: opening a ticket, leaving a CSAT, reading the QBR. Nova owns all three — branded as you, not us.</p>
+      </div>
+      <a class="fgroup__deep" href="/features/client-portal/">Deep dive →</a>
+    </div>
+    <div class="fgroup__body fgroup__body--reverse">
+      <div class="fpills">
+        <div class="fpill"><span class="fpill__num">/ 13</span><div><h3 class="fpill__title">Client Portal</h3><p class="fpill__hook">Self-service tickets, SLA progress, CSAT — white-labeled to your MSP. Nothing in the URL says Nova.</p></div></div>
+        <div class="fpill"><span class="fpill__num">/ 14</span><div><h3 class="fpill__title">CSAT Tracking & Moderation</h3><p class="fpill__hook">No SmileBack subscription. Built in. Override or restore reviews, per-tech leaderboards. ~32% capture.</p></div></div>
+        <div class="fpill"><span class="fpill__num">/ 20</span><div><h3 class="fpill__title">Reports & Analytics</h3><p class="fpill__hook">Per-client portal report, dispatch analytics, SmartNumbers. Open vs resolved, SLA, velocity, margin.</p></div></div>
+      </div>
+      <img class="fgroup__mock" src="../assets/mocks/portal-tickets-shot.png" alt="Client portal — white-labeled tickets and CSAT" onerror="this.src='../assets/mocks/client-portal.svg'" />
+    </div>
+  </div>
+</section>
+
+<!-- ============== GROUP 5: PLUMBING ============== -->
+<section class="fgroup" id="plumbing">
+  <div class="container">
+    <div class="fgroup__top">
+      <span class="fgroup__num">05</span>
+      <div class="fgroup__head">
+        <h2>Boring on purpose. <span class="accent">Always on.</span></h2>
+        <p class="lede">Three integrations carry most of an MSP's day — Autotask reads, Teams chatter, M365 license counts. Nova handles all three so you don't fight tickets and APIs at the same time.</p>
+      </div>
+      <span></span>
+    </div>
+    <div class="fgroup__body">
+      <img class="fgroup__mock" src="../assets/mocks/call-linking-shot.png" alt="Phone integration — calls auto-matched to companies and tickets" onerror="this.src='../assets/mocks/m365-sync.svg'" />
+      <div class="fpills">
+        <div class="fpill"><span class="fpill__num">/ 16</span><div><h3 class="fpill__title">Teams Integration</h3><p class="fpill__hook">Channel cards, DMs, P1 acknowledgments. Replaces the "did you see that ticket?" Slack thread.</p></div></div>
+        <div class="fpill"><span class="fpill__num">/ 17</span><div><h3 class="fpill__title">Phone Integration</h3><p class="fpill__hook">Inbound calls auto-matched to Autotask company + contact. Live call state from Teams + GoTo Connect.</p></div></div>
+        <div class="fpill"><span class="fpill__num">/ 18</span><div><h3 class="fpill__title">CIPP / M365 Sync</h3><p class="fpill__hook">Reconciles M365 license counts against contract service units. Catches over- and under-billing.</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== GROUP 6: IT LEARNS ============== -->
+<section class="fgroup fgroup--alt" id="learns">
+  <div class="container">
+    <div class="fgroup__top">
+      <span class="fgroup__num">06</span>
+      <div class="fgroup__head">
+        <h2>The system gets sharper <span class="accent">every week.</span></h2>
+        <p class="lede">Every dispatcher correction is a signal. Nova captures them all and surfaces auto-proposed rules for review — no model retraining, no data scientist, no waiting for a quarterly release.</p>
+      </div>
+      <span></span>
+    </div>
+    <div class="fgroup__body fgroup__body--reverse">
+      <div class="fpills">
+        <div class="fpill"><span class="fpill__num">/ 19</span><div><h3 class="fpill__title">AI Learning Loop</h3><p class="fpill__hook">Override the AI's queue choice, change a priority, reassign a tech — Nova watches. Patterns become auto-proposed rules ("when client = X, queue = Y") that the dispatcher reviews and accepts in one click.</p></div></div>
+        <div class="fpill" style="border-top: 1px solid var(--c-border-1); margin-top: 16px; padding-top: 24px;">
+          <span class="fpill__num" style="color: var(--c-accent);">/ FACT</span>
+          <div>
+            <h3 class="fpill__title">Built inside a working help desk.</h3>
+            <p class="fpill__hook">Every feature ships internally first. Techital — an MSP in Glendale, CA, founded in 2001 — runs on Nova every day. If something breaks here, it breaks our day too. <a href="/about/" style="color:var(--c-accent);font-weight:600;">Read the story →</a></p>
+          </div>
+        </div>
+      </div>
+      <img class="fgroup__mock" src="../assets/mocks/rules-console.svg" alt="Rules console — auto-proposed rules from dispatcher corrections" />
+    </div>
+  </div>
+</section>
+
+<!-- ============== DEEP DIVES ============== -->
+<section class="deepdive-strip">
+  <div class="container">
+    <div class="deepdive-strip__head">
+      <div>
+        <span class="eyebrow" style="color: var(--c-fg-on-dark-2);">Go deeper</span>
+        <h3>Five modules. Five deep-dive pages.</h3>
+        <p class="muted">Some features have their own page with screenshots, edge cases, FAQ, and implementation notes.</p>
+      </div>
+    </div>
+    <div class="deepdive-grid">
+      <a class="deepdive-card" href="/features/triage/">
+        <div class="deepdive-card__num">/ 01</div>
+        <h4 class="deepdive-card__title">AI Triage</h4>
+        <div class="deepdive-card__arrow">Reasoning · one-click override →</div>
+      </a>
+      <a class="deepdive-card" href="/features/needs-attention/">
+        <div class="deepdive-card__num">/ 02</div>
+        <h4 class="deepdive-card__title">Needs Attention</h4>
+        <div class="deepdive-card__arrow">Composite scoring · SLA breach →</div>
+      </a>
+      <a class="deepdive-card" href="/features/pulse/">
+        <div class="deepdive-card__num">/ 03</div>
+        <h4 class="deepdive-card__title">Pulse</h4>
+        <div class="deepdive-card__arrow">Huddles · pattern detection →</div>
+      </a>
+      <a class="deepdive-card" href="/features/field-ops/">
+        <div class="deepdive-card__num">/ 04</div>
+        <h4 class="deepdive-card__title">Field Ops</h4>
+        <div class="deepdive-card__arrow">Mobile · Status Board · Auto time →</div>
+      </a>
+      <a class="deepdive-card" href="/features/client-portal/">
+        <div class="deepdive-card__num">/ 05</div>
+        <h4 class="deepdive-card__title">Client Portal</h4>
+        <div class="deepdive-card__arrow">White-label · CSAT · QBR →</div>
+      </a>
     </div>
   </div>
 </section>

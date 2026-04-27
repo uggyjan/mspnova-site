@@ -27,6 +27,14 @@
   </div>
 </section>
 
+<section style="padding:64px 0 0;">
+  <div class="container">
+    <img src="../assets/mocks/integrations.svg" alt="Integrations dashboard — 8 connected, 4 available" style="display:block; width:100%; height:auto; border-radius:var(--r-lg); border:1px solid var(--c-navy-3); box-shadow:var(--shadow-xl); "/>
+  </div>
+</section>
+
+
+
 <!-- Live -->
 <section class="section bg-light">
   <div class="container">
@@ -42,7 +50,7 @@
             <div class="muted" style="font-size:13px;">Read tickets · Write back on dispatcher click</div>
           </div>
         </div>
-        <p class="muted" style="font-size:14px;line-height:1.6;">The core integration. Nova polls Autotask every 30 seconds for new and updated tickets, classifies them, and writes the dispatcher's accepted classification back to the ticket — priority, queue, category, sub-category, work type. No custom fields. No PSA add-ons.</p>
+        <p class="muted" style="font-size:14px;line-height:1.6;">The core integration. Nova polls Autotask continuously — fast during business hours, quieter overnight — for new and updated tickets, classifies them, and writes the dispatcher's accepted classification back to the ticket — priority, queue, category, sub-category, work type. No custom fields. No PSA add-ons.</p>
         <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:16px;">
           <span class="pill">Read tickets</span><span class="pill">Write classifications</span><span class="pill">Time entries</span><span class="pill">Notes</span><span class="pill">Status updates</span>
         </div>
@@ -81,12 +89,12 @@
           <div class="int-badge int-badge--lg">AC</div>
           <div>
             <h3 class="h-4" style="margin:0;">Anthropic Claude</h3>
-            <div class="muted" style="font-size:13px;">Two-pass triage + Pulse generation</div>
+            <div class="muted" style="font-size:13px;">AI triage + Pulse + EOD reports</div>
           </div>
         </div>
-        <p class="muted" style="font-size:14px;line-height:1.6;">Sonnet handles fast first-pass classification. Opus verifies low-confidence calls. Pulse cards (briefings, summaries) are written by Sonnet. Anthropic doesn't store or train on your prompts — confirmed by their enterprise zero-retention policy.</p>
+        <p class="muted" style="font-size:14px;line-height:1.6;">Anthropic powers Nova's classification, briefings, and end-of-day reports out of the box. You bring your own API key, billed directly by Anthropic. Their enterprise terms include zero retention — your prompts aren't stored or used for training.</p>
         <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:16px;">
-          <span class="pill">Sonnet</span><span class="pill">Opus</span><span class="pill">Zero retention</span>
+          <span class="pill">BYO key</span><span class="pill">Zero retention</span><span class="pill">Default provider</span>
         </div>
       </div>
 
@@ -98,9 +106,9 @@
             <div class="muted" style="font-size:13px;">Configurable per-process fallback</div>
           </div>
         </div>
-        <p class="muted" style="font-size:14px;line-height:1.6;">For MSPs with existing OpenAI relationships or compliance constraints. Any AI process (triage, briefings, summaries) can be configured to use GPT models instead of Claude. Same prompt library, same outputs.</p>
+        <p class="muted" style="font-size:14px;line-height:1.6;">For MSPs with existing OpenAI relationships or compliance constraints. Any AI process (triage, briefings, summaries) can run on OpenAI instead of Anthropic. Same prompt library, same outputs.</p>
         <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:16px;">
-          <span class="pill">GPT-4o</span><span class="pill">Per-process toggle</span>
+          <span class="pill">BYO key</span><span class="pill">Per-process toggle</span>
         </div>
       </div>
 
@@ -142,16 +150,6 @@
     <span class="eyebrow">On the roadmap</span>
     <h2 class="h-2 mb-48">What we're building next.</h2>
     <div class="grid grid-3">
-      <div class="card">
-        <div class="mono" style="font-size:11px;color:var(--c-accent);font-weight:700;">/ Q3 2025</div>
-        <h4 class="h-4" style="margin-top:8px;">ConnectWise Manage</h4>
-        <p class="muted" style="font-size:13px;">PSA-agnostic core makes the new connector ~80 lines. Half-built; alpha customers using it.</p>
-      </div>
-      <div class="card">
-        <div class="mono" style="font-size:11px;color:var(--c-accent);font-weight:700;">/ Q4 2025</div>
-        <h4 class="h-4" style="margin-top:8px;">HaloPSA</h4>
-        <p class="muted" style="font-size:13px;">Strong customer demand, good API. On the build list — design done, code starting.</p>
-      </div>
       <div class="card">
         <div class="mono" style="font-size:11px;color:var(--c-accent);font-weight:700;">/ Q1 2026</div>
         <h4 class="h-4" style="margin-top:8px;">ITGlue / Hudu</h4>

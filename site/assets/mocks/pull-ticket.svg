@@ -1,0 +1,136 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 800" preserveAspectRatio="xMidYMid slice" font-family="-apple-system, BlinkMacSystemFont, &#39;Segoe UI&#39;, system-ui, sans-serif">
+<defs>
+  <linearGradient id="bgGrad" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#0e1f3a"></stop><stop offset="1" stop-color="#091428"></stop></linearGradient>
+</defs>
+<rect width="1280" height="800" fill="url(#bgGrad)"></rect>
+
+  <rect x="0" y="0" width="1280" height="56" fill="#06101f"></rect>
+  <rect x="0" y="55" width="1280" height="1" fill="#1f3358"></rect>
+  <circle cx="32" cy="28" r="9" fill="#d45a3a"></circle>
+  <text x="50" y="33" fill="#e6edf5" font-size="14" font-weight="700" letter-spacing="0.04em">NOVA</text>
+  <g fill="#8a9bb4" font-size="12" font-weight="600"><text x="140" y="33" fill="#8a9bb4">Home</text><text x="200" y="33" fill="#8a9bb4">Triage</text><text x="270" y="33" fill="#8a9bb4">Needs Attention</text><text x="385" y="33" fill="#8a9bb4">Dispatch Queue</text><text x="495" y="33" fill="#8a9bb4">Pulse</text><text x="555" y="33" fill="#8a9bb4">Status</text></g>
+  <circle cx="1230" cy="28" r="14" fill="#16294a" stroke="#1f3358"></circle>
+  <text x="1230" y="33" fill="#8a9bb4" font-size="11" font-weight="700" text-anchor="middle">A</text>
+  <text x="1200" y="33" fill="#8a9bb4" font-size="11" text-anchor="end">Avery</text>
+
+  <text x="40" y="108" fill="#e6edf5" font-size="22" font-weight="700">My Queue — Devon S.</text>
+  <text x="40" y="130" fill="#8a9bb4" font-size="12">4 active · 2 scheduled today · onsite at Greenfield until 2 PM</text>
+
+  
+  <g transform="translate(40,160)">
+    <rect width="1200" height="80" rx="14" fill="#102545" stroke="#d45a3a" stroke-width="1.5"></rect>
+    <circle cx="48" cy="40" r="20" fill="#d45a3a"></circle>
+    <path d="M40 40l6 6 12-12" stroke="#fff" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"></path>
+    <text x="84" y="36" fill="#e6edf5" font-size="16" font-weight="700">Pull next ticket</text>
+    <text x="84" y="56" fill="#8a9bb4" font-size="12">3 tickets ready for you · highest priority surfaces first · weighted by SLA + skill match</text>
+    <rect x="1080" y="22" width="100" height="36" rx="8" fill="#d45a3a"></rect>
+    <text x="1130" y="45" fill="#fff" font-size="13" font-weight="700" text-anchor="middle">Pull →</text>
+  </g>
+
+  
+  <g transform="translate(40,260)">
+    <text x="0" y="0" fill="#5e7392" font-size="11" font-weight="700" letter-spacing="0.08em">CURRENTLY WORKING</text>
+    <rect x="0" y="14" width="780" height="220" rx="14" fill="#0c1c36" stroke="#1f3358"></rect>
+
+    <text x="24" y="50" fill="#60a5fa" font-size="12" font-weight="700" font-family="ui-monospace,Menlo,monospace">T-48217</text>
+    <rect x="100" y="36" width="44" height="22" rx="6" fill="#3b1818" stroke="#ef4444"></rect>
+    <text x="122" y="51" fill="#ef4444" font-size="11" font-weight="800" text-anchor="middle">P2</text>
+    <rect x="156" y="36" width="92" height="22" rx="11" fill="#1d2e4f"></rect>
+    <text x="202" y="51" fill="#a9b8d0" font-size="11" font-weight="600" text-anchor="middle">M365 / Email</text>
+    <text x="700" y="50" fill="#eab308" font-size="11" font-weight="700" text-anchor="end" font-family="ui-monospace,Menlo,monospace">SLA · 26m</text>
+
+    <text x="24" y="86" fill="#e6edf5" font-size="16" font-weight="700">Acme Holdings — Outlook keeps disconnecting from M365</text>
+    <text x="24" y="108" fill="#8a9bb4" font-size="12">Multiple users impacted. Possible mailbox auth issue (Nova flagged 3 similar in 2 hrs).</text>
+
+    <line x1="24" y1="128" x2="756" y2="128" stroke="#1f3358"></line>
+
+    <text x="24" y="156" fill="#5e7392" font-size="11" font-weight="600" letter-spacing="0.06em">REQUESTED BY</text>
+    <text x="24" y="178" fill="#e6edf5" font-size="12">halden.b@acme.com · Halden Brix, Ops</text>
+    <text x="24" y="196" fill="#8a9bb4" font-size="11">First response sent 4m ago · awaiting screenshot</text>
+
+    <text x="380" y="156" fill="#5e7392" font-size="11" font-weight="600" letter-spacing="0.06em">TIMER</text>
+    <text x="380" y="184" fill="#22c55e" font-size="22" font-weight="700" font-family="ui-monospace,Menlo,monospace">00:14:32</text>
+    <text x="380" y="202" fill="#8a9bb4" font-size="11">Auto-logged on pull · runs while open</text>
+
+    <rect x="600" y="170" width="80" height="32" rx="8" fill="#16294a" stroke="#1f3358"></rect>
+    <text x="640" y="190" fill="#a9b8d0" font-size="11" font-weight="600" text-anchor="middle">Pause</text>
+    <rect x="688" y="170" width="80" height="32" rx="8" fill="#22c55e"></rect>
+    <text x="728" y="190" fill="#0a1628" font-size="11" font-weight="700" text-anchor="middle">Resolve</text>
+  </g>
+
+  
+  <g transform="translate(840,260)">
+    <text x="0" y="0" fill="#5e7392" font-size="11" font-weight="700" letter-spacing="0.08em">NEXT UP · NOVA SUGGESTS</text>
+    <rect x="0" y="14" width="400" height="220" rx="14" fill="#0c1c36" stroke="#1f3358" stroke-dasharray="4 4"></rect>
+
+    <text x="24" y="50" fill="#60a5fa" font-size="12" font-weight="700" font-family="ui-monospace,Menlo,monospace">T-48213</text>
+    <rect x="100" y="36" width="44" height="22" rx="6" fill="#3b1818" stroke="#ef4444"></rect>
+    <text x="122" y="51" fill="#ef4444" font-size="11" font-weight="800" text-anchor="middle">P2</text>
+
+    <text x="24" y="86" fill="#e6edf5" font-size="14" font-weight="600" text-wrap="wrap">Acme — Backup job failed</text>
+    <text x="24" y="106" fill="#8a9bb4" font-size="11">Same client as your current ticket.</text>
+    <text x="24" y="122" fill="#8a9bb4" font-size="11">Likely related — auth issue on FS-02.</text>
+
+    <line x1="24" y1="142" x2="376" y2="142" stroke="#1f3358"></line>
+
+    <text x="24" y="166" fill="#5e7392" font-size="10" font-weight="600">WHY THIS ONE?</text>
+    <text x="24" y="184" fill="#a9b8d0" font-size="11">• Skill match: server / backup</text>
+    <text x="24" y="200" fill="#a9b8d0" font-size="11">• Same company, possible root cause</text>
+    <text x="24" y="216" fill="#a9b8d0" font-size="11">• SLA: 1h 12m to breach</text>
+  </g>
+
+  
+  <g transform="translate(40,500)">
+    <text x="0" y="0" fill="#5e7392" font-size="11" font-weight="700" letter-spacing="0.08em">MY OPEN TICKETS</text>
+    
+      <g transform="translate(0,14)">
+        <rect width="1200" height="56" rx="10" fill="#0c1c36" stroke="#1f3358"></rect>
+        <text x="20" y="24" fill="#60a5fa" font-size="11" font-weight="700" font-family="ui-monospace,Menlo,monospace">T-48201</text>
+        <text x="120" y="24" fill="#e6edf5" font-size="13" font-weight="600">Mercer — server reboot completed, awaiting verification</text>
+        <text x="900" y="24" fill="#5e7392" font-size="10" font-weight="600">SLA</text>
+        <text x="930" y="24" fill="#8a9bb4" font-size="11" font-weight="600">Best effort</text>
+        <rect x="1080" y="14" width="44" height="22" rx="6" fill="#2a2509" stroke="#eab308"></rect>
+        <text x="1102" y="29" fill="#eab308" font-size="11" font-weight="800" text-anchor="middle">P3</text>
+        <rect x="1140" y="14" width="44" height="22" rx="6" fill="#16294a"></rect>
+        <text x="1162" y="29" fill="#a9b8d0" font-size="10" font-weight="700" text-anchor="middle">OPEN</text>
+        <text x="20" y="42" fill="#5e7392" font-size="11">paused 38m ago</text>
+      </g>
+      <g transform="translate(0,78)">
+        <rect width="1200" height="56" rx="10" fill="#0c1c36" stroke="#1f3358"></rect>
+        <text x="20" y="24" fill="#60a5fa" font-size="11" font-weight="700" font-family="ui-monospace,Menlo,monospace">T-48198</text>
+        <text x="120" y="24" fill="#e6edf5" font-size="13" font-weight="600">Northwind — VPN config update for new branch office</text>
+        <text x="900" y="24" fill="#5e7392" font-size="10" font-weight="600">SLA</text>
+        <text x="930" y="24" fill="#22c55e" font-size="11" font-weight="600">Gold · 2h</text>
+        <rect x="1080" y="14" width="44" height="22" rx="6" fill="#2a2509" stroke="#eab308"></rect>
+        <text x="1102" y="29" fill="#eab308" font-size="11" font-weight="800" text-anchor="middle">P3</text>
+        <rect x="1140" y="14" width="44" height="22" rx="6" fill="#16294a"></rect>
+        <text x="1162" y="29" fill="#a9b8d0" font-size="10" font-weight="700" text-anchor="middle">OPEN</text>
+        <text x="20" y="42" fill="#5e7392" font-size="11">paused 38m ago</text>
+      </g>
+      <g transform="translate(0,142)">
+        <rect width="1200" height="56" rx="10" fill="#0c1c36" stroke="#1f3358"></rect>
+        <text x="20" y="24" fill="#60a5fa" font-size="11" font-weight="700" font-family="ui-monospace,Menlo,monospace">T-48189</text>
+        <text x="120" y="24" fill="#e6edf5" font-size="13" font-weight="600">Greenfield — onsite printer + network audit · scheduled 2 PM</text>
+        <text x="900" y="24" fill="#5e7392" font-size="10" font-weight="600">SLA</text>
+        <text x="930" y="24" fill="#a78bfa" font-size="11" font-weight="600">Scheduled</text>
+        <rect x="1080" y="14" width="44" height="22" rx="6" fill="#0f2030" stroke="#60a5fa"></rect>
+        <text x="1102" y="29" fill="#60a5fa" font-size="11" font-weight="800" text-anchor="middle">P4</text>
+        <rect x="1140" y="14" width="44" height="22" rx="6" fill="#16294a"></rect>
+        <text x="1162" y="29" fill="#a9b8d0" font-size="10" font-weight="700" text-anchor="middle">OPEN</text>
+        <text x="20" y="42" fill="#5e7392" font-size="11">paused 38m ago</text>
+      </g>
+      <g transform="translate(0,206)">
+        <rect width="1200" height="56" rx="10" fill="#0c1c36" stroke="#1f3358"></rect>
+        <text x="20" y="24" fill="#60a5fa" font-size="11" font-weight="700" font-family="ui-monospace,Menlo,monospace">T-48172</text>
+        <text x="120" y="24" fill="#e6edf5" font-size="13" font-weight="600">Pinewood — Hyper-V host disk space cleanup</text>
+        <text x="900" y="24" fill="#5e7392" font-size="10" font-weight="600">SLA</text>
+        <text x="930" y="24" fill="#8a9bb4" font-size="11" font-weight="600">Best effort</text>
+        <rect x="1080" y="14" width="44" height="22" rx="6" fill="#2a2509" stroke="#eab308"></rect>
+        <text x="1102" y="29" fill="#eab308" font-size="11" font-weight="800" text-anchor="middle">P3</text>
+        <rect x="1140" y="14" width="44" height="22" rx="6" fill="#16294a"></rect>
+        <text x="1162" y="29" fill="#a9b8d0" font-size="10" font-weight="700" text-anchor="middle">OPEN</text>
+        <text x="20" y="42" fill="#5e7392" font-size="11">paused 38m ago</text>
+      </g>
+  </g>
+
+</svg>

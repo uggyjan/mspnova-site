@@ -31,6 +31,12 @@
   </div>
 </section>
 
+<section style="padding:64px 0 0;">
+  <div class="container">
+    <img src="../../assets/mocks/needs-attention-shot.png" alt="Needs Attention dispatch board" style="display:block; width:100%; height:auto; border-radius:var(--r-lg); border:1px solid var(--c-navy-3); box-shadow:var(--shadow-xl); "/>
+  </div>
+</section>
+
 <section class="section-sm bg-dark-2">
   <div class="container">
     <div class="grid grid-4" style="gap:32px;">
@@ -91,7 +97,7 @@
           <li><span data-icon="check"></span><span>Optional manual mode for senior techs / leads</span></li>
         </ul>
       </div>
-      <div class="deepdive__shot mock-frame mock-frame--pull" aria-label="Pull Ticket flow"></div>
+      <img class="deepdive__shot mock-frame" src="../../assets/mocks/pull-ticket.svg" alt="Pull Ticket flow — tech queue with auto-assigned next ticket and timer"/>
     </div>
   </div>
 </section>
@@ -111,7 +117,7 @@
           <li><span data-icon="check"></span><span>Auto-close suggestions for clearly resolved tickets</span></li>
         </ul>
       </div>
-      <div class="deepdive__shot mock-frame mock-frame--holding" aria-label="Holding lanes"></div>
+      <img class="deepdive__shot mock-frame" src="../../assets/mocks/holding-lanes.svg" alt="Holding lanes — active, awaiting client, scheduled, blocked, onsite, snoozed"/>
     </div>
   </div>
 </section>
@@ -137,10 +143,8 @@
 
 <div data-mn-footer></div>
 <style>
-.mock-frame { background:linear-gradient(135deg,#1c3050 0%,#0a1628 100%); border-radius:var(--r-lg); border:1px solid var(--c-navy-3); box-shadow:var(--shadow-xl); position:relative; overflow:hidden; }
-.mock-frame::after { content:'NEEDS ATTENTION · placeholder'; position:absolute; left:50%; top:50%; transform:translate(-50%,-50%); font-family:var(--font-mono); font-size:11px; color:var(--c-fg-on-dark-3); letter-spacing:.06em; }
-.mock-frame--pull::after { content:'PULL TICKET FLOW · placeholder'; }
-.mock-frame--holding::after { content:'HOLDING LANES · placeholder'; }
+.mock-frame { display:block; width:100%; height:auto; border-radius:var(--r-lg); border:1px solid var(--c-navy-3); box-shadow:var(--shadow-xl); background:#0a1628; overflow:hidden; }
+
 </style>
 <script src="../../js/site.js?v=1"></script>
 </body>

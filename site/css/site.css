@@ -181,7 +181,9 @@ button { font-family: inherit; cursor: pointer; }
   align-items: center;
   gap: 32px;
 }
-.site-header__logo { flex-shrink: 0; }
+.site-header__logo { flex-shrink: 0; min-width: 0; }
+.site-header__logo .nv-logo-static { display: inline-block; flex-shrink: 0; }
+.site-header__logo img { display: block; flex-shrink: 0; max-width: none !important; }
 .site-nav {
   display: flex;
   gap: 28px;
@@ -198,8 +200,6 @@ button { font-family: inherit; cursor: pointer; }
 }
 .site-nav a:hover { color: #fff; }
 .site-nav a.is-active { color: #fff; border-bottom-color: var(--c-accent); }
-.site-header__signin { font-size: 13px; color: var(--c-fg-on-dark-2); font-weight: 500; }
-.site-header__signin:hover { color: #fff; }
 
 /* Mobile nav toggle */
 .site-header__menu-btn {
@@ -211,7 +211,7 @@ button { font-family: inherit; cursor: pointer; }
   color: #fff;
 }
 @media (max-width: 980px) {
-  .site-nav, .site-header__signin, .site-header__cta { display: none; }
+  .site-nav, .site-header__cta { display: none; }
   .site-header__menu-btn { display: inline-flex; }
 }
 
@@ -617,6 +617,29 @@ button { font-family: inherit; cursor: pointer; }
 .tier__price { display: flex; align-items: baseline; gap: 8px; }
 .tier__price-n { font-family: var(--font-display); font-size: 44px; font-weight: 800; letter-spacing: -0.025em; }
 .tier__price-s { font-size: 13px; color: var(--c-fg-2); }
+.tier__beta {
+  margin-top: 4px;
+  padding: 12px 14px;
+  background: linear-gradient(135deg, rgba(231,116,87,0.06) 0%, rgba(231,116,87,0.02) 100%);
+  border: 1px solid rgba(231,116,87,0.18);
+  border-radius: var(--r-md);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.tier__beta-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 12px;
+  font-size: 12px;
+  color: var(--c-fg-1);
+}
+.tier__beta-row span:first-child { color: var(--c-fg-2); }
+.tier__beta-price { font-family: var(--font-mono); font-weight: 700; color: var(--c-accent); }
+.tier__beta-row--minor { padding-top: 6px; border-top: 1px dashed rgba(231,116,87,0.24); margin-top: 2px; }
+.tier__beta-row--minor span:first-child { color: var(--c-fg-2); }
+.tier__beta-row--minor span:last-child { font-family: var(--font-mono); font-weight: 700; color: var(--c-fg-1); }
 .tier__features { list-style: none; padding: 16px 0 0; margin: 0; border-top: 1px solid var(--c-border-1); display: flex; flex-direction: column; gap: 10px; }
 .tier__features li { display: flex; gap: 10px; font-size: 13px; line-height: 1.45; }
 .tier__features svg { color: var(--c-accent); flex-shrink: 0; margin-top: 2px; }

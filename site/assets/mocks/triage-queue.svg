@@ -1,0 +1,253 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 800" preserveAspectRatio="xMidYMid slice" font-family="-apple-system, BlinkMacSystemFont, &#39;Segoe UI&#39;, system-ui, sans-serif">
+  <defs>
+    <linearGradient id="bgGrad" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0" stop-color="#0e1f3a"></stop>
+      <stop offset="1" stop-color="#091428"></stop>
+    </linearGradient>
+    <linearGradient id="confHi" x1="0" x2="1"><stop offset="0" stop-color="#22c55e"></stop><stop offset="1" stop-color="#16a34a"></stop></linearGradient>
+    <linearGradient id="confMed" x1="0" x2="1"><stop offset="0" stop-color="#eab308"></stop><stop offset="1" stop-color="#ca8a04"></stop></linearGradient>
+    <linearGradient id="confLo" x1="0" x2="1"><stop offset="0" stop-color="#ef4444"></stop><stop offset="1" stop-color="#b91c1c"></stop></linearGradient>
+  </defs>
+
+  
+  <rect width="1280" height="800" fill="url(#bgGrad)"></rect>
+
+  
+  <rect x="0" y="0" width="1280" height="56" fill="#06101f"></rect>
+  <rect x="0" y="55" width="1280" height="1" fill="#1f3358"></rect>
+  
+  <circle cx="32" cy="28" r="9" fill="#d45a3a"></circle>
+  <text x="50" y="33" fill="#e6edf5" font-size="14" font-weight="700" letter-spacing="0.04em">NOVA</text>
+  
+  <g fill="#8a9bb4" font-size="12" font-weight="600">
+    <text x="140" y="33">Home</text>
+    <text x="200" y="33" fill="#e6edf5">Triage</text>
+    <rect x="195" y="40" width="38" height="2" fill="#d45a3a"></rect>
+    <text x="270" y="33">Needs Attention</text>
+    <text x="385" y="33">Dispatch Queue</text>
+    <text x="495" y="33">Pulse</text>
+    <text x="555" y="33">Status</text>
+    </g>
+  
+  <circle cx="1230" cy="28" r="14" fill="#16294a" stroke="#1f3358"></circle>
+  <text x="1230" y="33" fill="#8a9bb4" font-size="11" font-weight="700" text-anchor="middle">A</text>
+  <text x="1200" y="33" fill="#8a9bb4" font-size="11" text-anchor="end">Avery</text>
+
+  
+  <text x="40" y="108" fill="#e6edf5" font-size="22" font-weight="700">Triage Queue</text>
+  <text x="40" y="130" fill="#8a9bb4" font-size="12">12 tickets awaiting review · last sync 14s ago</text>
+
+  
+  <g>
+    <rect x="900" y="84" width="100" height="56" rx="10" fill="#0f1e36" stroke="#1f3358"></rect>
+    <text x="912" y="104" fill="#8a9bb4" font-size="10" font-weight="600" letter-spacing="0.06em">PENDING</text>
+    <text x="912" y="130" fill="#e6edf5" font-size="22" font-weight="700" font-family="ui-monospace,Menlo,monospace">12</text>
+
+    <rect x="1010" y="84" width="100" height="56" rx="10" fill="#0f1e36" stroke="#1f3358"></rect>
+    <text x="1022" y="104" fill="#8a9bb4" font-size="10" font-weight="600" letter-spacing="0.06em">P1 / P2</text>
+    <text x="1022" y="130" fill="#ef4444" font-size="22" font-weight="700" font-family="ui-monospace,Menlo,monospace">3</text>
+
+    <rect x="1120" y="84" width="120" height="56" rx="10" fill="#0f1e36" stroke="#1f3358"></rect>
+    <text x="1132" y="104" fill="#8a9bb4" font-size="10" font-weight="600" letter-spacing="0.06em">AVG CONFIDENCE</text>
+    <text x="1132" y="130" fill="#22c55e" font-size="22" font-weight="700" font-family="ui-monospace,Menlo,monospace">87%</text>
+  </g>
+
+  
+  <g transform="translate(40,160)">
+    <rect width="1200" height="36" rx="8" fill="#0a1830"></rect>
+    <g fill="#8a9bb4" font-size="10" font-weight="700" letter-spacing="0.08em">
+      <text x="16" y="23">TICKET</text>
+      <text x="100" y="23">COMPANY · TITLE</text>
+      <text x="640" y="23">ISSUE TYPE</text>
+      <text x="800" y="23">PRIORITY</text>
+      <text x="900" y="23">CONFIDENCE</text>
+      <text x="1060" y="23">QUEUE</text>
+    </g>
+  </g>
+
+  
+  <g font-size="13" font-family="-apple-system, BlinkMacSystemFont, &#39;Segoe UI&#39;, sans-serif">
+    
+    <g transform="translate(40,200)">
+      <rect width="1200" height="76" rx="10" fill="#102545" stroke="#d45a3a" stroke-width="1.5"></rect>
+      <text x="16" y="30" fill="#60a5fa" font-size="12" font-weight="700" font-family="ui-monospace,Menlo,monospace">T-48217</text>
+      <text x="16" y="52" fill="#5e7392" font-size="10">2m ago</text>
+
+      <text x="100" y="28" fill="#e6edf5" font-weight="600">Acme Holdings</text>
+      <text x="100" y="48" fill="#8a9bb4" font-size="12">Outlook keeps disconnecting from M365 — multiple users impacted</text>
+      <text x="100" y="64" fill="#5e7392" font-size="11">From: halden.b@acme.com · Sent via email</text>
+
+      <rect x="640" y="22" width="120" height="22" rx="11" fill="#1d2e4f"></rect>
+      <text x="652" y="37" fill="#a9b8d0" font-size="11" font-weight="600">M365 / Email</text>
+
+      
+      <rect x="800" y="22" width="44" height="22" rx="6" fill="#3b1818" stroke="#ef4444"></rect>
+      <text x="822" y="37" fill="#ef4444" font-size="11" font-weight="800" text-anchor="middle">P2</text>
+      <text x="800" y="60" fill="#5e7392" font-size="10">High · Med</text>
+
+      
+      <rect x="900" y="32" width="120" height="6" rx="3" fill="#1f3358"></rect>
+      <rect x="900" y="32" width="113" height="6" rx="3" fill="url(#confHi)"></rect>
+      <text x="900" y="52" fill="#22c55e" font-size="11" font-weight="700" font-family="ui-monospace,Menlo,monospace">94%</text>
+      <text x="936" y="52" fill="#5e7392" font-size="10">High</text>
+
+      <text x="1060" y="34" fill="#e6edf5" font-size="12">Needs Attention</text>
+      <text x="1060" y="52" fill="#5e7392" font-size="10">Pre-Process · 22</text>
+
+      
+      <rect x="1170" y="24" width="22" height="22" rx="6" fill="#d45a3a"></rect>
+      <path d="M1177 35l4 4 8-8" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"></path>
+    </g>
+
+    
+    <g transform="translate(40,288)">
+      <rect width="1200" height="60" rx="10" fill="#0c1c36" stroke="#1f3358"></rect>
+      <text x="16" y="26" fill="#60a5fa" font-size="12" font-weight="700" font-family="ui-monospace,Menlo,monospace">T-48216</text>
+      <text x="16" y="44" fill="#5e7392" font-size="10">4m ago</text>
+
+      <text x="100" y="24" fill="#e6edf5" font-weight="600">Pinewood Dental</text>
+      <text x="100" y="44" fill="#8a9bb4" font-size="12">VPN credentials reset request for new hire — Niani Forst</text>
+
+      <rect x="640" y="18" width="120" height="22" rx="11" fill="#1d2e4f"></rect>
+      <text x="652" y="33" fill="#a9b8d0" font-size="11" font-weight="600">Identity / VPN</text>
+
+      <rect x="800" y="18" width="44" height="22" rx="6" fill="#2a2509" stroke="#eab308"></rect>
+      <text x="822" y="33" fill="#eab308" font-size="11" font-weight="800" text-anchor="middle">P3</text>
+      <text x="800" y="52" fill="#5e7392" font-size="10">Med · Low</text>
+
+      <rect x="900" y="28" width="120" height="6" rx="3" fill="#1f3358"></rect>
+      <rect x="900" y="28" width="106" height="6" rx="3" fill="url(#confHi)"></rect>
+      <text x="900" y="48" fill="#22c55e" font-size="11" font-weight="700" font-family="ui-monospace,Menlo,monospace">88%</text>
+
+      <text x="1060" y="30" fill="#e6edf5" font-size="12">Needs Attention</text>
+      <text x="1060" y="48" fill="#5e7392" font-size="10">Auto-route ✓</text>
+    </g>
+
+    
+    <g transform="translate(40,360)">
+      <rect width="1200" height="60" rx="10" fill="#0c1c36" stroke="#1f3358"></rect>
+      <text x="16" y="26" fill="#60a5fa" font-size="12" font-weight="700" font-family="ui-monospace,Menlo,monospace">T-48215</text>
+      <text x="16" y="44" fill="#5e7392" font-size="10">7m ago</text>
+
+      <text x="100" y="24" fill="#e6edf5" font-weight="600">Greenfield Logistics</text>
+      <text x="100" y="44" fill="#8a9bb4" font-size="12">Printer on 3rd floor offline since this morning — sales team blocked</text>
+
+      <rect x="640" y="18" width="120" height="22" rx="11" fill="#1d2e4f"></rect>
+      <text x="652" y="33" fill="#a9b8d0" font-size="11" font-weight="600">Hardware / Print</text>
+
+      <rect x="800" y="18" width="44" height="22" rx="6" fill="#3b1818" stroke="#ef4444"></rect>
+      <text x="822" y="33" fill="#ef4444" font-size="11" font-weight="800" text-anchor="middle">P1</text>
+      <text x="800" y="52" fill="#5e7392" font-size="10">High · High</text>
+
+      <rect x="900" y="28" width="120" height="6" rx="3" fill="#1f3358"></rect>
+      <rect x="900" y="28" width="78" height="6" rx="3" fill="url(#confMed)"></rect>
+      <text x="900" y="48" fill="#eab308" font-size="11" font-weight="700" font-family="ui-monospace,Menlo,monospace">65%</text>
+      <text x="936" y="48" fill="#5e7392" font-size="10">Review</text>
+
+      <text x="1060" y="30" fill="#eab308" font-size="12" font-weight="600">Held for review</text>
+      <text x="1060" y="48" fill="#5e7392" font-size="10">Below threshold</text>
+    </g>
+
+    
+    <g transform="translate(40,432)">
+      <rect width="1200" height="60" rx="10" fill="#0c1c36" stroke="#1f3358"></rect>
+      <text x="16" y="26" fill="#60a5fa" font-size="12" font-weight="700" font-family="ui-monospace,Menlo,monospace">T-48214</text>
+      <text x="16" y="44" fill="#5e7392" font-size="10">11m ago</text>
+
+      <text x="100" y="24" fill="#e6edf5" font-weight="600">Mercer Construction</text>
+      <text x="100" y="44" fill="#8a9bb4" font-size="12">New laptop request — onboarding for project manager starting Monday</text>
+
+      <rect x="640" y="18" width="120" height="22" rx="11" fill="#1d2e4f"></rect>
+      <text x="652" y="33" fill="#a9b8d0" font-size="11" font-weight="600">Procurement</text>
+
+      <rect x="800" y="18" width="44" height="22" rx="6" fill="#0f2030" stroke="#60a5fa"></rect>
+      <text x="822" y="33" fill="#60a5fa" font-size="11" font-weight="800" text-anchor="middle">P4</text>
+      <text x="800" y="52" fill="#5e7392" font-size="10">Low · Low</text>
+
+      <rect x="900" y="28" width="120" height="6" rx="3" fill="#1f3358"></rect>
+      <rect x="900" y="28" width="116" height="6" rx="3" fill="url(#confHi)"></rect>
+      <text x="900" y="48" fill="#22c55e" font-size="11" font-weight="700" font-family="ui-monospace,Menlo,monospace">96%</text>
+
+      <text x="1060" y="30" fill="#e6edf5" font-size="12">Procurement</text>
+      <text x="1060" y="48" fill="#5e7392" font-size="10">Auto-route ✓</text>
+    </g>
+
+    
+    <g transform="translate(40,504)">
+      <rect width="1200" height="60" rx="10" fill="#0c1c36" stroke="#1f3358"></rect>
+      <text x="16" y="26" fill="#60a5fa" font-size="12" font-weight="700" font-family="ui-monospace,Menlo,monospace">T-48213</text>
+      <text x="16" y="44" fill="#5e7392" font-size="10">14m ago</text>
+
+      <text x="100" y="24" fill="#e6edf5" font-weight="600">Acme Holdings</text>
+      <text x="100" y="44" fill="#8a9bb4" font-size="12">Server alert — backup job failed overnight on FS-02</text>
+
+      <rect x="640" y="18" width="120" height="22" rx="11" fill="#1d2e4f"></rect>
+      <text x="652" y="33" fill="#a9b8d0" font-size="11" font-weight="600">Backup / Server</text>
+
+      <rect x="800" y="18" width="44" height="22" rx="6" fill="#3b1818" stroke="#ef4444"></rect>
+      <text x="822" y="33" fill="#ef4444" font-size="11" font-weight="800" text-anchor="middle">P2</text>
+      <text x="800" y="52" fill="#5e7392" font-size="10">High · Med</text>
+
+      <rect x="900" y="28" width="120" height="6" rx="3" fill="#1f3358"></rect>
+      <rect x="900" y="28" width="111" height="6" rx="3" fill="url(#confHi)"></rect>
+      <text x="900" y="48" fill="#22c55e" font-size="11" font-weight="700" font-family="ui-monospace,Menlo,monospace">92%</text>
+
+      <text x="1060" y="30" fill="#e6edf5" font-size="12">Needs Attention</text>
+      <text x="1060" y="48" fill="#5e7392" font-size="10">MS · Gold SLA</text>
+    </g>
+
+    
+    <g transform="translate(40,576)">
+      <rect width="1200" height="60" rx="10" fill="#0c1c36" stroke="#1f3358"></rect>
+      <text x="16" y="26" fill="#60a5fa" font-size="12" font-weight="700" font-family="ui-monospace,Menlo,monospace">T-48212</text>
+      <text x="16" y="44" fill="#5e7392" font-size="10">18m ago</text>
+
+      <text x="100" y="24" fill="#e6edf5" font-weight="600">Pinewood Dental</text>
+      <text x="100" y="44" fill="#8a9bb4" font-size="12">Wi-Fi slow in operatory 4 — affecting imaging software</text>
+
+      <rect x="640" y="18" width="120" height="22" rx="11" fill="#1d2e4f"></rect>
+      <text x="652" y="33" fill="#a9b8d0" font-size="11" font-weight="600">Network / Wi-Fi</text>
+
+      <rect x="800" y="18" width="44" height="22" rx="6" fill="#2a2509" stroke="#eab308"></rect>
+      <text x="822" y="33" fill="#eab308" font-size="11" font-weight="800" text-anchor="middle">P3</text>
+      <text x="800" y="52" fill="#5e7392" font-size="10">Med · Med</text>
+
+      <rect x="900" y="28" width="120" height="6" rx="3" fill="#1f3358"></rect>
+      <rect x="900" y="28" width="100" height="6" rx="3" fill="url(#confHi)"></rect>
+      <text x="900" y="48" fill="#22c55e" font-size="11" font-weight="700" font-family="ui-monospace,Menlo,monospace">83%</text>
+
+      <text x="1060" y="30" fill="#e6edf5" font-size="12">Needs Attention</text>
+      <text x="1060" y="48" fill="#5e7392" font-size="10">Auto-route ✓</text>
+    </g>
+
+    
+    <g transform="translate(40,648)">
+      <rect width="1200" height="60" rx="10" fill="#0c1c36" stroke="#1f3358"></rect>
+      <text x="16" y="26" fill="#60a5fa" font-size="12" font-weight="700" font-family="ui-monospace,Menlo,monospace">T-48211</text>
+      <text x="16" y="44" fill="#5e7392" font-size="10">22m ago</text>
+
+      <text x="100" y="24" fill="#e6edf5" font-weight="600">XYZ Test Company</text>
+      <text x="100" y="44" fill="#8a9bb4" font-size="12">Test ticket — please ignore (auto-generated by Avery)</text>
+
+      <rect x="640" y="18" width="120" height="22" rx="11" fill="#1d2e4f"></rect>
+      <text x="652" y="33" fill="#a9b8d0" font-size="11" font-weight="600">Other</text>
+
+      <rect x="800" y="18" width="44" height="22" rx="6" fill="#0f2030" stroke="#60a5fa"></rect>
+      <text x="822" y="33" fill="#60a5fa" font-size="11" font-weight="800" text-anchor="middle">P4</text>
+      <text x="800" y="52" fill="#5e7392" font-size="10">Low · Low</text>
+
+      <rect x="900" y="28" width="120" height="6" rx="3" fill="#1f3358"></rect>
+      <rect x="900" y="28" width="48" height="6" rx="3" fill="url(#confLo)"></rect>
+      <text x="900" y="48" fill="#ef4444" font-size="11" font-weight="700" font-family="ui-monospace,Menlo,monospace">40%</text>
+      <text x="936" y="48" fill="#5e7392" font-size="10">Low</text>
+
+      <text x="1060" y="30" fill="#ef4444" font-size="12" font-weight="600">Manual review</text>
+      <text x="1060" y="48" fill="#5e7392" font-size="10">Below threshold</text>
+    </g>
+  </g>
+
+  
+  <rect x="0" y="720" width="1280" height="80" fill="url(#bgGrad)" opacity="0.85"></rect>
+  <rect x="40" y="720" width="1200" height="36" rx="8" fill="#0c1c36" opacity="0.5" stroke="#1f3358"></rect>
+  <text x="640" y="744" fill="#5e7392" font-size="11" text-anchor="middle">5 more · scroll for full queue</text>
+</svg>

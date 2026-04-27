@@ -1,0 +1,157 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 800" preserveAspectRatio="xMidYMid slice" font-family="-apple-system, BlinkMacSystemFont, &#39;Segoe UI&#39;, system-ui, sans-serif">
+  <defs>
+    <linearGradient id="bgG" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#0e1f3a"></stop><stop offset="1" stop-color="#091428"></stop></linearGradient>
+    <linearGradient id="brand" x1="0" x2="1"><stop offset="0" stop-color="#d45a3a"></stop><stop offset="1" stop-color="#b94428"></stop></linearGradient>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="rgba(212,90,58,0.18)"></stop><stop offset="1" stop-color="rgba(212,90,58,0)"></stop></radialGradient>
+  </defs>
+  <rect width="1280" height="800" fill="url(#bgG)"></rect>
+  <ellipse cx="640" cy="400" rx="500" ry="320" fill="url(#glow)"></ellipse>
+
+  
+  <text x="80" y="80" fill="#5e7392" font-size="12" font-weight="700" letter-spacing="0.1em" font-family="ui-monospace,Menlo,monospace">FIELD APP · ONSITE CHECK-IN</text>
+
+  
+  <g transform="translate(180,130)">
+    
+    <rect x="0" y="0" width="280" height="580" rx="36" fill="#0a1628" stroke="#1f3358" stroke-width="2"></rect>
+    <rect x="6" y="6" width="268" height="568" rx="30" fill="#06101f"></rect>
+    
+    <rect x="110" y="14" width="60" height="20" rx="10" fill="#0a1628"></rect>
+
+    
+    <text x="22" y="50" fill="#e6edf5" font-size="11" font-weight="700">9:41</text>
+    <g transform="translate(220,42)" fill="#e6edf5">
+      <rect x="0" y="0" width="14" height="9" rx="1.5" fill="none" stroke="#e6edf5"></rect>
+      <rect x="2" y="2" width="10" height="5" fill="#e6edf5"></rect>
+      <rect x="14" y="3" width="2" height="3" fill="#e6edf5"></rect>
+    </g>
+
+    
+    <text x="22" y="92" fill="#8a9bb4" font-size="11">Today · Tue Oct 21</text>
+    <text x="22" y="118" fill="#e6edf5" font-size="22" font-weight="700">Onsite at Greenfield</text>
+    <text x="22" y="138" fill="#8a9bb4" font-size="12">2:00 PM · 4501 Industrial Way</text>
+
+    
+    <g transform="translate(22,166)">
+      <rect width="236" height="92" rx="14" fill="url(#brand)"></rect>
+      <circle cx="40" cy="46" r="20" fill="rgba(255,255,255,0.15)"></circle>
+      <path d="M30 46l8 8 16-16" stroke="#fff" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"></path>
+      <text x="74" y="44" fill="#fff" font-size="17" font-weight="700">Check in onsite</text>
+      <text x="74" y="62" fill="rgba(255,255,255,0.85)" font-size="11">Auto-logs arrival · starts billing</text>
+      <text x="74" y="78" fill="rgba(255,255,255,0.7)" font-size="10">Verifying location… 38ft from site</text>
+    </g>
+
+    
+    <g transform="translate(22,278)">
+      <text x="0" y="0" fill="#5e7392" font-size="9" font-weight="700" letter-spacing="0.08em">VISIT COVERS</text>
+      <rect x="0" y="10" width="236" height="120" rx="12" fill="#0c1c36" stroke="#1f3358"></rect>
+
+      <text x="14" y="36" fill="#60a5fa" font-size="10" font-weight="700" font-family="ui-monospace,Menlo,monospace">T-48189</text>
+      <rect x="68" y="22" width="34" height="18" rx="4" fill="#3b1818" stroke="#ef4444"></rect>
+      <text x="85" y="35" fill="#ef4444" font-size="10" font-weight="800" text-anchor="middle">P1</text>
+
+      <text x="14" y="58" fill="#e6edf5" font-size="13" font-weight="600">Printer offline · 3rd fl</text>
+      <text x="14" y="76" fill="#8a9bb4" font-size="11">Sales team blocked · 4 users</text>
+
+      <line x1="14" y1="90" x2="222" y2="90" stroke="#1f3358"></line>
+      <text x="14" y="110" fill="#5e7392" font-size="10">Contact:</text>
+      <text x="60" y="110" fill="#a9b8d0" font-size="10">Tasi Velmer · ext 214</text>
+      <text x="14" y="124" fill="#5e7392" font-size="10">Bonus:</text>
+      <text x="60" y="124" fill="#a9b8d0" font-size="10">+ network audit (T-48190)</text>
+    </g>
+
+    
+    <g transform="translate(22,420)">
+      <rect width="112" height="44" rx="10" fill="#16294a" stroke="#1f3358"></rect>
+      <text x="56" y="28" fill="#a9b8d0" font-size="11" font-weight="600" text-anchor="middle">Get directions</text>
+      <rect x="124" y="0" width="112" height="44" rx="10" fill="#16294a" stroke="#1f3358"></rect>
+      <text x="180" y="28" fill="#a9b8d0" font-size="11" font-weight="600" text-anchor="middle">Call contact</text>
+    </g>
+
+    
+    <line x1="22" y1="510" x2="258" y2="510" stroke="#1f3358"></line>
+    <g fill="#5e7392" font-size="10" text-anchor="middle">
+      <text x="56" y="540" fill="#d45a3a" font-weight="700">Today</text>
+      <text x="116" y="540">Queue</text>
+      <text x="228" y="540">Profile</text>
+    </g>
+  </g>
+
+  
+  <g transform="translate(540,130)">
+    <rect x="0" y="0" width="280" height="580" rx="36" fill="#0a1628" stroke="#1f3358" stroke-width="2"></rect>
+    <rect x="6" y="6" width="268" height="568" rx="30" fill="#06101f"></rect>
+    <rect x="110" y="14" width="60" height="20" rx="10" fill="#0a1628"></rect>
+
+    <text x="22" y="50" fill="#e6edf5" font-size="11" font-weight="700">9:41</text>
+
+    
+    <text x="22" y="80" fill="#d45a3a" font-size="14">‹ Today</text>
+
+    
+    <text x="22" y="118" fill="#60a5fa" font-size="11" font-weight="700" font-family="ui-monospace,Menlo,monospace">T-48189 · GREENFIELD</text>
+    <text x="22" y="146" fill="#e6edf5" font-size="20" font-weight="700">Printer offline</text>
+    <text x="22" y="166" fill="#e6edf5" font-size="20" font-weight="700">3rd floor</text>
+
+    
+    <g transform="translate(22,190)">
+      <rect width="236" height="80" rx="14" fill="rgba(34,197,94,0.08)" stroke="#22c55e"></rect>
+      <circle cx="22" cy="40" r="6" fill="#22c55e">
+        
+      </circle>
+      <text x="40" y="32" fill="#22c55e" font-size="10" font-weight="700" letter-spacing="0.06em">CLOCK RUNNING · ONSITE</text>
+      <text x="40" y="58" fill="#e6edf5" font-size="22" font-weight="700" font-family="ui-monospace,Menlo,monospace">00:34:18</text>
+      <rect x="172" y="24" width="50" height="32" rx="8" fill="#16294a"></rect>
+      <text x="197" y="44" fill="#a9b8d0" font-size="10" font-weight="600" text-anchor="middle">Pause</text>
+    </g>
+
+    
+    <g transform="translate(22,290)">
+      <text x="0" y="0" fill="#5e7392" font-size="9" font-weight="700" letter-spacing="0.08em">WORK NOTE</text>
+      <rect x="0" y="10" width="236" height="80" rx="12" fill="#0c1c36" stroke="#1f3358"></rect>
+      <text x="14" y="34" fill="#e6edf5" font-size="11" font-weight="600">Replaced toner + reset</text>
+      <text x="14" y="50" fill="#e6edf5" font-size="11" font-weight="600">network module on HP-3F.</text>
+      <text x="14" y="68" fill="#8a9bb4" font-size="10">Tested 3 print jobs — clean.</text>
+      <text x="14" y="82" fill="#8a9bb4" font-size="10">Tasi verified queue cleared.</text>
+    </g>
+
+    
+    <g transform="translate(22,386)">
+      <rect width="68" height="60" rx="8" fill="#16294a" stroke="#1f3358"></rect>
+      <text x="34" y="35" fill="#5e7392" font-size="20" text-anchor="middle">📷</text>
+      <rect x="76" y="0" width="68" height="60" rx="8" fill="#16294a" stroke="#1f3358"></rect>
+      <text x="110" y="35" fill="#5e7392" font-size="20" text-anchor="middle">📷</text>
+      <rect x="152" y="0" width="68" height="60" rx="8" fill="rgba(212,90,58,0.1)" stroke="#d45a3a" stroke-dasharray="3 3"></rect>
+      <text x="186" y="38" fill="#d45a3a" font-size="20" text-anchor="middle">+</text>
+    </g>
+
+    
+    <g transform="translate(22,468)">
+      <rect width="236" height="48" rx="12" fill="#22c55e"></rect>
+      <text x="118" y="30" fill="#0a1628" font-size="13" font-weight="700" text-anchor="middle">Mark resolved · 34m logged</text>
+    </g>
+  </g>
+
+  
+  <g transform="translate(880,200)">
+    <text x="0" y="0" fill="#d45a3a" font-size="12" font-weight="700" letter-spacing="0.08em" font-family="ui-monospace,Menlo,monospace">FIELD-OPS APP</text>
+    <text x="0" y="36" fill="#e6edf5" font-size="22" font-weight="700">Auto check-in,</text>
+    <text x="0" y="62" fill="#e6edf5" font-size="22" font-weight="700">auto time entry.</text>
+    <text x="0" y="100" fill="#8a9bb4" font-size="13" line-height="1.5">Geofenced arrival starts the timer.</text>
+    <text x="0" y="120" fill="#8a9bb4" font-size="13">Photos + work notes attach to the ticket.</text>
+    <text x="0" y="140" fill="#8a9bb4" font-size="13">Resolve onsite — billing posts automatically.</text>
+
+    <g transform="translate(0,180)">
+      <circle cx="6" cy="6" r="4" fill="#22c55e"></circle>
+      <text x="20" y="10" fill="#a9b8d0" font-size="12">No more &#34;did you log that ticket?&#34;</text>
+    </g>
+    <g transform="translate(0,206)">
+      <circle cx="6" cy="6" r="4" fill="#22c55e"></circle>
+      <text x="20" y="10" fill="#a9b8d0" font-size="12">No paper time slips reconciled at end of week</text>
+    </g>
+    <g transform="translate(0,232)">
+      <circle cx="6" cy="6" r="4" fill="#22c55e"></circle>
+      <text x="20" y="10" fill="#a9b8d0" font-size="12">Surfaces nearby tickets — bundle visits</text>
+    </g>
+  </g>
+</svg>
