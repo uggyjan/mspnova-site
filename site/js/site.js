@@ -64,6 +64,11 @@
         ['Field Ops', '/features/field-ops/'],
         ['Client Portal', '/features/client-portal/'],
         ['Call Linking', '/features/call-linking/'],
+        ['Lobby & TV', '/features/lobby/'],
+        ['Reports', '/features/reports/'],
+        ['Billing Accuracy', '/features/billing-accuracy/'],
+        ['Time & Payroll', '/features/time-payroll/'],
+        ['Coaching & QA', '/features/coaching-qa/'],
         ['Pricing', '/pricing/'],
       ]},
       { t: 'Solutions', items: [

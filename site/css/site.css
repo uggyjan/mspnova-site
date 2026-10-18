@@ -369,7 +369,7 @@ button { font-family: inherit; cursor: pointer; }
 .pill--navy { background: var(--c-navy-1); color: var(--c-fg-on-dark-1); }
 
 /* ---------- DEEP DIVE ROW ---------- */
-.deepdive { padding: 96px 0; border-top: 1px solid var(--c-border-1); }
+.deepdive { padding-top: 96px; padding-bottom: 96px; border-top: 1px solid var(--c-border-1); }
 .bg-dark .deepdive, .bg-dark-2 .deepdive { border-top-color: var(--c-navy-3); }
 .deepdive__grid {
   display: grid;
