@@ -14,6 +14,9 @@
 <link rel="stylesheet" href="../css/site.css?v=1" />
 
 <!-- TODO: paste Cloudflare Web Analytics <script> here -->
+<style>@media (max-width: 860px) { .contact-grid { grid-template-columns: 1fr !important; gap: 32px !important; } }
+@media (max-width: 480px) { .contact-grid .card { padding: 24px !important; } .contact-grid .btn-lg { width: 100%; justify-content: center; white-space: normal; } }
+.contact-tel { display: inline-block; padding: 12px 0; }</style>
 </head>
 <body>
 <div data-mn-header></div>
@@ -37,90 +40,28 @@
 
 <section class="section bg-light">
   <div class="container">
-    <div class="grid" style="grid-template-columns:1.2fr 1fr;gap:64px;align-items:start;">
+    <div class="grid contact-grid" style="grid-template-columns:1.2fr 1fr;gap:64px;align-items:start;">
       <!-- Form -->
-      <!-- TODO: replace with real form ID -->
-      <form class="card" style="padding:36px;" name="demo-request" method="POST" action="https://formspree.io/f/your-form-id" id="contactForm">
-        <input type="hidden" name="_subject" value="MSPNova demo request">
-        <input type="hidden" name="_replyto_subject" value="Thanks for booking a demo with MSPNova">
+      <div class="card" style="padding:36px;">
         <h3 class="h-3">Book a 30-min demo</h3>
-        <p class="muted" style="font-size:14px;margin:0 0 24px;">We'll reply within one business day with three time slots. Demos run on Google Meet or Teams — your choice.</p>
-        <div class="form">
-          <div class="form__row">
-            <div class="field">
-              <label class="field__label" for="firstName">First name</label>
-              <input type="text" id="firstName" name="firstName" required>
-            </div>
-            <div class="field">
-              <label class="field__label" for="lastName">Last name</label>
-              <input type="text" id="lastName" name="lastName" required>
-            </div>
-          </div>
-          <div class="field">
-            <label class="field__label" for="email">Work email</label>
-            <input type="email" id="email" name="email" required>
-          </div>
-          <div class="form__row">
-            <div class="field">
-              <label class="field__label" for="company">Company / MSP name</label>
-              <input type="text" id="company" name="company" required>
-            </div>
-            <div class="field">
-              <label class="field__label" for="role">Your role</label>
-              <select id="role" name="role">
-                <option>Owner / CEO</option>
-                <option>COO / VP Operations</option>
-                <option>Service Manager</option>
-                <option>Dispatcher</option>
-                <option>Senior Engineer</option>
-                <option>Other</option>
-              </select>
-            </div>
-          </div>
-          <div class="form__row">
-            <div class="field">
-              <label class="field__label" for="psa">Which PSA?</label>
-              <select id="psa" name="psa">
-                <option>Autotask</option>
-              </select>
-            </div>
-            <div class="field">
-              <label class="field__label" for="size">Team size</label>
-              <select id="size" name="size">
-                <option>1–4 engineers</option>
-                <option>5–10 engineers</option>
-                <option>11–25 engineers</option>
-                <option>26–50 engineers</option>
-                <option>50+ engineers</option>
-              </select>
-            </div>
-          </div>
-          <div class="field">
-            <label class="field__label" for="biggestPain">What's slowing your dispatch down today?</label>
-            <textarea id="biggestPain" name="biggestPain" placeholder="One sentence is fine — the dispatcher is overwhelmed, SLA breaches, manual triage, etc."></textarea>
-          </div>
-          <button type="submit" class="btn btn-primary btn-lg btn-arrow" style="margin-top:8px;justify-content:center;">Send it</button>
-          <div style="font-size:12px;color:var(--c-fg-2);text-align:center;margin-top:8px;">By submitting, you agree to our <a href="/privacy/" class="accent">privacy policy</a>.</div>
-        </div>
-      </form>
+        <p class="muted" style="font-size:15px;line-height:1.6;margin:0 0 24px;">Email us and we'll reply within one business day with three time slots. Demos run on Google Meet or Teams — your choice.</p>
+        <a class="btn btn-primary btn-lg btn-arrow" href="mailto:hello@techital.com?subject=MSPNova%20demo%20request&body=Hi%20MSPNova%20team%2C%0A%0AI%27d%20like%20to%20book%20a%2030-minute%20demo.%0A%0AName%3A%0ACompany%3A%0ARole%3A%0ATeam%20size%20%28engineers%29%3A%0APSA%3A%0AWhat%27s%20slowing%20our%20dispatch%20down%20today%3A%0A%0AThanks%21">Email us to book a demo</a>
+        <p class="muted" style="font-size:14px;line-height:1.6;margin:20px 0 0;">The button opens your email app with a few short prompts to answer: your team size, your PSA, and what's slowing dispatch down. Using webmail? Email <a href="mailto:hello@techital.com" class="accent" style="font-weight:600;text-decoration:underline;">hello@techital.com</a> with your name, company, team size and PSA. (MSPNova is built by Techital.)</p>
+      </div>
 
       <!-- Side info -->
       <div>
         <div class="card" style="margin-bottom:24px;">
-          <span class="eyebrow">Faster ways</span>
-          <h4 class="h-4">Skip the form.</h4>
+          <span class="eyebrow">Other ways</span>
+          <h4 class="h-4">Prefer to call?</h4>
           <div style="display:flex;flex-direction:column;gap:12px;margin-top:16px;font-size:14px;">
             <div style="display:flex;gap:10px;align-items:center;">
-              <span data-icon="message" style="color:var(--c-accent);"></span>
-              <a href="mailto:hello@mspnova.com" class="accent">hello@mspnova.com</a>
-            </div>
-            <div style="display:flex;gap:10px;align-items:center;">
               <span data-icon="phone" style="color:var(--c-accent);"></span>
-              <a href="tel:+18186492900" class="accent">+1 (818) 649-2900</a>
+              <a href="tel:+18186492900" class="accent contact-tel">+1 (818) 649-2900</a>
             </div>
             <div style="display:flex;gap:10px;align-items:center;">
               <span data-icon="target" style="color:var(--c-accent);"></span>
-              <span class="muted">Glendale, CA · We respond M–F, 8 AM–6 PM PT</span>
+              <span class="muted">Phone answered M–F, 8 AM–6 PM PT · Glendale, CA</span>
             </div>
           </div>
         </div>
@@ -160,19 +101,6 @@
 
 <div data-mn-footer></div>
 
-<script>
-// Light client-side validation + thank-you handoff.
-// Replace formspree action with your endpoint, or wire to WP Forms inside Elementor.
-(function() {
-  var form = document.getElementById('contactForm');
-  if (!form) return;
-  form.addEventListener('submit', function(e) {
-    // Let it submit naturally to the endpoint, but offer a quick visual confirm:
-    var btn = form.querySelector('button[type="submit"]');
-    if (btn) { btn.disabled = true; btn.textContent = 'Sending…'; }
-  });
-})();
-</script>
 <script src="../js/site.js?v=1"></script>
 </body>
 </html>
