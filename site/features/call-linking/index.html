@@ -109,22 +109,6 @@
   </div>
 </section>
 
-<!-- Live state -->
-<section class="section bg-dark">
-  <div class="container">
-    <span class="eyebrow eyebrow--on-dark">Live call state</span>
-    <h2 class="h-2 mb-24" style="color:#fff;">The Status Board lights up <span class="accent">when the phone rings.</span></h2>
-    <p class="lede" style="color:var(--c-fg-on-dark-2);max-width:680px;">GoTo Connect's webhooks push presence into Nova in real time. The dispatch wall shows who's on a call, with whom, and for how long — without anyone touching their status.</p>
-
-    <ul class="deepdive__bullets" style="margin-top:32px;color:var(--c-fg-on-dark-1);">
-      <li><span data-icon="check"></span><span>Inbound ringing → Status Board flips that tech to "on call (incoming)" with caller name + company</span></li>
-      <li><span data-icon="check"></span><span>Outbound dial → "on call (outgoing)" with the dialed contact resolved against Autotask</span></li>
-      <li><span data-icon="check"></span><span>Call duration ticker visible to dispatch — long calls (&gt;20 min) flag for follow-up</span></li>
-      <li><span data-icon="check"></span><span>Hung up → Nova waits 60s, then runs the linker and posts a Teams DM with the proposed ticket</span></li>
-    </ul>
-  </div>
-</section>
-
 <!-- Inbox features -->
 <section class="section bg-mute">
   <div class="container">
@@ -187,7 +171,7 @@
       </div>
       <div>
         <h4 class="h-4">Does it consume Anthropic tokens for every call?</h4>
-        <p class="muted" style="line-height:1.65;">Yes — transcript + summary use your Anthropic key. Typical 10-minute call is &lt; $0.05. Calls under 30 seconds skip summarization by default.</p>
+        <p class="muted" style="line-height:1.65;">Yes — transcript + summary use your Anthropic key. Typical 10-minute call is $0.10–$0.20. Calls under 30 seconds skip summarization by default.</p>
       </div>
     </div>
   </div>

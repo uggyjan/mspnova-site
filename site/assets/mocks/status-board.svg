@@ -1,203 +1,248 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 800" preserveAspectRatio="xMidYMid slice" font-family="-apple-system, BlinkMacSystemFont, &#39;Segoe UI&#39;, system-ui, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 760" font-family="ui-sans-serif,system-ui,&#39;Inter&#39;,&#39;Manrope&#39;,Helvetica,Arial,sans-serif">
   <defs>
-    <linearGradient id="bgG2" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#0e1f3a"></stop><stop offset="1" stop-color="#091428"></stop></linearGradient>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0a1628"></stop>
+      <stop offset="1" stop-color="#091322"></stop>
+    </linearGradient>
   </defs>
-  <rect width="1280" height="800" fill="url(#bgG2)"></rect>
+
+  <rect width="1400" height="760" fill="url(#bg)"></rect>
 
   
-  <rect x="0" y="0" width="1280" height="64" fill="#06101f"></rect>
-  <rect x="0" y="63" width="1280" height="1" fill="#1f3358"></rect>
-  <circle cx="36" cy="32" r="11" fill="#d45a3a"></circle>
-  <text x="58" y="38" fill="#e6edf5" font-size="16" font-weight="700" letter-spacing="0.04em">NOVA</text>
-  <text x="120" y="38" fill="#5e7392" font-size="13">/</text>
-  <text x="138" y="38" fill="#e6edf5" font-size="14" font-weight="600">Status Board</text>
+  <rect x="0" y="0" width="1400" height="48" fill="#0a1830"></rect>
+  <text x="28" y="30" fill="#e6edf5" font-size="16" font-weight="800">Tech Status Board</text>
+  <circle cx="1175" cy="24" r="4" fill="#22c55e"></circle>
+  <text x="1185" y="28" fill="#8a9bb4" font-size="11">Updated 10:37 AM</text>
+  <text x="1290" y="28" fill="#60a5fa" font-size="11" font-weight="700">Alex Kim</text>
+  <text x="1360" y="28" fill="#60a5fa" font-size="11">Logout</text>
 
   
-  <text x="1240" y="36" fill="#e6edf5" font-size="20" font-weight="700" font-family="ui-monospace,Menlo,monospace" text-anchor="end">10:47:32 PST</text>
-  <text x="1240" y="52" fill="#8a9bb4" font-size="11" text-anchor="end">Tue · Oct 21 · synced 3s ago</text>
+  <rect x="0" y="48" width="1400" height="40" fill="#0c1a35" stroke="#172a4f"></rect>
+  <text x="28" y="73" fill="#e6edf5" font-size="13" font-weight="700">Triage Queue</text>
+  <rect x="123" y="59" width="22" height="20" rx="10" fill="#1f3358"></rect>
+  <text x="134" y="73" fill="#e6edf5" font-size="11" font-weight="800" text-anchor="middle">4</text>
+
+  <text x="170" y="73" fill="#e6edf5" font-size="13" font-weight="700">Needs Attention</text>
+  <rect x="285" y="59" width="22" height="20" rx="10" fill="#1f3358"></rect>
+  <text x="296" y="73" fill="#e6edf5" font-size="11" font-weight="800" text-anchor="middle">1</text>
+
+  <text x="332" y="73" fill="#e6edf5" font-size="13" font-weight="700">Talking Points</text>
+  <rect x="430" y="59" width="22" height="20" rx="10" fill="#1f3358"></rect>
+  <text x="441" y="73" fill="#e6edf5" font-size="11" font-weight="800" text-anchor="middle">0</text>
 
   
-  <g transform="translate(40,90)">
-    <rect width="288" height="120" rx="16" fill="#0c1c36" stroke="#1f3358"></rect>
-    <text x="20" y="40" fill="#5e7392" font-size="11" font-weight="700" letter-spacing="0.08em">OPEN TICKETS</text>
-    <text x="20" y="92" fill="#e6edf5" font-size="56" font-weight="700" font-family="ui-monospace,Menlo,monospace">23</text>
-    <text x="160" y="92" fill="#22c55e" font-size="14">↓ 4 vs hour</text>
-    <text x="160" y="108" fill="#8a9bb4" font-size="11">last hour</text>
+  <g transform="translate(28,104)">
+    <rect x="0" y="0" width="56" height="30" rx="15" fill="#1e3a8a" stroke="#3b82f6"></rect>
+    <text x="14" y="20" fill="#bfdbfe" font-size="12" font-weight="700">All</text>
+    <rect x="35" y="6" width="16" height="18" rx="9" fill="#0a1628"></rect>
+    <text x="43" y="19" fill="#bfdbfe" font-size="10" font-weight="800" text-anchor="middle">8</text>
 
-    <rect x="304" y="0" width="288" height="120" rx="16" fill="#0c1c36" stroke="#1f3358"></rect>
-    <text x="324" y="40" fill="#5e7392" font-size="11" font-weight="700" letter-spacing="0.08em">P1 / P2 ACTIVE</text>
-    <text x="324" y="92" fill="#ef4444" font-size="56" font-weight="700" font-family="ui-monospace,Menlo,monospace">3</text>
-    <text x="430" y="84" fill="#8a9bb4" font-size="12">all assigned</text>
-    <text x="430" y="100" fill="#8a9bb4" font-size="12">avg age 18m</text>
+    <rect x="68" y="0" width="100" height="30" rx="15" fill="#0a1628" stroke="#1f3358"></rect>
+    <circle cx="83" cy="15" r="4" fill="#22c55e"></circle>
+    <text x="92" y="20" fill="#8a9bb4" font-size="12" font-weight="600">Available</text>
+    <rect x="148" y="6" width="16" height="18" rx="9" fill="#0a1830"></rect>
+    <text x="156" y="19" fill="#8a9bb4" font-size="10" font-weight="800" text-anchor="middle">4</text>
 
-    <rect x="608" y="0" width="288" height="120" rx="16" fill="#0c1c36" stroke="#1f3358"></rect>
-    <text x="628" y="40" fill="#5e7392" font-size="11" font-weight="700" letter-spacing="0.08em">SLA AT RISK</text>
-    <text x="628" y="92" fill="#eab308" font-size="56" font-weight="700" font-family="ui-monospace,Menlo,monospace">2</text>
-    <text x="734" y="84" fill="#8a9bb4" font-size="12">≤ 30 min to breach</text>
-    <text x="734" y="100" fill="#eab308" font-size="12" font-weight="600">⚠ Acme · Northwind</text>
+    <rect x="182" y="0" width="92" height="30" rx="15" fill="#0a1628" stroke="#1f3358"></rect>
+    <text x="197" y="20" fill="#fb923c" font-size="13">📍</text>
+    <text x="216" y="20" fill="#8a9bb4" font-size="12" font-weight="600">On Site</text>
+    <rect x="254" y="6" width="16" height="18" rx="9" fill="#0a1830"></rect>
+    <text x="262" y="19" fill="#fb923c" font-size="10" font-weight="800" text-anchor="middle">2</text>
 
-    <rect x="912" y="0" width="288" height="120" rx="16" fill="#0c1c36" stroke="#1f3358"></rect>
-    <text x="932" y="40" fill="#5e7392" font-size="11" font-weight="700" letter-spacing="0.08em">CLOSED TODAY</text>
-    <text x="932" y="92" fill="#22c55e" font-size="56" font-weight="700" font-family="ui-monospace,Menlo,monospace">31</text>
-    <text x="1080" y="92" fill="#22c55e" font-size="14">↑ 18%</text>
-    <text x="1080" y="108" fill="#8a9bb4" font-size="11">vs Tue avg</text>
+    <rect x="288" y="0" width="106" height="30" rx="15" fill="#0a1628" stroke="#1f3358"></rect>
+    <text x="303" y="20" fill="#a78bfa" font-size="13">☏</text>
+    <text x="316" y="20" fill="#8a9bb4" font-size="12" font-weight="600">On Phone</text>
+    <rect x="374" y="6" width="16" height="18" rx="9" fill="#0a1830"></rect>
+    <text x="382" y="19" fill="#a78bfa" font-size="10" font-weight="800" text-anchor="middle">1</text>
+
+    <rect x="408" y="0" width="78" height="30" rx="15" fill="#0a1628" stroke="#1f3358"></rect>
+    <text x="423" y="20" fill="#8a9bb4" font-size="13">⏸</text>
+    <text x="436" y="20" fill="#8a9bb4" font-size="12" font-weight="600">Other</text>
+    <rect x="466" y="6" width="16" height="18" rx="9" fill="#0a1830"></rect>
+    <text x="474" y="19" fill="#8a9bb4" font-size="10" font-weight="800" text-anchor="middle">2</text>
   </g>
 
   
-  <g transform="translate(40,236)">
-    <text x="0" y="0" fill="#5e7392" font-size="11" font-weight="700" letter-spacing="0.08em">TEAM · LIVE</text>
+  
+  <g transform="translate(28,160)">
+    <rect width="316" height="220" rx="12" fill="#0d1d3d" stroke="#1f3358"></rect>
+    <text x="18" y="30" fill="#e6edf5" font-size="14" font-weight="800">Sarah Chen</text>
+    <rect x="216" y="14" width="84" height="22" rx="11" fill="#3a1f0a" stroke="#fb923c"></rect>
+    <text x="258" y="29" fill="#fdba74" font-size="10" font-weight="700" letter-spacing="0.06em" text-anchor="middle">TRAVELING</text>
 
-    
-      <g transform="translate(0,14)">
-        <rect width="600" height="60" rx="10" fill="#0c1c36" stroke="#1f3358"></rect>
-        <circle cx="30" cy="30" r="18" fill="#16294a"></circle>
-        <text x="30" y="35" fill="#a9b8d0" font-size="13" font-weight="700" text-anchor="middle">D</text>
-        <circle cx="44" cy="42" r="5" fill="#22c55e" stroke="#0c1c36" stroke-width="2"></circle>
+    <text x="18" y="68" fill="#fb923c" font-size="11" font-weight="800" letter-spacing="0.08em">TRAVELING</text>
+    <text x="298" y="78" fill="#fb923c" font-size="22" font-weight="800" font-family="ui-monospace,Menlo,Consolas,monospace" text-anchor="end">38:16</text>
 
-        <text x="64" y="26" fill="#e6edf5" font-size="13" font-weight="600">Devon S.</text>
-        <text x="64" y="42" fill="#5e7392" font-size="10">Senior Tech</text>
+    <text x="18" y="108" fill="#8a9bb4" font-size="11">Destination:</text>
+    <text x="98" y="108" fill="#fb923c" font-size="11" font-weight="700">Home</text>
+    <text x="18" y="128" fill="#8a9bb4" font-size="11">Since:</text>
+    <text x="98" y="128" fill="#e6edf5" font-size="11" font-weight="600">9:59 AM</text>
 
-        <text x="220" y="26" fill="#e6edf5" font-size="12">Onsite — Greenfield · 34m</text>
-        <text x="220" y="42" fill="#60a5fa" font-size="10" font-family="ui-monospace,Menlo,monospace">T-48189</text>
-      </g>
-      <g transform="translate(0,84)">
-        <rect width="600" height="60" rx="10" fill="#0c1c36" stroke="#1f3358"></rect>
-        <circle cx="30" cy="30" r="18" fill="#16294a"></circle>
-        <text x="30" y="35" fill="#a9b8d0" font-size="13" font-weight="700" text-anchor="middle">S</text>
-        <circle cx="44" cy="42" r="5" fill="#22c55e" stroke="#0c1c36" stroke-width="2"></circle>
-
-        <text x="64" y="26" fill="#e6edf5" font-size="13" font-weight="600">Sarah L.</text>
-        <text x="64" y="42" fill="#5e7392" font-size="10">Tier 2</text>
-
-        <text x="220" y="26" fill="#e6edf5" font-size="12">Working — T-48213 · 12m</text>
-        <text x="220" y="42" fill="#60a5fa" font-size="10" font-family="ui-monospace,Menlo,monospace">Acme · Backup</text>
-      </g>
-      <g transform="translate(0,154)">
-        <rect width="600" height="60" rx="10" fill="#0c1c36" stroke="#1f3358"></rect>
-        <circle cx="30" cy="30" r="18" fill="#16294a"></circle>
-        <text x="30" y="35" fill="#a9b8d0" font-size="13" font-weight="700" text-anchor="middle">J</text>
-        <circle cx="44" cy="42" r="5" fill="#60a5fa" stroke="#0c1c36" stroke-width="2"></circle>
-
-        <text x="64" y="26" fill="#e6edf5" font-size="13" font-weight="600">Jamal D.</text>
-        <text x="64" y="42" fill="#5e7392" font-size="10">Tier 2</text>
-
-        <text x="220" y="26" fill="#e6edf5" font-size="12">In meeting — back 10:30</text>
-        <text x="220" y="42" fill="#60a5fa" font-size="10" font-family="ui-monospace,Menlo,monospace">—</text>
-      </g>
-      <g transform="translate(0,224)">
-        <rect width="600" height="60" rx="10" fill="#0c1c36" stroke="#1f3358"></rect>
-        <circle cx="30" cy="30" r="18" fill="#16294a"></circle>
-        <text x="30" y="35" fill="#a9b8d0" font-size="13" font-weight="700" text-anchor="middle">P</text>
-        <circle cx="44" cy="42" r="5" fill="#22c55e" stroke="#0c1c36" stroke-width="2"></circle>
-
-        <text x="64" y="26" fill="#e6edf5" font-size="13" font-weight="600">Priya N.</text>
-        <text x="64" y="42" fill="#5e7392" font-size="10">Tier 1</text>
-
-        <text x="220" y="26" fill="#e6edf5" font-size="12">Available · 2 active</text>
-        <text x="220" y="42" fill="#60a5fa" font-size="10" font-family="ui-monospace,Menlo,monospace">T-48198 · T-48172</text>
-      </g>
-      <g transform="translate(0,294)">
-        <rect width="600" height="60" rx="10" fill="#0c1c36" stroke="#1f3358"></rect>
-        <circle cx="30" cy="30" r="18" fill="#16294a"></circle>
-        <text x="30" y="35" fill="#a9b8d0" font-size="13" font-weight="700" text-anchor="middle">J</text>
-        <circle cx="44" cy="42" r="5" fill="#22c55e" stroke="#0c1c36" stroke-width="2"></circle>
-
-        <text x="64" y="26" fill="#e6edf5" font-size="13" font-weight="600">Jordan Pell</text>
-        <text x="64" y="42" fill="#5e7392" font-size="10">Service Mgr</text>
-
-        <text x="220" y="26" fill="#e6edf5" font-size="12">Available · escalations</text>
-        <text x="220" y="42" fill="#60a5fa" font-size="10" font-family="ui-monospace,Menlo,monospace">—</text>
-      </g>
-      <g transform="translate(0,364)">
-        <rect width="600" height="60" rx="10" fill="#0c1c36" stroke="#1f3358"></rect>
-        <circle cx="30" cy="30" r="18" fill="#16294a"></circle>
-        <text x="30" y="35" fill="#a9b8d0" font-size="13" font-weight="700" text-anchor="middle">T</text>
-        <circle cx="44" cy="42" r="5" fill="#a78bfa" stroke="#0c1c36" stroke-width="2"></circle>
-
-        <text x="64" y="26" fill="#e6edf5" font-size="13" font-weight="600">Tom W.</text>
-        <text x="64" y="42" fill="#5e7392" font-size="10">Tier 1</text>
-
-        <text x="220" y="26" fill="#e6edf5" font-size="12">PTO — back Mon</text>
-        <text x="220" y="42" fill="#60a5fa" font-size="10" font-family="ui-monospace,Menlo,monospace">—</text>
-      </g>
+    <rect x="18" y="160" width="84" height="30" rx="6" fill="#0a1628" stroke="#1f3358"></rect>
+    <text x="60" y="180" fill="#fb923c" font-size="11" text-anchor="middle">📍  Map</text>
+    <rect x="114" y="160" width="84" height="30" rx="6" fill="#0a1628" stroke="#1f3358"></rect>
+    <text x="156" y="180" fill="#8a9bb4" font-size="11" text-anchor="middle">💬  Ping</text>
+    <rect x="210" y="160" width="84" height="30" rx="6" fill="#0a1628" stroke="#1f3358"></rect>
+    <text x="252" y="180" fill="#8a9bb4" font-size="11" text-anchor="middle">⚙  Status</text>
   </g>
 
   
-  <g transform="translate(680,236)">
-    <text x="0" y="0" fill="#5e7392" font-size="11" font-weight="700" letter-spacing="0.08em">SLA PULSE · NEXT 2 HOURS</text>
+  <g transform="translate(360,160)">
+    <rect width="316" height="220" rx="12" fill="#0d1d3d" stroke="#1f3358"></rect>
+    <text x="18" y="30" fill="#e6edf5" font-size="14" font-weight="800">Mike Rodriguez</text>
 
-    <rect x="0" y="14" width="560" height="500" rx="14" fill="#0c1c36" stroke="#1f3358"></rect>
-
-    
-    <g transform="translate(20,40)">
-      <line x1="0" y1="14" x2="520" y2="14" stroke="#1f3358"></line>
-      <g fill="#5e7392" font-size="10" font-family="ui-monospace,Menlo,monospace">
-        <line x1="0" y1="10" x2="0" y2="18" stroke="#5e7392"></line>
-        <text x="0" y="36">now</text>
-        <line x1="130" y1="10" x2="130" y2="18" stroke="#5e7392"></line>
-        <text x="130" y="36" text-anchor="middle">+30m</text>
-        <line x1="260" y1="10" x2="260" y2="18" stroke="#5e7392"></line>
-        <text x="260" y="36" text-anchor="middle">+1h</text>
-        <line x1="390" y1="10" x2="390" y2="18" stroke="#5e7392"></line>
-        <text x="390" y="36" text-anchor="middle">+1h 30m</text>
-        <line x1="520" y1="10" x2="520" y2="18" stroke="#5e7392"></line>
-        <text x="520" y="36" text-anchor="end">+2h</text>
-      </g>
-    </g>
+    <text x="18" y="64" fill="#8a9bb4" font-size="11">Status since:</text>
+    <text x="98" y="64" fill="#e6edf5" font-size="11" font-weight="600">1h 28m ago</text>
 
     
-    
-      <g transform="translate(20,100)">
-        <text x="0" y="-4" fill="#8a9bb4" font-size="10" font-family="ui-monospace,Menlo,monospace">T-48217 · Acme</text>
-        <rect x="0" y="0" width="110" height="20" rx="4" fill="#ef4444" opacity="1"></rect>
-        <rect x="0" y="0" width="110" height="20" rx="4" fill="#ef4444"></rect>
-        <text x="8" y="14" fill="#fff" font-size="9" font-weight="700">Acme · Outlook · 26m left</text>
-      </g>
-      <g transform="translate(20,140)">
-        <text x="0" y="-4" fill="#8a9bb4" font-size="10" font-family="ui-monospace,Menlo,monospace">T-48210 · Northwind</text>
-        <rect x="0" y="0" width="75" height="20" rx="4" fill="#ef4444" opacity="1"></rect>
-        <rect x="0" y="0" width="75" height="20" rx="4" fill="#ef4444"></rect>
-        <text x="8" y="14" fill="#fff" font-size="9" font-weight="700">Northwind · 2FA · 18m left</text>
-      </g>
-      <g transform="translate(20,180)">
-        <text x="0" y="-4" fill="#8a9bb4" font-size="10" font-family="ui-monospace,Menlo,monospace">T-48215 · Greenfield</text>
-        <rect x="0" y="0" width="185" height="20" rx="4" fill="#eab308" opacity="0.7"></rect>
-        
-        <text x="8" y="14" fill="#fff" font-size="9" font-weight="700">Greenfield · Printer · 43m left</text>
-      </g>
-      <g transform="translate(20,220)">
-        <text x="0" y="-4" fill="#8a9bb4" font-size="10" font-family="ui-monospace,Menlo,monospace">T-48213 · Acme</text>
-        <rect x="0" y="0" width="310" height="20" rx="4" fill="#eab308" opacity="0.7"></rect>
-        
-        <text x="8" y="14" fill="#fff" font-size="9" font-weight="700">Acme · Backup · 1h 12m left</text>
-      </g>
-      <g transform="translate(20,260)">
-        <text x="0" y="-4" fill="#8a9bb4" font-size="10" font-family="ui-monospace,Menlo,monospace">T-48198 · Northwind</text>
-        <rect x="60" y="0" width="380" height="20" rx="4" fill="#22c55e" opacity="0.7"></rect>
-        
-        <text x="68" y="14" fill="#fff" font-size="9" font-weight="700">Northwind · VPN config</text>
-      </g>
-      <g transform="translate(20,300)">
-        <text x="0" y="-4" fill="#8a9bb4" font-size="10" font-family="ui-monospace,Menlo,monospace">T-48189 · Greenfield</text>
-        <rect x="140" y="0" width="240" height="20" rx="4" fill="#a78bfa" opacity="0.7"></rect>
-        
-        <text x="148" y="14" fill="#fff" font-size="9" font-weight="700">Greenfield · Onsite scheduled 2 PM</text>
-      </g>
-      <g transform="translate(20,340)">
-        <text x="0" y="-4" fill="#8a9bb4" font-size="10" font-family="ui-monospace,Menlo,monospace">T-48172 · Pinewood</text>
-        <rect x="180" y="0" width="200" height="20" rx="4" fill="#22c55e" opacity="0.7"></rect>
-        
-        <text x="188" y="14" fill="#fff" font-size="9" font-weight="700">Pinewood · Hyper-V cleanup</text>
-      </g>
-      <g transform="translate(20,380)">
-        <text x="0" y="-4" fill="#8a9bb4" font-size="10" font-family="ui-monospace,Menlo,monospace">T-48155 · Pinewood</text>
-        <rect x="340" y="0" width="180" height="20" rx="4" fill="#a78bfa" opacity="0.7"></rect>
-        
-        <text x="348" y="14" fill="#fff" font-size="9" font-weight="700">After-hours patch · 8 PM</text>
-      </g>
+    <rect x="18" y="82" width="280" height="46" rx="8" fill="#1a0a2e" stroke="#a78bfa"></rect>
+    <rect x="26" y="92" width="58" height="26" rx="4" fill="#fb923c"></rect>
+    <text x="55" y="110" fill="#0a1628" font-size="10" font-weight="800" text-anchor="middle">GOTO</text>
+    <text x="92" y="100" fill="#a78bfa" font-size="10">↑</text>
+    <text x="104" y="101" fill="#e6edf5" font-size="11" font-weight="700">XYZ Test Company</text>
+    <text x="104" y="120" fill="#8a9bb4" font-size="11" font-family="ui-monospace,Menlo,Consolas,monospace">(818) 555-8176</text>
+    <text x="290" y="113" fill="#a78bfa" font-size="13" font-weight="800" font-family="ui-monospace,Menlo,Consolas,monospace" text-anchor="end">0:13</text>
 
-    
-    <line x1="40" y1="80" x2="40" y2="424" stroke="#d45a3a" stroke-width="2" stroke-dasharray="2 2"></line>
-    <text x="40" y="448" fill="#d45a3a" font-size="10" font-weight="700" text-anchor="middle" font-family="ui-monospace,Menlo,monospace">NOW</text>
+    <rect x="18" y="160" width="135" height="30" rx="6" fill="#0a1628" stroke="#1f3358"></rect>
+    <text x="86" y="180" fill="#8a9bb4" font-size="11" text-anchor="middle">💬  Ping</text>
+    <rect x="163" y="160" width="135" height="30" rx="6" fill="#0a1628" stroke="#1f3358"></rect>
+    <text x="231" y="180" fill="#8a9bb4" font-size="11" text-anchor="middle">⚙  Status</text>
   </g>
+
+  
+  <g transform="translate(692,160)">
+    <rect width="316" height="220" rx="12" fill="#0d1d3d" stroke="#1f3358"></rect>
+    <text x="18" y="30" fill="#e6edf5" font-size="14" font-weight="800">Jennifer Park</text>
+
+    <text x="18" y="64" fill="#8a9bb4" font-size="11">Status since:</text>
+    <text x="98" y="64" fill="#e6edf5" font-size="11" font-weight="600">52m ago</text>
+
+    <rect x="18" y="100" width="135" height="30" rx="6" fill="#0a1628" stroke="#1f3358"></rect>
+    <text x="86" y="120" fill="#8a9bb4" font-size="11" text-anchor="middle">💬  Ping</text>
+    <rect x="163" y="100" width="135" height="30" rx="6" fill="#0a1628" stroke="#1f3358"></rect>
+    <text x="231" y="120" fill="#8a9bb4" font-size="11" text-anchor="middle">⚙  Status</text>
+  </g>
+
+  
+  <g transform="translate(1024,160)">
+    <rect width="348" height="220" rx="12" fill="#0d1d3d" stroke="#1f3358"></rect>
+    <text x="18" y="30" fill="#e6edf5" font-size="14" font-weight="800">David Thompson</text>
+
+    <text x="18" y="64" fill="#8a9bb4" font-size="11">Status since:</text>
+    <text x="98" y="64" fill="#e6edf5" font-size="11" font-weight="600">32m ago</text>
+
+    <rect x="18" y="100" width="151" height="30" rx="6" fill="#0a1628" stroke="#1f3358"></rect>
+    <text x="94" y="120" fill="#8a9bb4" font-size="11" text-anchor="middle">💬  Ping</text>
+    <rect x="179" y="100" width="151" height="30" rx="6" fill="#0a1628" stroke="#1f3358"></rect>
+    <text x="255" y="120" fill="#8a9bb4" font-size="11" text-anchor="middle">⚙  Status</text>
+  </g>
+
+  
+  
+  <g transform="translate(28,400)">
+    <rect width="316" height="320" rx="12" fill="#0d1d3d" stroke="#1f3358"></rect>
+    <text x="18" y="30" fill="#e6edf5" font-size="14" font-weight="800">Marcus Johnson</text>
+    <rect x="216" y="14" width="84" height="22" rx="11" fill="#3b1d6b" stroke="#7c3aed"></rect>
+    <text x="258" y="29" fill="#c4b5fd" font-size="10" font-weight="700" letter-spacing="0.06em" text-anchor="middle">IN PROGRESS</text>
+
+    <text x="18" y="56" fill="#8a9bb4" font-size="11">Status:</text>
+    <text x="68" y="56" fill="#e6edf5" font-size="11" font-weight="600">In Progress</text>
+    <text x="18" y="74" fill="#8a9bb4" font-size="11">Since:</text>
+    <text x="68" y="74" fill="#e6edf5" font-size="11" font-weight="600">10:25 AM</text>
+
+    <rect x="18" y="92" width="148" height="26" rx="13" fill="#0a3a1a" stroke="#22c55e"></rect>
+    <text x="92" y="109" fill="#86efac" font-size="11" font-weight="800" text-anchor="middle">⚡ Working Issue Now</text>
+    <text x="290" y="111" fill="#fb923c" font-size="16" font-weight="800" font-family="ui-monospace,Menlo,Consolas,monospace" text-anchor="end">11:32</text>
+
+    <text x="18" y="140" fill="#8a9bb4" font-size="11">Ticket:</text>
+    <text x="68" y="140" fill="#60a5fa" font-size="11" font-weight="700" font-family="ui-monospace,Menlo,Consolas,monospace">T20260425.0003</text>
+
+    <text x="18" y="162" fill="#8a9bb4" font-size="11">Issue:</text>
+    <text x="68" y="162" fill="#e6edf5" font-size="11">Printer/Scanner: Lobby</text>
+    <text x="68" y="176" fill="#e6edf5" font-size="11">Ricoh Pro 5300s scan-</text>
+    <text x="68" y="190" fill="#e6edf5" font-size="11">to-email not sending —</text>
+    <text x="68" y="204" fill="#e6edf5" font-size="11">Empire Transportation</text>
+
+    <text x="18" y="226" fill="#8a9bb4" font-size="11">Client:</text>
+    <text x="68" y="226" fill="#e6edf5" font-size="11">Empire Transportation</text>
+
+    <rect x="18" y="244" width="280" height="26" rx="6" fill="transparent" stroke="#ef4444" stroke-dasharray="3 3"></rect>
+    <text x="158" y="261" fill="#fca5a5" font-size="11" font-weight="700" text-anchor="middle">Force Close</text>
+
+    <rect x="18" y="280" width="135" height="28" rx="6" fill="#0a1628" stroke="#1f3358"></rect>
+    <text x="86" y="298" fill="#8a9bb4" font-size="11" text-anchor="middle">💬  Ping</text>
+    <rect x="163" y="280" width="135" height="28" rx="6" fill="#0a1628" stroke="#1f3358"></rect>
+    <text x="231" y="298" fill="#8a9bb4" font-size="11" text-anchor="middle">⚙  Status</text>
+  </g>
+
+  
+  <g transform="translate(360,400)">
+    <rect width="316" height="320" rx="12" fill="#0d1d3d" stroke="#1f3358"></rect>
+    <text x="18" y="30" fill="#e6edf5" font-size="14" font-weight="800">Priya Patel</text>
+    <rect x="216" y="14" width="84" height="22" rx="11" fill="#3b1d6b" stroke="#7c3aed"></rect>
+    <text x="258" y="29" fill="#c4b5fd" font-size="10" font-weight="700" letter-spacing="0.06em" text-anchor="middle">IN PROGRESS</text>
+
+    <text x="18" y="56" fill="#8a9bb4" font-size="11">Status:</text>
+    <text x="68" y="56" fill="#e6edf5" font-size="11" font-weight="600">In Progress</text>
+    <text x="18" y="74" fill="#8a9bb4" font-size="11">Since:</text>
+    <text x="68" y="74" fill="#e6edf5" font-size="11" font-weight="600">10:36 AM</text>
+
+    <rect x="18" y="92" width="148" height="26" rx="13" fill="#0a3a1a" stroke="#22c55e"></rect>
+    <text x="92" y="109" fill="#86efac" font-size="11" font-weight="800" text-anchor="middle">⚡ Working Issue Now</text>
+    <text x="290" y="111" fill="#fb923c" font-size="16" font-weight="800" font-family="ui-monospace,Menlo,Consolas,monospace" text-anchor="end">1:09</text>
+
+    <text x="18" y="140" fill="#8a9bb4" font-size="11">Ticket:</text>
+    <text x="68" y="140" fill="#60a5fa" font-size="11" font-weight="700" font-family="ui-monospace,Menlo,Consolas,monospace">T20260422.0051</text>
+
+    <text x="18" y="162" fill="#8a9bb4" font-size="11">Issue:</text>
+    <text x="68" y="162" fill="#e6edf5" font-size="11">Computer: Replace hard</text>
+    <text x="68" y="176" fill="#e6edf5" font-size="11">drive on Intel NUC mini kit</text>
+
+    <rect x="18" y="200" width="280" height="26" rx="6" fill="transparent" stroke="#ef4444" stroke-dasharray="3 3"></rect>
+    <text x="158" y="217" fill="#fca5a5" font-size="11" font-weight="700" text-anchor="middle">Force Close</text>
+
+    <rect x="18" y="280" width="135" height="28" rx="6" fill="#0a1628" stroke="#1f3358"></rect>
+    <text x="86" y="298" fill="#8a9bb4" font-size="11" text-anchor="middle">💬  Ping</text>
+    <rect x="163" y="280" width="135" height="28" rx="6" fill="#0a1628" stroke="#1f3358"></rect>
+    <text x="231" y="298" fill="#8a9bb4" font-size="11" text-anchor="middle">⚙  Status</text>
+  </g>
+
+  
+  <g transform="translate(692,400)">
+    <rect width="316" height="220" rx="12" fill="#0d1d3d" stroke="#1f3358"></rect>
+    <text x="18" y="30" fill="#e6edf5" font-size="14" font-weight="800">Tom Wilson</text>
+
+    <text x="18" y="64" fill="#8a9bb4" font-size="11">Status since:</text>
+    <text x="98" y="64" fill="#e6edf5" font-size="11" font-weight="600">1h 4m ago</text>
+
+    <rect x="18" y="100" width="135" height="30" rx="6" fill="#0a1628" stroke="#1f3358"></rect>
+    <text x="86" y="120" fill="#8a9bb4" font-size="11" text-anchor="middle">💬  Ping</text>
+    <rect x="163" y="100" width="135" height="30" rx="6" fill="#0a1628" stroke="#1f3358"></rect>
+    <text x="231" y="120" fill="#8a9bb4" font-size="11" text-anchor="middle">⚙  Status</text>
+  </g>
+
+  
+  <g transform="translate(1024,400)">
+    <rect width="348" height="220" rx="12" fill="#0d1d3d" stroke="#1f3358"></rect>
+    <text x="18" y="30" fill="#e6edf5" font-size="14" font-weight="800">Rachel Martinez</text>
+    <rect x="248" y="14" width="84" height="22" rx="11" fill="#3a1f0a" stroke="#fb923c"></rect>
+    <text x="290" y="29" fill="#fdba74" font-size="10" font-weight="700" letter-spacing="0.06em" text-anchor="middle">TRAVELING</text>
+
+    <text x="18" y="68" fill="#fb923c" font-size="11" font-weight="800" letter-spacing="0.08em">TRAVELING</text>
+    <text x="330" y="78" fill="#fb923c" font-size="22" font-weight="800" font-family="ui-monospace,Menlo,Consolas,monospace" text-anchor="end">12:17</text>
+
+    <text x="18" y="108" fill="#8a9bb4" font-size="11">Destination:</text>
+    <text x="98" y="108" fill="#fb923c" font-size="11" font-weight="700">Home</text>
+    <text x="18" y="128" fill="#8a9bb4" font-size="11">Since:</text>
+    <text x="98" y="128" fill="#e6edf5" font-size="11" font-weight="600">10:25 AM</text>
+
+    <rect x="18" y="160" width="100" height="30" rx="6" fill="#0a1628" stroke="#1f3358"></rect>
+    <text x="68" y="180" fill="#fb923c" font-size="11" text-anchor="middle">📍  Map</text>
+    <rect x="128" y="160" width="100" height="30" rx="6" fill="#0a1628" stroke="#1f3358"></rect>
+    <text x="178" y="180" fill="#8a9bb4" font-size="11" text-anchor="middle">💬  Ping</text>
+    <rect x="238" y="160" width="100" height="30" rx="6" fill="#0a1628" stroke="#1f3358"></rect>
+    <text x="288" y="180" fill="#8a9bb4" font-size="11" text-anchor="middle">⚙  Status</text>
+  </g>
+
+  <text x="700" y="745" fill="#5e7392" font-size="11" text-anchor="middle">Live presence from GoTo Connect + Microsoft Teams · auto-refresh every 5 seconds</text>
 </svg>

@@ -68,22 +68,22 @@
   </div>
 </section>
 
-<!-- Status board -->
+<!-- Status board (now its own feature) -->
 <section class="bg-light" id="status">
   <div class="container deepdive deepdive--reverse">
     <div class="deepdive__grid">
       <div>
-        <div class="deepdive__head">/ Status board</div>
-        <h3 class="h-2" style="font-size:36px;">A wall display the dispatcher can actually use.</h3>
-        <p class="muted" style="font-size:16px;line-height:1.6;">Live grid of every tech, their current state (on-site, in-office, lunch, PTO), the ticket they're on, and the time they've been on it. Color-coded for overruns. Dispatch sees at a glance who's free to take the next escalation.</p>
+        <div class="deepdive__head">/ Tech Status Board</div>
+        <h3 class="h-2" style="font-size:36px;">Field check-in flips a card on the dispatch wall.</h3>
+        <p class="muted" style="font-size:16px;line-height:1.6;">When a tech taps "Check in" on-site, their card on the Tech Status Board flips to "On Site" with the client name and a duration timer. Dispatch sees who's where, who's running long, and who's free for the next escalation — all without anyone touching their status.</p>
         <ul class="deepdive__bullets">
-          <li><span data-icon="check"></span><span>Color-coded states: green / amber / red for overruns</span></li>
-          <li><span data-icon="check"></span><span>Click any cell to see full ticket + assign work</span></li>
-          <li><span data-icon="check"></span><span>Designed for a 4K dispatch wall — readable from across the room</span></li>
-          <li><span data-icon="check"></span><span>Filter by location, skill, or contract</span></li>
+          <li><span data-icon="check"></span><span>On-Site state with client name + arrival timer</span></li>
+          <li><span data-icon="check"></span><span>Long-visit flag fires when ETA is exceeded by 25%</span></li>
+          <li><span data-icon="check"></span><span>One-click Ping from dispatch sends a Teams DM</span></li>
         </ul>
+        <a class="btn btn-link" href="/features/status-board/" style="margin-top: 20px;">Tech Status Board deep dive →</a>
       </div>
-      <img class="deepdive__shot mock-frame" src="../../assets/mocks/status-board.svg" alt="Live status board — team availability and SLA pulse timeline"/>
+      <img class="deepdive__shot mock-frame" src="../../assets/mocks/status-board.svg?v=6" alt="Tech Status Board — live grid of techs with status pills and ticket timers"/>
     </div>
   </div>
 </section>

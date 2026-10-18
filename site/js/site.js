@@ -59,6 +59,7 @@
       { t: 'Product', items: [
         ['Triage', '/features/triage/'],
         ['Needs Attention', '/features/needs-attention/'],
+        ['Tech Status Board', '/features/status-board/'],
         ['Pulse', '/features/pulse/'],
         ['Field Ops', '/features/field-ops/'],
         ['Client Portal', '/features/client-portal/'],
