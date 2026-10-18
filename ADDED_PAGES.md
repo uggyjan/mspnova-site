@@ -27,7 +27,7 @@ footer Product column, Sitemap page.
 
 | Image | Nova page | Used on |
 |---|---|---|
-| triage.webp | triage.html (v3) | Home hero + deep dive, Features, Triage |
+| triage.webp | triage.html (v3), 3 tickets | Home hero + deep dive, Features, Triage |
 | triage-control.webp | triage.html (Sensitive + low confidence first) | Triage "You stay in control" |
 | needs-attention.webp | needs-attention.html | Home, Needs Attention hero |
 | needs-attention-rows.webp | needs-attention.html (crop) | Needs Attention "Grouped by reason" |
@@ -41,6 +41,7 @@ footer Product column, Sitemap page.
 | integrations.webp | integrations.html (Integration Credentials, crop) | Integrations |
 | reports-scorecard-top.webp | dispatch-scorecard.html | Pricing, Reports |
 | lobby.webp | lobby.html | Lobby, Status Board, Customers |
+| portal-report.webp | client portal Monthly Service Report (React build) | Client Portal "Open the results together" |
 
 Old drawn images in assets/mocks/ are no longer referenced by any page; they are
 left in place (not deleted) until Alex decides.
@@ -53,3 +54,9 @@ left in place (not deleted) until Alex decides.
   headless renderer. Not verified in a real browser; not shown on the site.
 - **Integrations page:** shows the owner-only "Ticket Intelligence" panel at the
   top; cropped out of the site image because it is unreleased.
+
+## 2026-10-18 follow-ups
+- Phone menu had no background (white links over the page); now a solid panel, button right-aligned, Escape closes it.
+- Hero Triage image cut to 3 tickets; Status Board now shows six different states (GoTo call, Teams call, on site, working, lunch timer, traveling).
+- Every product screenshot opens a larger preview on click (keyboard too); on phones it opens tall and pans sideways.
+- Client Portal page: new "Client reviews" section with the monthly service report.

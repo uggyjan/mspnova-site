@@ -205,6 +205,59 @@
         const open = !mobile.hidden;
         mobile.hidden = open;
         menuBtn.setAttribute('aria-expanded', String(!open));
+        menuBtn.setAttribute('aria-label', open ? 'Open menu' : 'Close menu');
+      });
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && !mobile.hidden) { mobile.hidden = true; menuBtn.setAttribute('aria-expanded', 'false'); menuBtn.setAttribute('aria-label', 'Open menu'); menuBtn.focus(); }
+      });
+    }
+
+    // Click-to-enlarge for product screenshots (same behaviour as Nova's
+    // training guides). Built here so pages need no extra markup.
+    const shots = document.querySelectorAll('img[src*="assets/shots/"]');
+    if (shots.length) {
+      const lb = document.createElement('div');
+      lb.className = 'lb';
+      lb.setAttribute('role', 'dialog');
+      lb.setAttribute('aria-modal', 'true');
+      lb.setAttribute('aria-label', 'Enlarged screenshot');
+      lb.hidden = true;
+      lb.innerHTML = '<div class="lb-inner"><div class="lb-bar"><span class="lb-cap"></span>'
+        + '<button type="button" class="lb-close">Close &times;</button></div><img class="lb-img" src="" alt=""></div>';
+      document.body.appendChild(lb);
+      const lbImg = lb.querySelector('.lb-img');
+      const lbCap = lb.querySelector('.lb-cap');
+      const lbClose = lb.querySelector('.lb-close');
+      let lastFocus = null;
+      const openLb = (el) => {
+        lastFocus = document.activeElement;
+        lbImg.src = el.getAttribute('src');   // the full-size desktop image, even when a phone crop is showing
+        lbImg.alt = el.getAttribute('alt') || '';
+        lbCap.textContent = el.getAttribute('alt') || '';
+        lb.hidden = false;
+        document.body.style.overflow = 'hidden';
+        lbClose.focus();
+      };
+      const closeLb = () => {
+        lb.hidden = true;
+        lbImg.src = '';
+        document.body.style.overflow = '';
+        if (lastFocus && document.contains(lastFocus)) lastFocus.focus();
+        lastFocus = null;
+      };
+      lb.addEventListener('click', (e) => { if (e.target === lb || e.target === lbImg || e.target === lbClose || e.target.classList.contains('lb-inner')) closeLb(); });
+      document.addEventListener('keydown', (e) => {
+        if (lb.hidden) return;
+        if (e.key === 'Escape') closeLb();
+        else if (e.key === 'Tab') { e.preventDefault(); lbClose.focus(); }
+      });
+      shots.forEach((el) => {
+        el.classList.add('zoomable');
+        el.tabIndex = 0;
+        el.setAttribute('role', 'button');
+        el.setAttribute('aria-label', 'Enlarge: ' + (el.getAttribute('alt') || 'screenshot'));
+        el.addEventListener('click', () => openLb(el));
+        el.addEventListener('keydown', (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openLb(el); } });
       });
     }
 
