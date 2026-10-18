@@ -63,6 +63,7 @@
         ['Pulse', '/features/pulse/'],
         ['Field Ops', '/features/field-ops/'],
         ['Client Portal', '/features/client-portal/'],
+        ['Call Linking', '/features/call-linking/'],
         ['Pricing', '/pricing/'],
       ]},
       { t: 'Solutions', items: [
@@ -74,7 +75,7 @@
         ['About', '/about/'],
         ['Customers', '/customers/'],
         ['Contact', '/contact/'],
-        ['Sitemap', '/sitemap/'],
+        ['Sitemap', '/sitemap.html'],
       ]},
       { t: 'Trust', items: [
         ['Security', '/security/'],

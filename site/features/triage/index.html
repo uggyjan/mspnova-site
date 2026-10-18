@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>AI Triage — Classify every Autotask ticket in under 30 seconds · MSPNova</title>
-<meta name="description" content="Nova classifies every new Autotask ticket — priority, queue, category, work type, source — in under 30 seconds. The dispatcher accepts or overrides with one click. Every override teaches the next pass." />
+<title>AI Triage — Classify every Autotask ticket within moments · MSPNova</title>
+<meta name="description" content="Nova classifies every new Autotask ticket — priority, queue, type, issue, category — within moments of it landing. The dispatcher accepts or overrides with one click. Every override teaches the next pass." />
 <link rel="canonical" href="https://mspnova.com/features/triage/" />
 <link rel="icon" type="image/svg+xml" href="../../assets/favicon.svg" />
 <meta name="theme-color" content="#0a1628" />
@@ -22,8 +22,8 @@
   <div class="container">
     <div class="breadcrumb"><a href="/">Home</a><span class="breadcrumb__sep">/</span><a href="/features/">Features</a><span class="breadcrumb__sep">/</span>AI Triage</div>
     <span class="eyebrow eyebrow--accent">01 · AI Triage</span>
-    <h1 class="h-1">From ticket created<br/>to dispatched, <span class="accent">in 30 seconds.</span></h1>
-    <p class="lede">Every new Autotask ticket gets classified across priority, issue type, queue, category, sub-category, work type, and source — before your dispatcher sees it. Each suggestion comes with reasoning attached. One click to accept, one click to override.</p>
+    <h1 class="h-1">From ticket created<br/>to triaged, <span class="accent">in under a minute.</span></h1>
+    <p class="lede">Every new Autotask ticket gets a suggested priority, queue, type, issue and category — before your dispatcher sees it. Each suggestion comes with reasoning attached. One click to accept, one click to override.</p>
     <div class="hero__ctas">
       <a class="btn btn-lg btn-primary btn-arrow" href="/contact/">See it on your tickets</a>
       <a class="btn btn-lg btn-outline" href="#how">How it works</a>
@@ -42,10 +42,10 @@
 <section class="section-sm bg-dark-2">
   <div class="container">
     <div class="grid grid-4" style="gap:32px;">
-      <div><div class="hero__stat-n">&lt;30s</div><div class="hero__stat-l">AI triage time</div></div>
-      <div><div class="hero__stat-n">12 min</div><div class="hero__stat-l">Triage SLA target</div></div>
-      <div><div class="hero__stat-n">7</div><div class="hero__stat-l">Classified dimensions</div></div>
-      <div><div class="hero__stat-n">~$4.50/day</div><div class="hero__stat-l">AI cost (BYO key)</div></div>
+      <div><div class="hero__stat-n">&lt;1 min</div><div class="hero__stat-l">Ticket to AI triage</div></div>
+      <div><div class="hero__stat-n">2.2 min</div><div class="hero__stat-l">Median time to confirm (our MSP)</div></div>
+      <div><div class="hero__stat-n">Every</div><div class="hero__stat-l">Suggestion explained</div></div>
+      <div><div class="hero__stat-n">BYO</div><div class="hero__stat-l">AI key, no markup</div></div>
     </div>
   </div>
 </section>
@@ -59,17 +59,17 @@
       <div>
         <div class="card__num" style="margin-bottom:12px;">01 / WATCH</div>
         <h3 class="h-4">Adaptive polling</h3>
-        <p class="muted" style="font-size:14px;">Nova checks Autotask every 30 seconds during business hours, every 5 minutes off-hours, every 15 minutes overnight. New tickets get picked up before your dispatcher refreshes.</p>
+        <p class="muted" style="font-size:14px;">Nova checks Autotask every 30 seconds during business hours and less often overnight. New tickets get picked up before your dispatcher refreshes.</p>
       </div>
       <div>
         <div class="card__num" style="margin-bottom:12px;">02 / CLASSIFY</div>
-        <h3 class="h-4">7 dimensions, &lt;30s</h3>
-        <p class="muted" style="font-size:14px;">Subject, body, contact context, and recent history get read in one pass. Out comes priority, issue type, queue, category, sub-category, work type, and source — with reasoning for each call.</p>
+        <h3 class="h-4">Every field, one pass</h3>
+        <p class="muted" style="font-size:14px;">The ticket, its contact and recent history get read in one pass. Out comes priority, queue, type, issue and category — with reasoning and a confidence level.</p>
       </div>
       <div>
         <div class="card__num" style="margin-bottom:12px;">03 / DECIDE</div>
         <h3 class="h-4">Dispatcher reviews</h3>
-        <p class="muted" style="font-size:14px;">Suggestions land in a clean review list with the AI's reasoning visible. One click to accept, one click to override. Every override flows back as a training signal for the next pass.</p>
+        <p class="muted" style="font-size:14px;">Suggestions land in a clean review list with the AI's reasoning visible. One click to accept, or correct any field first. Every correction is recorded and feeds the learning loop.</p>
       </div>
     </div>
   </div>
@@ -84,9 +84,9 @@
         <h3 class="h-2" style="font-size:36px;">Every classification shows its work.</h3>
         <p class="muted" style="font-size:16px;line-height:1.6;">Nothing about Nova's calls is opaque. Each ticket card surfaces the reasoning the AI used — what signals in the subject, body, or contact history led to the priority, the queue, the category. Your dispatcher reads the reasoning, agrees or disagrees, and clicks once. The decision and the override (if any) are logged.</p>
         <ul class="deepdive__bullets">
-          <li><span data-icon="check"></span><span>Plain-language reasoning on every field — priority, queue, category, work type</span></li>
-          <li><span data-icon="check"></span><span>Click any field to override; reasoning travels with the override into history</span></li>
-          <li><span data-icon="check"></span><span>Audit log: who accepted, who overrode, when, why</span></li>
+          <li><span data-icon="check"></span><span>Plain-language reasoning behind every suggestion</span></li>
+          <li><span data-icon="check"></span><span>Change any field before accepting</span></li>
+          <li><span data-icon="check"></span><span>Every accept and correction is recorded</span></li>
           <li><span data-icon="check"></span><span>The dispatcher is always source of truth — Nova learns from them</span></li>
         </ul>
       </div>
@@ -100,17 +100,17 @@
   <div class="container deepdive deepdive--reverse">
     <div class="deepdive__grid">
       <div>
-        <div class="deepdive__head">/ Tunable per queue</div>
-        <h3 class="h-2" style="font-size:36px;">Auto-route routine work. Hand-review what matters.</h3>
-        <p class="muted" style="font-size:16px;line-height:1.6;">High-volume routine queues — password resets, license requests, printer reboots — can auto-route at high confidence. Sensitive queues (security incidents, P1s, VIP clients) stay 100% dispatcher-reviewed. You set the policy per queue and per client tier from the admin panel.</p>
+        <div class="deepdive__head">/ You stay in control</div>
+        <h3 class="h-2" style="font-size:36px;">AI suggests. People decide.</h3>
+        <p class="muted" style="font-size:16px;line-height:1.6;">Nothing reaches Autotask until a person accepts it. You set the confidence levels that flag a suggestion for a closer look, sensitive tickets ask for extra confirmation, and an accuracy report shows how often the AI agrees with your team.</p>
         <ul class="deepdive__bullets">
-          <li><span data-icon="check"></span><span>Auto-route policy per queue, per client tier</span></li>
-          <li><span data-icon="check"></span><span>P1 and security tickets always land in dispatch review</span></li>
-          <li><span data-icon="check"></span><span>Daily classification report posted to Teams</span></li>
-          <li><span data-icon="check"></span><span>Pause AI for any queue from the admin panel — Nova falls back to manual</span></li>
+          <li><span data-icon="check"></span><span>Confidence thresholds you set</span></li>
+          <li><span data-icon="check"></span><span>Terminations and other sensitive tickets ask for confirmation</span></li>
+          <li><span data-icon="check"></span><span>AI accuracy report — how often your team agrees with the AI</span></li>
+          <li><span data-icon="check"></span><span>Repeated corrections become proposed rules for an admin to review</span></li>
         </ul>
       </div>
-      <img class="deepdive__shot mock-frame" src="../../assets/mocks/threshold.svg" alt="Per-queue auto-route policy editor"/>
+      <img class="deepdive__shot mock-frame" src="../../assets/mocks/threshold.svg" alt="Confidence threshold settings"/>
     </div>
   </div>
 </section>
@@ -133,23 +133,23 @@
             <span class="mono" style="font-weight:700;color:var(--c-accent);">Already done</span>
           </div>
           <div style="display:flex;justify-content:space-between;align-items:baseline;border-bottom:1px solid var(--c-border-1);padding-bottom:10px;">
-            <span class="muted" style="font-size:14px;">Time per ticket review</span>
-            <span class="mono" style="font-weight:700;">~5–10s</span>
+            <span class="muted" style="font-size:14px;">Median time to confirm (our MSP)</span>
+            <span class="mono" style="font-weight:700;">10.9 → 2.2 min</span>
           </div>
           <div style="display:flex;justify-content:space-between;align-items:baseline;border-bottom:1px solid var(--c-border-1);padding-bottom:10px;">
-            <span class="muted" style="font-size:14px;">Triage SLA target</span>
-            <span class="mono" style="font-weight:700;">12 minutes</span>
+            <span class="muted" style="font-size:14px;">Triage target</span>
+            <span class="mono" style="font-weight:700;">You set it</span>
           </div>
           <div style="display:flex;justify-content:space-between;align-items:baseline;border-bottom:1px solid var(--c-border-1);padding-bottom:10px;">
-            <span class="muted" style="font-size:14px;">Tickets newer than that</span>
-            <span class="mono" style="font-weight:700;">Flagged on Pulse</span>
+            <span class="muted" style="font-size:14px;">Tickets waiting past it</span>
+            <span class="mono" style="font-weight:700;">Flagged live</span>
           </div>
           <div style="display:flex;justify-content:space-between;align-items:baseline;">
-            <span class="muted" style="font-size:14px;">AI cost per ticket</span>
-            <span class="mono" style="font-weight:700;color:var(--c-accent);">~$0.05</span>
+            <span class="muted" style="font-size:14px;">AI cost</span>
+            <span class="mono" style="font-weight:700;color:var(--c-accent);">A few dollars a day</span>
           </div>
         </div>
-        <p class="muted" style="font-size:12px;line-height:1.5;margin-top:16px;">Numbers vary with ticket volume and your override rate. We share real per-tenant data on the discovery call.</p>
+        <p class="muted" style="font-size:12px;line-height:1.5;margin-top:16px;">Numbers vary with ticket volume and your override rate. Our own numbers are from February to October 2026.</p>
       </div>
     </div>
   </div>

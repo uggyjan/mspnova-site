@@ -4,7 +4,7 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Needs Attention — One queue, ranked by urgency · MSPNova</title>
-<meta name="description" content="Composite scoring ranks every open ticket by SLA risk, age, scarcity, and skill match. The Pull Ticket flow gives techs their next best work — anti-cherry-picking is structural." />
+<meta name="description" content="Composite scoring ranks open tickets by priority, SLA risk, age, skill match and more. The Pull Ticket flow gives techs their next best work — anti-cherry-picking is structural." />
 <link rel="canonical" href="https://mspnova.com/features/needs-attention/" />
 <link rel="icon" type="image/svg+xml" href="../../assets/favicon.svg" />
 <meta name="theme-color" content="#0a1628" />
@@ -23,7 +23,7 @@
     <div class="breadcrumb"><a href="/">Home</a><span class="breadcrumb__sep">/</span><a href="/features/">Features</a><span class="breadcrumb__sep">/</span>Needs Attention</div>
     <span class="eyebrow eyebrow--accent">02 · Needs Attention</span>
     <h1 class="h-1">One queue. <span class="accent">Ranked by urgency,</span><br/>not arrival time.</h1>
-    <p class="lede">Composite scoring weighs SLA risk, age, client tier, skill match, and tech scarcity to rank every open ticket. The Pull Ticket flow presents each engineer their next best work — anti-cherry-picking is structural, not policy. Each card explains why it needs attention right now.</p>
+    <p class="lede">Composite scoring weighs priority, SLA risk, age, skill match and more to rank every open ticket. The Pull Ticket flow presents each engineer their next best work — anti-cherry-picking is structural, not policy. Each card explains why it needs attention right now.</p>
     <div class="hero__ctas">
       <a class="btn btn-lg btn-primary btn-arrow" href="/contact/">Book a demo</a>
       <a class="btn btn-lg btn-outline" href="#scoring">How scoring works</a>
@@ -40,9 +40,9 @@
 <section class="section-sm bg-dark-2">
   <div class="container">
     <div class="grid grid-4" style="gap:32px;">
-      <div><div class="hero__stat-n">12 min</div><div class="hero__stat-l">Triage SLA target</div></div>
-      <div><div class="hero__stat-n">94%</div><div class="hero__stat-l">SLA hit rate (avg)</div></div>
-      <div><div class="hero__stat-n">5 factors</div><div class="hero__stat-l">In each composite score</div></div>
+      <div><div class="hero__stat-n">1 queue</div><div class="hero__stat-l">Every stalled ticket</div></div>
+      <div><div class="hero__stat-n">AI</div><div class="hero__stat-l">Suggested next step</div></div>
+      <div><div class="hero__stat-n">Live</div><div class="hero__stat-l">SLA countdowns</div></div>
       <div><div class="hero__stat-n">1 click</div><div class="hero__stat-l">From card → action</div></div>
     </div>
   </div>
@@ -52,31 +52,31 @@
 <section class="section bg-light" id="scoring">
   <div class="container">
     <span class="eyebrow">Composite scoring</span>
-    <h2 class="h-2 mb-48">Five factors. One score. No gut calls.</h2>
+    <h2 class="h-2 mb-48">Several factors. One score. No gut calls.</h2>
     <div class="grid-bordered grid-3">
       <div>
         <h4 class="h-4">SLA risk</h4>
-        <p class="muted" style="font-size:14px;">Time-to-breach weighted exponentially as the deadline closes. A ticket with 30 min on the clock outranks one with 4 hours, even if it came in later.</p>
+        <p class="muted" style="font-size:14px;">Time to breach counts more as the deadline gets closer. A ticket with 30 minutes on the clock outranks one with 4 hours, even if it came in later.</p>
       </div>
       <div>
-        <h4 class="h-4">Client tier</h4>
-        <p class="muted" style="font-size:14px;">Tier 1 clients (managed services contract, agreed response times) get a multiplier. Tier 3 (T&amp;M, ad hoc) sits behind. Tunable per contract.</p>
+        <h4 class="h-4">Priority</h4>
+        <p class="muted" style="font-size:14px;">A P1 outranks a P2, and so on — with weights your admin can tune.</p>
       </div>
       <div>
         <h4 class="h-4">Age</h4>
-        <p class="muted" style="font-size:14px;">Tickets older than 24 hours that aren't waiting on the client get an aging boost — small at first, growing daily.</p>
+        <p class="muted" style="font-size:14px;">Older tickets get an aging boost, so nothing sits at the bottom forever.</p>
       </div>
       <div>
         <h4 class="h-4">Skill match</h4>
-        <p class="muted" style="font-size:14px;">Each ticket carries a primary skill tag (M365, networking, on-site, etc.). The Pull Ticket flow scores against the requesting tech's skill profile.</p>
+        <p class="muted" style="font-size:14px;">Tickets are matched against each tech's skills, so the next ticket a tech pulls is one they can actually handle.</p>
       </div>
       <div>
         <h4 class="h-4">Scarcity</h4>
-        <p class="muted" style="font-size:14px;">If only one tech can handle a ticket type today (sole on-call, only certified person), Nova surfaces it before broader-skill tickets queue up.</p>
+        <p class="muted" style="font-size:14px;">When only a few techs can handle a type of work, Nova gives that work to them first.</p>
       </div>
       <div>
-        <h4 class="h-4">Override</h4>
-        <p class="muted" style="font-size:14px;">Dispatcher can pin any ticket to the top of the queue — VIP issue, internal escalation, owner ask. Pinned tickets show a manual flag.</p>
+        <h4 class="h-4">Boosts</h4>
+        <p class="muted" style="font-size:14px;">Admins can tune the scoring weights so the queue reflects how your MSP actually prioritizes.</p>
       </div>
     </div>
   </div>
@@ -89,12 +89,11 @@
       <div>
         <div class="deepdive__head">/ Pull Ticket</div>
         <h3 class="h-2" style="font-size:36px;">Techs ask for work. Nova picks one.</h3>
-        <p class="muted" style="font-size:16px;line-height:1.6;">Engineers don't browse a queue and pick what looks easy. They click "Pull next ticket." Nova considers their skills, current load, and the queue's composite scores, and assigns the single best fit. They can decline (with a reason) — that signal trains the model too.</p>
+        <p class="muted" style="font-size:16px;line-height:1.6;">Engineers don't browse a queue and pick what looks easy. They click "Pull next ticket." Nova considers their skills, current load, and the queue's composite scores, and assigns the single best fit. They can skip with a reason, which is recorded so dispatch can see why.</p>
         <ul class="deepdive__bullets">
           <li><span data-icon="check"></span><span>Anti-cherry-picking by design — no list browsing</span></li>
-          <li><span data-icon="check"></span><span>Decline w/ reason: "out of skill," "context mismatch," "need on-site"</span></li>
-          <li><span data-icon="check"></span><span>Rebalance algorithm prevents one tech getting all the easy tickets</span></li>
-          <li><span data-icon="check"></span><span>Optional manual mode for senior techs / leads</span></li>
+          <li><span data-icon="check"></span><span>Skip with a reason — out of skill, needs onsite, and so on</span></li>
+                    <li><span data-icon="check"></span><span>Optional choice mode: see the top few tickets and pick one</span></li>
         </ul>
       </div>
       <img class="deepdive__shot mock-frame" src="../../assets/mocks/pull-ticket.svg" alt="Pull Ticket flow — tech queue with auto-assigned next ticket and timer"/>
@@ -107,17 +106,17 @@
   <div class="container deepdive deepdive--reverse">
     <div class="deepdive__grid">
       <div>
-        <div class="deepdive__head">/ Holding lanes</div>
+        <div class="deepdive__head">/ Grouped by reason</div>
         <h3 class="h-2" style="font-size:36px;">Waiting on the client doesn't mean lost.</h3>
-        <p class="muted" style="font-size:16px;line-height:1.6;">Tickets in "waiting on customer" pause SLA but stay tracked. Nova surfaces them when the client replies — or when they've been silent past the chase threshold. No more tickets falling into the void of someone else's inbox.</p>
+        <p class="muted" style="font-size:16px;line-height:1.6;">Every ticket on the board says why it's there — a deadline, scheduling, a client follow-up, or waiting on someone — with how long it's been idle and what to do next. No more tickets falling into the void of someone else's inbox.</p>
         <ul class="deepdive__bullets">
-          <li><span data-icon="check"></span><span>Pause SLA when status flips to waiting</span></li>
-          <li><span data-icon="check"></span><span>Auto-resurface when client replies (Outlook integration)</span></li>
-          <li><span data-icon="check"></span><span>Stale-chase alert at 3, 7, 14 days (configurable)</span></li>
-          <li><span data-icon="check"></span><span>Auto-close suggestions for clearly resolved tickets</span></li>
+          <li><span data-icon="check"></span><span>Reason, owner and idle time on every ticket</span></li>
+          <li><span data-icon="check"></span><span>AI-suggested next step, or a question to ask the tech</span></li>
+          <li><span data-icon="check"></span><span>Stale tickets flagged for the morning huddle</span></li>
+          <li><span data-icon="check"></span><span>Add a note or flag for the huddle in one click</span></li>
         </ul>
       </div>
-      <img class="deepdive__shot mock-frame" src="../../assets/mocks/holding-lanes.svg" alt="Holding lanes — active, awaiting client, scheduled, blocked, onsite, snoozed"/>
+      <img class="deepdive__shot mock-frame" src="../../assets/mocks/holding-lanes.svg" alt="Needs Attention tickets grouped by reason"/>
     </div>
   </div>
 </section>

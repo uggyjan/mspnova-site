@@ -4,7 +4,7 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Security — How Nova handles your data · MSPNova</title>
-<meta name="description" content="Your ticket data stays in your PSA. Nova reads, doesn't store. SSO via Microsoft Entra. Anthropic zero-retention policy." />
+<meta name="description" content="Each MSP runs in its own environment with its own private database. Microsoft sign-in for staff. Your tickets are never used to train AI." />
 <link rel="canonical" href="https://mspnova.com/security/" />
 <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg" />
 <meta name="theme-color" content="#0a1628" />
@@ -23,7 +23,7 @@
     <div class="breadcrumb"><a href="/">Home</a><span class="breadcrumb__sep">/</span>Security</div>
     <span class="eyebrow">Security &amp; trust</span>
     <h1 class="h-1">Your data stays <span class="accent">where it lives.</span></h1>
-    <p class="lede">Nova reads from your PSA and writes back to your PSA. We don't build a parallel data lake. We don't train AI on your tickets. And we don't store more than the metadata we need to do our job.</p>
+    <p class="lede">Nova reads from your PSA and writes back only when a person clicks. Each MSP runs in its own environment with its own private database. We keep what Nova needs to work, and your tickets are never used to train AI.</p>
   </div>
 </section>
 
@@ -36,16 +36,16 @@
   <div class="container">
     <div class="grid grid-3" style="gap:24px;">
       <div class="card" style="text-align:center;background:var(--c-navy-2);border-color:var(--c-navy-3);">
-        <div class="h-4" style="color:#fff;margin:0 0 4px;">ZERO-RETENTION AI</div>
-        <div class="muted" style="font-size:12px;color:var(--c-fg-on-dark-2);">Prompts not stored or trained on</div>
+        <div class="h-4" style="color:#fff;margin:0 0 4px;">NO AI TRAINING</div>
+        <div class="muted" style="font-size:12px;color:var(--c-fg-on-dark-2);">Your tickets never train models</div>
       </div>
       <div class="card" style="text-align:center;background:var(--c-navy-2);border-color:var(--c-navy-3);">
-        <div class="h-4" style="color:#fff;margin:0 0 4px;">ENTRA SSO</div>
-        <div class="muted" style="font-size:12px;color:var(--c-fg-on-dark-2);">Required for all staff access</div>
+        <div class="h-4" style="color:#fff;margin:0 0 4px;">MICROSOFT SIGN-IN</div>
+        <div class="muted" style="font-size:12px;color:var(--c-fg-on-dark-2);">Staff use the account they already have</div>
       </div>
       <div class="card" style="text-align:center;background:var(--c-navy-2);border-color:var(--c-navy-3);">
-        <div class="h-4" style="color:#fff;margin:0 0 4px;">DATA STAYS PUT</div>
-        <div class="muted" style="font-size:12px;color:var(--c-fg-on-dark-2);">Ticket bodies live in your PSA</div>
+        <div class="h-4" style="color:#fff;margin:0 0 4px;">YOUR OWN ENVIRONMENT</div>
+        <div class="muted" style="font-size:12px;color:var(--c-fg-on-dark-2);">A separate database for every MSP</div>
       </div>
     </div>
   </div>
@@ -60,17 +60,17 @@
       <div class="card">
         <div class="mono" style="font-size:11px;color:var(--c-accent);font-weight:700;">/ READS</div>
         <h4 class="h-4" style="margin-top:8px;">From your PSA, on a schedule</h4>
-        <p class="muted" style="font-size:14px;line-height:1.6;">Ticket subject, body, status, priority, contact. Read-only API access via your Autotask user. We see what your dispatcher sees — nothing more.</p>
+        <p class="muted" style="font-size:14px;line-height:1.6;">Ticket details, status, priority and contact, through an Autotask API user you control. We see what your dispatcher sees — nothing more.</p>
       </div>
       <div class="card">
         <div class="mono" style="font-size:11px;color:var(--c-accent);font-weight:700;">/ WRITES</div>
         <h4 class="h-4" style="margin-top:8px;">When dispatcher clicks Accept</h4>
-        <p class="muted" style="font-size:14px;line-height:1.6;">Updated classification fields (priority, queue, category, work type). Internal notes for transparency. Time entries when techs check out from Field Ops. All changes logged.</p>
+        <p class="muted" style="font-size:14px;line-height:1.6;">Classification fields and notes, only when a person clicks. Changes are logged.</p>
       </div>
       <div class="card">
         <div class="mono" style="font-size:11px;color:var(--c-accent);font-weight:700;">/ STORES</div>
         <h4 class="h-4" style="margin-top:8px;">Only what we need to operate</h4>
-        <p class="muted" style="font-size:14px;line-height:1.6;">Ticket metadata (IDs, classifications, history) and learned rules. Encrypted at rest (AES-256) and in transit (TLS 1.3). Ticket bodies are not persisted — read, classified, discarded.</p>
+        <p class="muted" style="font-size:14px;line-height:1.6;">The ticket details Nova needs to triage and report, classifications, history and learned rules — in your own private database, encrypted in transit.</p>
       </div>
     </div>
   </div>
@@ -83,29 +83,25 @@
       <div>
         <div class="deepdive__head">/ AI usage</div>
         <h3 class="h-2" style="font-size:36px;">Your tickets are not training data.</h3>
-        <p class="muted" style="font-size:16px;line-height:1.6;">Nova uses Anthropic's enterprise API with zero-retention enabled. Prompts are processed and discarded — not stored, not used to train models, not visible to anyone at Anthropic outside of your active inference call.</p>
+        <p class="muted" style="font-size:16px;line-height:1.6;">Nova uses your own AI provider account. Under Anthropic's and OpenAI's commercial API terms, your data isn't used to train their models.</p>
         <ul class="deepdive__bullets">
-          <li><span data-icon="check"></span><span>Anthropic enterprise API · zero data retention</span></li>
-          <li><span data-icon="check"></span><span>Prompts redacted of obvious PII before sending</span></li>
-          <li><span data-icon="check"></span><span>Optional: bring your own AI provider with self-hosted compliance</span></li>
+          <li><span data-icon="check"></span><span>Your own API key — billed to you, visible to you</span></li>
+          <li><span data-icon="check"></span><span>Only what's needed to classify the ticket is sent</span></li>
+          <li><span data-icon="check"></span><span>Choose your provider per process</span></li>
 
         </ul>
       </div>
       <div class="card" style="background:var(--c-bg-3);">
         <h4 class="h-4">What goes to the AI</h4>
         <div style="font-family:var(--font-mono);font-size:13px;background:var(--c-navy-1);color:var(--c-fg-on-dark-1);padding:16px;border-radius:var(--r-sm);margin-top:12px;line-height:1.6;">
-          <span style="color:#90D7EC;">// Sample prompt body</span><br/>
-          <span style="color:#a5d6a7;">subject:</span> "Outlook crashing on launch"<br/>
-          <span style="color:#a5d6a7;">body:</span> "Started this morning after Win update..."<br/>
-          <span style="color:#a5d6a7;">contact_role:</span> "office manager"<br/>
-          <span style="color:#a5d6a7;">contract_tier:</span> "managed services T1"<br/>
-          <span style="color:#a5d6a7;">history_summary:</span> "3 tickets last 30d"<br/>
+          <span style="color:#90D7EC;">// What a triage request contains</span><br/>
+          <span style="color:#a5d6a7;">ticket:</span> title and description<br/>
+          <span style="color:#a5d6a7;">contact:</span> who opened it<br/>
+          <span style="color:#a5d6a7;">company:</span> which client<br/>
+          <span style="color:#a5d6a7;">your rules:</span> priority matrix and categories<br/>
           <br/>
-          <span style="color:#90D7EC;">// What's NOT sent:</span><br/>
-          <span style="color:#ef9a9a;">- contact name, email, phone</span><br/>
-          <span style="color:#ef9a9a;">- attachment contents</span><br/>
-          <span style="color:#ef9a9a;">- internal notes flagged private</span><br/>
-          <span style="color:#ef9a9a;">- billing or contract amounts</span>
+          <span style="color:#90D7EC;">// Ticket text is treated as data,</span><br/>
+          <span style="color:#90D7EC;">// never as instructions to the AI.</span>
         </div>
       </div>
     </div>
@@ -121,22 +117,20 @@
       <div class="card">
         <h4 class="h-4">Inside your MSP</h4>
         <ul style="margin:12px 0 0;padding:0;list-style:none;display:flex;flex-direction:column;gap:10px;font-size:14px;">
-          <li style="display:flex;gap:10px;"><span data-icon="check" style="color:var(--c-accent);"></span><span>Microsoft Entra SSO required for all staff access</span></li>
-          <li style="display:flex;gap:10px;"><span data-icon="check" style="color:var(--c-accent);"></span><span>Role-based: dispatcher, tech, manager, owner, billing</span></li>
-          <li style="display:flex;gap:10px;"><span data-icon="check" style="color:var(--c-accent);"></span><span>Group-based provisioning — Entra group changes propagate</span></li>
-          <li style="display:flex;gap:10px;"><span data-icon="check" style="color:var(--c-accent);"></span><span>Audit log of every classification, override, login</span></li>
-          <li style="display:flex;gap:10px;"><span data-icon="check" style="color:var(--c-accent);"></span><span>Session timeout configurable (default 8 hours)</span></li>
+          <li style="display:flex;gap:10px;"><span data-icon="check" style="color:var(--c-accent);"></span><span>Staff sign in with Microsoft</span></li>
+          <li style="display:flex;gap:10px;"><span data-icon="check" style="color:var(--c-accent);"></span><span>Role-based access — for example, dispatcher or tech — with page access set per role</span></li>
+                    <li style="display:flex;gap:10px;"><span data-icon="check" style="color:var(--c-accent);"></span><span>Classifications, corrections and changes are logged</span></li>
+          <li style="display:flex;gap:10px;"><span data-icon="check" style="color:var(--c-accent);"></span><span>Sessions expire automatically</span></li>
         </ul>
       </div>
       <div class="card">
         <h4 class="h-4">Inside your client portal</h4>
         <ul style="margin:12px 0 0;padding:0;list-style:none;display:flex;flex-direction:column;gap:10px;font-size:14px;">
-          <li style="display:flex;gap:10px;"><span data-icon="check" style="color:var(--c-accent);"></span><span>SSO via M365, Google, or SAML 2.0</span></li>
-          <li style="display:flex;gap:10px;"><span data-icon="check" style="color:var(--c-accent);"></span><span>Per-client roles: regular user, manager, billing, admin</span></li>
+          <li style="display:flex;gap:10px;"><span data-icon="check" style="color:var(--c-accent);"></span><span>Sign in with Microsoft 365, Google, or email</span></li>
+          <li style="display:flex;gap:10px;"><span data-icon="check" style="color:var(--c-accent);"></span><span>Roles — for example, managers see their whole company</span></li>
           <li style="display:flex;gap:10px;"><span data-icon="check" style="color:var(--c-accent);"></span><span>Org-level isolation: clients see only their own tickets</span></li>
           <li style="display:flex;gap:10px;"><span data-icon="check" style="color:var(--c-accent);"></span><span>Public/private ticket comment separation</span></li>
-          <li style="display:flex;gap:10px;"><span data-icon="check" style="color:var(--c-accent);"></span><span>Optional MFA enforcement per client policy</span></li>
-        </ul>
+                  </ul>
       </div>
     </div>
   </div>
@@ -164,7 +158,7 @@
     <div class="cta__grid">
       <div>
         <h2 class="h-2" style="font-size:46px;color:#fff;">Have a security <span class="accent">questionnaire?</span></h2>
-        <p style="font-size:17px;color:#c9d3dd;">Send it over. We respond inside one business day. We've answered every variant of "do you store our ticket bodies?" — short version: no.</p>
+        <p style="font-size:17px;color:#c9d3dd;">Send it over. We respond inside one business day. We've answered every variant of "where does our data live?" — short version: in your own environment.</p>
       </div>
       <div class="cta__ctas">
         <a class="btn btn-lg btn-primary btn-arrow" href="mailto:security@mspnova.com">Email security@</a>

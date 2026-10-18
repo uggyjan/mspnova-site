@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Integrations — Autotask, Teams, Entra, Anthropic, CIPP · MSPNova</title>
-<meta name="description" content="Nova plugs into the rails your MSP already runs on. Autotask PSA, Microsoft Teams, Entra ID SSO, Anthropic Claude, OpenAI, CIPP, ConnectBooster." />
+<title>Integrations — Autotask, Teams, Entra, GoTo, QuickBooks and more · MSPNova</title>
+<meta name="description" content="Nova plugs into the rails your MSP already runs on. Autotask PSA, Microsoft Teams, Entra ID, GoTo Connect, Anthropic, OpenAI, CIPP, ConnectBooster, QuickBooks, Pax8 and more." />
 <link rel="canonical" href="https://mspnova.com/integrations/" />
 <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg" />
 <meta name="theme-color" content="#0a1628" />
@@ -39,7 +39,7 @@
 <section class="section bg-light">
   <div class="container">
     <span class="eyebrow">Live integrations</span>
-    <h2 class="h-2 mb-48">Nine systems, all production-ready.</h2>
+    <h2 class="h-2 mb-48">Eight core systems, all in production.</h2>
     <div class="grid grid-2" style="gap:32px;">
 
       <div class="card" id="autotask">
@@ -50,9 +50,9 @@
             <div class="muted" style="font-size:13px;">Read tickets · Write back on dispatcher click</div>
           </div>
         </div>
-        <p class="muted" style="font-size:14px;line-height:1.6;">The core integration. Nova polls Autotask continuously — fast during business hours, quieter overnight — for new and updated tickets, classifies them, and writes the dispatcher's accepted classification back to the ticket — priority, queue, category, sub-category, work type. No custom fields. No PSA add-ons.</p>
+        <p class="muted" style="font-size:14px;line-height:1.6;">The core integration. Nova polls Autotask continuously — fast during business hours, quieter overnight — for new and updated tickets, classifies them, and writes the dispatcher's accepted classification back to the ticket — priority, queue, type, issue and category. No custom fields. No PSA add-ons.</p>
         <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:16px;">
-          <span class="pill">Read tickets</span><span class="pill">Write classifications</span><span class="pill">Time entries</span><span class="pill">Notes</span><span class="pill">Status updates</span>
+          <span class="pill">Read tickets</span><span class="pill">Write classifications</span><span class="pill">Notes</span><span class="pill">Status updates</span>
         </div>
       </div>
 
@@ -64,7 +64,7 @@
             <div class="muted" style="font-size:13px;">Channel posts + per-tech direct messages</div>
           </div>
         </div>
-        <p class="muted" style="font-size:14px;line-height:1.6;">All Pulse cards (briefings, P1 alerts, EOD reports) post to your dispatch channel. Per-tech status checks land as direct messages with one-click reply actions. Adaptive Cards, not bots.</p>
+        <p class="muted" style="font-size:14px;line-height:1.6;">Pulse cards — briefings, P1 alerts, end-of-day summaries — post to your dispatch channel. Per-tech status checks land as direct messages.</p>
         <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:16px;">
           <span class="pill">Channel cards</span><span class="pill">Direct messages</span><span class="pill">Adaptive Cards</span><span class="pill">@-mentions</span>
         </div>
@@ -78,9 +78,9 @@
             <div class="muted" style="font-size:13px;">SSO + role-based permissions</div>
           </div>
         </div>
-        <p class="muted" style="font-size:14px;line-height:1.6;">Single sign-on for Nova staff and the client portal. Role mappings honor your Entra groups — service desk, dispatch, owner, billing. Add a user to a group in Entra, they get the right Nova access on next login.</p>
+        <p class="muted" style="font-size:14px;line-height:1.6;">Single sign-on for Nova staff and the client portal. Staff sign in with their Microsoft account, under your existing sign-in policies. Access is set by role inside Nova — for example, dispatcher or tech.</p>
         <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:16px;">
-          <span class="pill">SSO</span><span class="pill">Group → role</span><span class="pill">Conditional access</span>
+          <span class="pill">SSO</span><span class="pill">Roles</span><span class="pill">Your sign-in policies</span>
         </div>
       </div>
 
@@ -89,12 +89,12 @@
           <div class="int-badge int-badge--lg">AC</div>
           <div>
             <h3 class="h-4" style="margin:0;">Anthropic Claude</h3>
-            <div class="muted" style="font-size:13px;">AI triage + Pulse + EOD reports</div>
+            <div class="muted" style="font-size:13px;">AI triage, Pulse and summaries</div>
           </div>
         </div>
-        <p class="muted" style="font-size:14px;line-height:1.6;">Anthropic powers Nova's classification, briefings, and end-of-day reports out of the box. You bring your own API key, billed directly by Anthropic. Their enterprise terms include zero retention — your prompts aren't stored or used for training.</p>
+        <p class="muted" style="font-size:14px;line-height:1.6;">Anthropic powers Nova's classification, briefings, and end-of-day reports out of the box. You bring your own API key, billed directly by Anthropic. Anthropic's commercial terms don't use your API data to train models.</p>
         <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:16px;">
-          <span class="pill">BYO key</span><span class="pill">Zero retention</span><span class="pill">Default provider</span>
+          <span class="pill">BYO key</span><span class="pill">No training on your data</span><span class="pill">Default provider</span>
         </div>
       </div>
 
@@ -106,7 +106,7 @@
             <div class="muted" style="font-size:13px;">Configurable per-process fallback</div>
           </div>
         </div>
-        <p class="muted" style="font-size:14px;line-height:1.6;">For MSPs with existing OpenAI relationships or compliance constraints. Any AI process (triage, briefings, summaries) can run on OpenAI instead of Anthropic. Same prompt library, same outputs.</p>
+        <p class="muted" style="font-size:14px;line-height:1.6;">For MSPs with existing OpenAI relationships or compliance constraints. Any AI process (triage, briefings, summaries) can run on OpenAI instead of Anthropic. Same prompts, your choice of provider.</p>
         <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:16px;">
           <span class="pill">BYO key</span><span class="pill">Per-process toggle</span>
         </div>
@@ -134,9 +134,9 @@
             <div class="muted" style="font-size:13px;">M365 license + tenant management</div>
           </div>
         </div>
-        <p class="muted" style="font-size:14px;line-height:1.6;">Pull license assignments, MFA status, and tenant health into Nova. Drives the asset register in client portal and informs triage (e.g., "user has E5 license — full troubleshoot path available").</p>
+        <p class="muted" style="font-size:14px;line-height:1.6;">Pulls license assignments and MFA status into Nova, and feeds the seat audit that compares Microsoft 365 licenses with your Autotask contracts.</p>
         <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:16px;">
-          <span class="pill">License sync</span><span class="pill">MFA status</span><span class="pill">Tenant health</span>
+          <span class="pill">License sync</span><span class="pill">MFA status</span><span class="pill">Seat audit</span>
         </div>
       </div>
 
@@ -148,7 +148,7 @@
             <div class="muted" style="font-size:13px;">Client billing + invoice portal</div>
           </div>
         </div>
-        <p class="muted" style="font-size:14px;line-height:1.6;">Surface invoice + payment status inside the client portal. Clients see their billing history, current balance, and pay invoices — without leaving Nova-branded UX.</p>
+        <p class="muted" style="font-size:14px;line-height:1.6;">Surface invoice + payment status inside the client portal. Clients see their billing history and pay invoices inside the portal, with the same sign-in.</p>
         <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:16px;">
           <span class="pill">Invoice list</span><span class="pill">Pay link</span><span class="pill">Payment history</span>
         </div>
@@ -161,28 +161,53 @@
 <!-- Roadmap -->
 <section class="section bg-mute">
   <div class="container">
-    <span class="eyebrow">On the roadmap</span>
-    <h2 class="h-2 mb-48">What we're building next.</h2>
+    <span class="eyebrow">More connections</span>
+    <h2 class="h-2 mb-48">The rest of the stack, and what's next.</h2>
     <div class="grid grid-3">
       <div class="card">
-        <div class="mono" style="font-size:11px;color:var(--c-accent);font-weight:700;">/ Q1 2026</div>
-        <h4 class="h-4" style="margin-top:8px;">ITGlue / Hudu</h4>
-        <p class="muted" style="font-size:13px;">Pull documentation directly into the AI's classification context for faster, smarter triage.</p>
+        <div class="mono" style="font-size:11px;color:var(--c-accent);font-weight:700;">/ LIVE</div>
+        <h4 class="h-4" style="margin-top:8px;">QuickBooks Online</h4>
+        <p class="muted" style="font-size:13px;">Read-only accounting connection that feeds the finance reports.</p>
       </div>
       <div class="card">
-        <div class="mono" style="font-size:11px;color:var(--c-accent);font-weight:700;">/ Q1 2026</div>
+        <div class="mono" style="font-size:11px;color:var(--c-accent);font-weight:700;">/ LIVE</div>
+        <h4 class="h-4" style="margin-top:8px;">Pax8</h4>
+        <p class="muted" style="font-size:13px;">Compares Pax8 subscription costs with what your Autotask contracts bill.</p>
+      </div>
+      <div class="card">
+        <div class="mono" style="font-size:11px;color:var(--c-accent);font-weight:700;">/ LIVE</div>
+        <h4 class="h-4" style="margin-top:8px;">Datto RMM</h4>
+        <p class="muted" style="font-size:13px;">Patching and device health, including in monthly client reviews.</p>
+      </div>
+      <div class="card">
+        <div class="mono" style="font-size:11px;color:var(--c-accent);font-weight:700;">/ LIVE</div>
+        <h4 class="h-4" style="margin-top:8px;">IT Glue</h4>
+        <p class="muted" style="font-size:13px;">Documentation insights such as upcoming renewals, in client reviews.</p>
+      </div>
+      <div class="card">
+        <div class="mono" style="font-size:11px;color:var(--c-accent);font-weight:700;">/ LIVE</div>
+        <h4 class="h-4" style="margin-top:8px;">UptimeRobot</h4>
+        <p class="muted" style="font-size:13px;">Uptime status for your team, and an uptime page in the client portal.</p>
+      </div>
+      <div class="card">
+        <div class="mono" style="font-size:11px;color:var(--c-accent);font-weight:700;">/ LIVE</div>
+        <h4 class="h-4" style="margin-top:8px;">SmileBack</h4>
+        <p class="muted" style="font-size:13px;">Bring your existing reviews and history into Nova's CSAT reports.</p>
+      </div>
+      <div class="card">
+        <div class="mono" style="font-size:11px;color:var(--c-accent);font-weight:700;">/ LIVE</div>
+        <h4 class="h-4" style="margin-top:8px;">SMS through GoTo</h4>
+        <p class="muted" style="font-size:13px;">Text broadcasts to clients, and quick texts from a ticket.</p>
+      </div>
+      <div class="card">
+        <div class="mono" style="font-size:11px;color:var(--c-accent);font-weight:700;">/ ON REQUEST</div>
         <h4 class="h-4" style="margin-top:8px;">Slack</h4>
-        <p class="muted" style="font-size:13px;">For MSPs running on Slack instead of Teams. Same Adaptive Cards, mapped to Slack Block Kit.</p>
+        <p class="muted" style="font-size:13px;">For MSPs running on Slack instead of Teams.</p>
       </div>
       <div class="card">
         <div class="mono" style="font-size:11px;color:var(--c-accent);font-weight:700;">/ EVALUATING</div>
         <h4 class="h-4" style="margin-top:8px;">N-able N-central</h4>
-        <p class="muted" style="font-size:13px;">For RMM context (alerts, device health) feeding triage. Conversations underway.</p>
-      </div>
-      <div class="card">
-        <div class="mono" style="font-size:11px;color:var(--c-accent);font-weight:700;">/ EVALUATING</div>
-        <h4 class="h-4" style="margin-top:8px;">Datto Autotask Webhooks</h4>
-        <p class="muted" style="font-size:13px;">Real-time event push instead of polling. Cuts triage latency from 30s to ~3s.</p>
+        <p class="muted" style="font-size:13px;">RMM context, such as alerts and device health, feeding triage.</p>
       </div>
     </div>
     <p class="muted" style="font-size:14px;margin-top:32px;">Need an integration that's not on this list? <a href="/contact/" class="accent">Tell us</a>. Customer asks shape the roadmap.</p>
